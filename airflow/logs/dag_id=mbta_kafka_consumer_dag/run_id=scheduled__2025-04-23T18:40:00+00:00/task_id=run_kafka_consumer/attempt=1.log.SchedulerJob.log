@@ -1,0 +1,1 @@
+[2025-04-23T18:45:55.220+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T18:40:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

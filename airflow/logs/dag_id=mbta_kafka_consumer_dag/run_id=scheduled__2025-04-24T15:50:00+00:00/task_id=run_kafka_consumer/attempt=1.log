@@ -1,0 +1,514 @@
+[2025-04-24T15:55:01.399+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-24T15:50:00+00:00 [queued]>
+[2025-04-24T15:55:01.405+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-24T15:50:00+00:00 [queued]>
+[2025-04-24T15:55:01.405+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-24T15:55:01.412+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-24 15:50:00+00:00
+[2025-04-24T15:55:01.418+0000] {standard_task_runner.py:60} INFO - Started process 507 to run task
+[2025-04-24T15:55:01.420+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-24T15:50:00+00:00', '--job-id', '908', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpa2x92p_0']
+[2025-04-24T15:55:01.422+0000] {standard_task_runner.py:88} INFO - Job 908: Subtask run_kafka_consumer
+[2025-04-24T15:55:01.467+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-24T15:50:00+00:00 [running]> on host a93f71bb5a5f
+[2025-04-24T15:55:01.563+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-24T15:50:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-24T15:50:00+00:00'
+[2025-04-24T15:55:01.564+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-24T15:55:01.565+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-24T15:55:02.295+0000] {mbta_kafka_consumer.py:52} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-24T15:55:02.295+0000] {mbta_kafka_consumer.py:266} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-24T15:55:02.302+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.19.0.4', 9092)]>: connecting to kafka:9092 [('172.19.0.4', 9092) IPv4]
+[2025-04-24T15:55:02.313+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.19.0.4', 9092)]>: Broker version identified as 2.6
+[2025-04-24T15:55:02.313+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.19.0.4', 9092)]>: Connection complete.
+[2025-04-24T15:55:02.314+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-24T15:55:02.315+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions', 'mbta_schedules', 'mbta_lines', 'mbta_facilities')
+[2025-04-24T15:55:02.321+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_facilities', 0), ('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_lines', 0), ('mbta_stops', 0), ('mbta_predictions', 0), ('mbta_vehicles', 0), ('mbta_schedules', 0)]
+[2025-04-24T15:55:02.324+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.19.0.4', 9092)]>: connecting to kafka:9092 [('172.19.0.4', 9092) IPv4]
+[2025-04-24T15:55:02.325+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.19.0.4', 9092)]>: Connection complete.
+[2025-04-24T15:55:02.325+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.19.0.4', 9092)]>: Closing connection. 
+[2025-04-24T15:55:03.489+0000] {mbta_kafka_consumer.py:280} INFO - 📥 Received 500 records from topic: mbta_stops
+[2025-04-24T15:55:03.495+0000] {mbta_kafka_consumer.py:62} INFO - 🔍 Sample data for MBTA_STOPS:
+[2025-04-24T15:55:03.495+0000] {mbta_kafka_consumer.py:63} INFO - 
+          STOP_ID  ...                 CREATED_AT
+0            5682  ... 2025-04-24 15:55:03.489917
+1           50620  ... 2025-04-24 15:55:03.489919
+2  node-417-lobby  ... 2025-04-24 15:55:03.489920
+3            4042  ... 2025-04-24 15:55:03.489921
+4          109822  ... 2025-04-24 15:55:03.489922
+
+[5 rows x 5 columns]
+[2025-04-24T15:55:03.503+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_STOPS WHERE STOP_ID IN ('5682','50620','node-417-lobby','4042...]
+[2025-04-24T15:55:03.700+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:03.701+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-24T15:55:04.302+0000] {mbta_kafka_consumer.py:112} INFO - 🔁 0 new/updated records out of 500 incoming records (some may be duplicates) for MBTA_STOPS
+[2025-04-24T15:55:04.302+0000] {mbta_kafka_consumer.py:115} INFO - ✅ All 500 records already up-to-date in MBTA_STOPS, no merge needed.
+[2025-04-24T15:55:04.303+0000] {mbta_kafka_consumer.py:280} INFO - 📥 Received 500 records from topic: mbta_stops
+[2025-04-24T15:55:04.306+0000] {mbta_kafka_consumer.py:62} INFO - 🔍 Sample data for MBTA_STOPS:
+[2025-04-24T15:55:04.306+0000] {mbta_kafka_consumer.py:63} INFO - 
+  STOP_ID                STOP_NAME  ...  LONGITUDE                 CREATED_AT
+0    6631    Willow Rd @ Summer St  ... -70.917785 2025-04-24 15:55:04.303426
+1   57121  Broadway @ Fernwood Ave  ... -71.011956 2025-04-24 15:55:04.303430
+2    5299      Main St @ Albion St  ... -71.104027 2025-04-24 15:55:04.303432
+3    8164     Walnut St @ Clyde St  ... -71.206015 2025-04-24 15:55:04.303432
+4    4094      West St @ Trask Ave  ... -71.025834 2025-04-24 15:55:04.303433
+
+[5 rows x 5 columns]
+[2025-04-24T15:55:04.310+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_STOPS WHERE STOP_ID IN ('6631','57121','5299','8164','4094','...]
+[2025-04-24T15:55:04.494+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:04.495+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-24T15:55:04.797+0000] {mbta_kafka_consumer.py:112} INFO - 🔁 0 new/updated records out of 500 incoming records (some may be duplicates) for MBTA_STOPS
+[2025-04-24T15:55:04.798+0000] {mbta_kafka_consumer.py:115} INFO - ✅ All 500 records already up-to-date in MBTA_STOPS, no merge needed.
+[2025-04-24T15:55:04.798+0000] {mbta_kafka_consumer.py:280} INFO - 📥 Received 500 records from topic: mbta_stops
+[2025-04-24T15:55:04.802+0000] {mbta_kafka_consumer.py:62} INFO - 🔍 Sample data for MBTA_STOPS:
+[2025-04-24T15:55:04.802+0000] {mbta_kafka_consumer.py:63} INFO - 
+  STOP_ID                 STOP_NAME  ...  LONGITUDE                 CREATED_AT
+0    6835     Olive St @ Fayette St  ... -70.935201 2025-04-24 15:55:04.798804
+1    1340   Walnut Ave @ Circuit St  ... -71.083985 2025-04-24 15:55:04.798808
+2   45406     Main St @ Winthrop St  ... -71.062034 2025-04-24 15:55:04.798809
+3    4297    N Main St @ Charles St  ... -71.059709 2025-04-24 15:55:04.798810
+4    8332  Readville St opp Como Rd  ... -71.135558 2025-04-24 15:55:04.798811
+
+[5 rows x 5 columns]
+[2025-04-24T15:55:04.805+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_STOPS WHERE STOP_ID IN ('6835','1340','45406','4297','8332','...]
+[2025-04-24T15:55:04.999+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:05.000+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-24T15:55:05.279+0000] {mbta_kafka_consumer.py:112} INFO - 🔁 0 new/updated records out of 500 incoming records (some may be duplicates) for MBTA_STOPS
+[2025-04-24T15:55:05.280+0000] {mbta_kafka_consumer.py:115} INFO - ✅ All 500 records already up-to-date in MBTA_STOPS, no merge needed.
+[2025-04-24T15:55:05.280+0000] {mbta_kafka_consumer.py:280} INFO - 📥 Received 500 records from topic: mbta_facilities
+[2025-04-24T15:55:05.280+0000] {mbta_kafka_consumer.py:258} ERROR - ❌ Error processing topic mbta_facilities: 'NoneType' object has no attribute 'get'
+[2025-04-24T15:55:05.280+0000] {mbta_kafka_consumer.py:280} INFO - 📥 Received 500 records from topic: mbta_schedules
+[2025-04-24T15:55:05.284+0000] {mbta_kafka_consumer.py:62} INFO - 🔍 Sample data for MBTA_SCHEDULES:
+[2025-04-24T15:55:05.285+0000] {mbta_kafka_consumer.py:63} INFO - 
+                  SCHEDULE_ID  ...                 CREATED_AT
+0   schedule-67959825-70105-1  ... 2025-04-24 15:55:05.281076
+1  schedule-67959825-70104-10  ... 2025-04-24 15:55:05.281082
+2  schedule-67959825-70102-20  ... 2025-04-24 15:55:05.281083
+3  schedule-67959825-70100-30  ... 2025-04-24 15:55:05.281084
+4  schedule-67959825-70098-40  ... 2025-04-24 15:55:05.281085
+
+[5 rows x 9 columns]
+[2025-04-24T15:55:05.288+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_SCHEDULES WHERE SCHEDULE_ID IN ('schedule-67959825-70105-1','...]
+[2025-04-24T15:55:05.600+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:05.601+0000] {cursor.py:1205} INFO - Number of results in first chunk: 468
+[2025-04-24T15:55:05.629+0000] {mbta_kafka_consumer.py:112} INFO - 🔁 500 new/updated records out of 500 incoming records (some may be duplicates) for MBTA_SCHEDULES
+[2025-04-24T15:55:05.630+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70105-1', N...]
+[2025-04-24T15:55:07.227+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:07.229+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70104-10', ...]
+[2025-04-24T15:55:08.173+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:08.175+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70102-20', ...]
+[2025-04-24T15:55:09.082+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:09.083+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70100-30', ...]
+[2025-04-24T15:55:09.983+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:09.987+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70098-40', ...]
+[2025-04-24T15:55:12.774+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:12.776+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70096-100',...]
+[2025-04-24T15:55:13.709+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:13.711+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70084-110',...]
+[2025-04-24T15:55:14.490+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:14.501+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70082-120',...]
+[2025-04-24T15:55:15.403+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:15.405+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70080-130',...]
+[2025-04-24T15:55:16.290+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:16.292+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70078-140',...]
+[2025-04-24T15:55:17.079+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:17.081+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70076-150',...]
+[2025-04-24T15:55:18.005+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:18.008+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70074-160',...]
+[2025-04-24T15:55:18.865+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:18.866+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70072-170',...]
+[2025-04-24T15:55:19.666+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:19.670+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70070-180',...]
+[2025-04-24T15:55:20.569+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:20.571+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70068-190',...]
+[2025-04-24T15:55:21.145+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:21.146+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70066-200',...]
+[2025-04-24T15:55:22.051+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:22.051+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70064-210',...]
+[2025-04-24T15:55:24.973+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:24.976+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67959825-70061-220',...]
+[2025-04-24T15:55:25.767+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:25.768+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70061-1', N...]
+[2025-04-24T15:55:27.103+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:27.104+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70063-10', ...]
+[2025-04-24T15:55:27.903+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:27.904+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70065-20', ...]
+[2025-04-24T15:55:28.820+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:28.820+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70067-30', ...]
+[2025-04-24T15:55:32.058+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:32.062+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70069-40', ...]
+[2025-04-24T15:55:32.679+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:32.680+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70071-50', ...]
+[2025-04-24T15:55:34.163+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:34.164+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70073-60', ...]
+[2025-04-24T15:55:35.349+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:35.353+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70075-70', ...]
+[2025-04-24T15:55:36.116+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:36.118+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70077-80', ...]
+[2025-04-24T15:55:36.899+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:36.899+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70079-90', ...]
+[2025-04-24T15:55:37.637+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:37.637+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70081-100',...]
+[2025-04-24T15:55:38.541+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:38.548+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70083-110',...]
+[2025-04-24T15:55:39.335+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:39.336+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70095-120',...]
+[2025-04-24T15:55:39.841+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:39.842+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70097-180',...]
+[2025-04-24T15:55:40.674+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:40.674+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70099-190',...]
+[2025-04-24T15:55:41.391+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:41.392+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70101-200',...]
+[2025-04-24T15:55:42.166+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:42.167+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70103-210',...]
+[2025-04-24T15:55:43.036+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:43.036+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970186-70105-220',...]
+[2025-04-24T15:55:43.852+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:43.853+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70105-1', N...]
+[2025-04-24T15:55:44.634+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:44.635+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70104-10', ...]
+[2025-04-24T15:55:45.151+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:45.152+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70102-20', ...]
+[2025-04-24T15:55:45.996+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:45.997+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70100-30', ...]
+[2025-04-24T15:55:46.888+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:46.889+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70098-40', ...]
+[2025-04-24T15:55:47.660+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:47.661+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70096-100',...]
+[2025-04-24T15:55:48.517+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:48.541+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70084-110',...]
+[2025-04-24T15:55:49.252+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:49.252+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70082-120',...]
+[2025-04-24T15:55:50.121+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:50.122+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70080-130',...]
+[2025-04-24T15:55:50.992+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:50.994+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70078-140',...]
+[2025-04-24T15:55:53.676+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:53.679+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70076-150',...]
+[2025-04-24T15:55:54.730+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:54.732+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70074-160',...]
+[2025-04-24T15:55:55.605+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:55.607+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70072-170',...]
+[2025-04-24T15:55:56.405+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:56.407+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70070-180',...]
+[2025-04-24T15:55:57.302+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:57.303+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70068-190',...]
+[2025-04-24T15:55:58.226+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:58.227+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70066-200',...]
+[2025-04-24T15:55:59.080+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:59.081+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70064-210',...]
+[2025-04-24T15:55:59.914+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:55:59.916+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970187-70061-220',...]
+[2025-04-24T15:56:00.756+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:00.757+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70061-1', N...]
+[2025-04-24T15:56:02.110+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:02.114+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70063-10', ...]
+[2025-04-24T15:56:03.034+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:03.035+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70065-20', ...]
+[2025-04-24T15:56:03.955+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:03.956+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70067-30', ...]
+[2025-04-24T15:56:04.760+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:04.761+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70069-40', ...]
+[2025-04-24T15:56:05.532+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:05.533+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70071-50', ...]
+[2025-04-24T15:56:06.338+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:06.338+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70073-60', ...]
+[2025-04-24T15:56:07.135+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:07.135+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70075-70', ...]
+[2025-04-24T15:56:07.955+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:07.957+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70077-80', ...]
+[2025-04-24T15:56:08.778+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:08.779+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70079-90', ...]
+[2025-04-24T15:56:09.554+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:09.554+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70081-100',...]
+[2025-04-24T15:56:10.509+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:10.509+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70083-110',...]
+[2025-04-24T15:56:11.434+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:11.435+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70095-120',...]
+[2025-04-24T15:56:12.161+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:12.162+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70097-180',...]
+[2025-04-24T15:56:13.032+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:13.033+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70099-190',...]
+[2025-04-24T15:56:13.886+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:13.887+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70101-200',...]
+[2025-04-24T15:56:14.693+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:14.695+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70103-210',...]
+[2025-04-24T15:56:15.702+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:15.702+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970188-70105-220',...]
+[2025-04-24T15:56:16.503+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:16.504+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70105-1', N...]
+[2025-04-24T15:56:17.317+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:17.318+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70104-10', ...]
+[2025-04-24T15:56:18.259+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:18.262+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70102-20', ...]
+[2025-04-24T15:56:19.059+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:19.060+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70100-30', ...]
+[2025-04-24T15:56:19.886+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:19.887+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70098-40', ...]
+[2025-04-24T15:56:20.742+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:20.743+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70096-100',...]
+[2025-04-24T15:56:21.553+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:21.554+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70084-110',...]
+[2025-04-24T15:56:22.428+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:22.428+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70082-120',...]
+[2025-04-24T15:56:23.331+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:23.332+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70080-130',...]
+[2025-04-24T15:56:24.608+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:24.610+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70078-140',...]
+[2025-04-24T15:56:25.421+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:25.422+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70076-150',...]
+[2025-04-24T15:56:26.374+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:26.376+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70074-160',...]
+[2025-04-24T15:56:27.190+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:27.191+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70072-170',...]
+[2025-04-24T15:56:27.985+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:27.986+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70070-180',...]
+[2025-04-24T15:56:28.766+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:28.766+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70068-190',...]
+[2025-04-24T15:56:29.579+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:29.580+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70066-200',...]
+[2025-04-24T15:56:30.396+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:30.509+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70064-210',...]
+[2025-04-24T15:56:31.189+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:31.190+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970189-70061-220',...]
+[2025-04-24T15:56:32.174+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:32.174+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70061-1', N...]
+[2025-04-24T15:56:33.070+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:33.070+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70063-10', ...]
+[2025-04-24T15:56:34.349+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:34.353+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70065-20', ...]
+[2025-04-24T15:56:35.164+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:35.166+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70067-30', ...]
+[2025-04-24T15:56:36.046+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:36.047+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70069-40', ...]
+[2025-04-24T15:56:36.874+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:36.875+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70071-50', ...]
+[2025-04-24T15:56:37.716+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:37.718+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70073-60', ...]
+[2025-04-24T15:56:38.511+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:38.515+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70075-70', ...]
+[2025-04-24T15:56:39.274+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:39.275+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70077-80', ...]
+[2025-04-24T15:56:40.161+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:40.162+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70079-90', ...]
+[2025-04-24T15:56:41.667+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:41.671+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70081-100',...]
+[2025-04-24T15:56:42.446+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:42.447+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70083-110',...]
+[2025-04-24T15:56:43.308+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:43.310+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70095-120',...]
+[2025-04-24T15:56:44.038+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:44.038+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70097-180',...]
+[2025-04-24T15:56:44.842+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:44.844+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70099-190',...]
+[2025-04-24T15:56:45.647+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:45.649+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70101-200',...]
+[2025-04-24T15:56:46.418+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:46.419+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70103-210',...]
+[2025-04-24T15:56:49.229+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:49.229+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970190-70105-220',...]
+[2025-04-24T15:56:50.047+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:50.049+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70105-1', N...]
+[2025-04-24T15:56:51.017+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:51.018+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70104-10', ...]
+[2025-04-24T15:56:51.900+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:51.900+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70102-20', ...]
+[2025-04-24T15:56:52.693+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:52.695+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70100-30', ...]
+[2025-04-24T15:56:53.503+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:53.504+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70098-40', ...]
+[2025-04-24T15:56:54.399+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:54.400+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70096-100',...]
+[2025-04-24T15:56:55.190+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:55.191+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70084-110',...]
+[2025-04-24T15:56:55.991+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:55.992+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70082-120',...]
+[2025-04-24T15:56:56.827+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:56.828+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70080-130',...]
+[2025-04-24T15:56:57.699+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:57.699+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70078-140',...]
+[2025-04-24T15:56:58.511+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:58.512+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70076-150',...]
+[2025-04-24T15:56:59.437+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:56:59.438+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70074-160',...]
+[2025-04-24T15:57:00.239+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:00.241+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70072-170',...]
+[2025-04-24T15:57:01.054+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:01.056+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70070-180',...]
+[2025-04-24T15:57:01.885+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:01.886+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70068-190',...]
+[2025-04-24T15:57:02.747+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:02.749+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70066-200',...]
+[2025-04-24T15:57:03.598+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:03.599+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70064-210',...]
+[2025-04-24T15:57:04.415+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:04.416+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970191-70061-220',...]
+[2025-04-24T15:57:05.399+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:05.400+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70061-1', N...]
+[2025-04-24T15:57:06.266+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:06.267+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70063-10', ...]
+[2025-04-24T15:57:07.083+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:07.088+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70065-20', ...]
+[2025-04-24T15:57:07.835+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:07.836+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70067-30', ...]
+[2025-04-24T15:57:08.668+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:08.668+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70069-40', ...]
+[2025-04-24T15:57:09.494+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:09.496+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70071-50', ...]
+[2025-04-24T15:57:10.325+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:10.325+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70073-60', ...]
+[2025-04-24T15:57:11.294+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:11.294+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70075-70', ...]
+[2025-04-24T15:57:12.085+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:12.086+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70077-80', ...]
+[2025-04-24T15:57:12.932+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:12.934+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70079-90', ...]
+[2025-04-24T15:57:13.682+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:13.682+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70081-100',...]
+[2025-04-24T15:57:14.525+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:14.526+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70083-110',...]
+[2025-04-24T15:57:15.320+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:15.321+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70095-120',...]
+[2025-04-24T15:57:16.138+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:16.139+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70097-180',...]
+[2025-04-24T15:57:17.099+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:17.101+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70099-190',...]
+[2025-04-24T15:57:17.905+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:17.906+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70101-200',...]
+[2025-04-24T15:57:18.758+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:18.759+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70103-210',...]
+[2025-04-24T15:57:19.614+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:19.616+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970192-70105-220',...]
+[2025-04-24T15:57:20.408+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:20.408+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70105-1', N...]
+[2025-04-24T15:57:21.254+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:21.255+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70104-10', ...]
+[2025-04-24T15:57:22.069+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:22.070+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70102-20', ...]
+[2025-04-24T15:57:22.856+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:22.856+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70100-30', ...]
+[2025-04-24T15:57:23.701+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:23.703+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70098-40', ...]
+[2025-04-24T15:57:24.858+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:24.860+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70096-100',...]
+[2025-04-24T15:57:25.702+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:25.703+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70084-110',...]
+[2025-04-24T15:57:26.970+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:26.971+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70082-120',...]
+[2025-04-24T15:57:27.802+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:27.803+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70080-130',...]
+[2025-04-24T15:57:28.685+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:28.687+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70078-140',...]
+[2025-04-24T15:57:29.605+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:29.606+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70076-150',...]
+[2025-04-24T15:57:30.473+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:30.473+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70074-160',...]
+[2025-04-24T15:57:31.456+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:31.456+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70072-170',...]
+[2025-04-24T15:57:32.395+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:32.395+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70070-180',...]
+[2025-04-24T15:57:33.256+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:33.257+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70068-190',...]
+[2025-04-24T15:57:34.125+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:34.125+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70066-200',...]
+[2025-04-24T15:57:34.978+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:34.979+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70064-210',...]
+[2025-04-24T15:57:35.912+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:35.912+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970193-70061-220',...]
+[2025-04-24T15:57:36.780+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:36.781+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70061-1', N...]
+[2025-04-24T15:57:37.781+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:37.782+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70063-10', ...]
+[2025-04-24T15:57:38.786+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:38.787+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70065-20', ...]
+[2025-04-24T15:57:39.718+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:39.719+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70067-30', ...]
+[2025-04-24T15:57:40.701+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:40.702+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70069-40', ...]
+[2025-04-24T15:57:41.506+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:41.507+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70071-50', ...]
+[2025-04-24T15:57:42.354+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:42.355+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70073-60', ...]
+[2025-04-24T15:57:43.171+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:43.171+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70075-70', ...]
+[2025-04-24T15:57:43.908+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:43.909+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70077-80', ...]
+[2025-04-24T15:57:44.771+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:44.773+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70079-90', ...]
+[2025-04-24T15:57:45.698+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:45.700+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70081-100',...]
+[2025-04-24T15:57:46.494+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:46.497+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70083-110',...]
+[2025-04-24T15:57:47.349+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:47.350+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70095-120',...]
+[2025-04-24T15:57:48.203+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:48.205+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70097-180',...]
+[2025-04-24T15:57:49.091+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:49.094+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70099-190',...]
+[2025-04-24T15:57:50.002+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:50.006+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70101-200',...]
+[2025-04-24T15:57:50.822+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:50.824+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70103-210',...]
+[2025-04-24T15:57:51.611+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:51.613+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970194-70105-220',...]
+[2025-04-24T15:57:52.499+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:52.499+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70105-1', N...]
+[2025-04-24T15:57:53.375+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:53.377+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70104-10', ...]
+[2025-04-24T15:57:54.307+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:54.308+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70102-20', ...]
+[2025-04-24T15:57:55.354+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:55.358+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70100-30', ...]
+[2025-04-24T15:57:58.030+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:58.031+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70098-40', ...]
+[2025-04-24T15:57:58.958+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:58.959+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70096-100',...]
+[2025-04-24T15:57:59.849+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:57:59.850+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70084-110',...]
+[2025-04-24T15:58:01.158+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:01.160+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70082-120',...]
+[2025-04-24T15:58:02.328+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:02.444+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70080-130',...]
+[2025-04-24T15:58:03.277+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:03.277+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70078-140',...]
+[2025-04-24T15:58:04.193+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:04.195+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70076-150',...]
+[2025-04-24T15:58:05.014+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:05.016+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70074-160',...]
+[2025-04-24T15:58:06.053+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:06.054+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70072-170',...]
+[2025-04-24T15:58:07.038+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:07.040+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70070-180',...]
+[2025-04-24T15:58:08.119+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:08.120+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70068-190',...]
+[2025-04-24T15:58:09.006+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:09.007+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70066-200',...]
+[2025-04-24T15:58:10.069+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:10.072+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70064-210',...]
+[2025-04-24T15:58:11.044+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:11.044+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970195-70061-220',...]
+[2025-04-24T15:58:12.016+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:12.018+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70061-1', N...]
+[2025-04-24T15:58:13.153+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:13.154+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70063-10', ...]
+[2025-04-24T15:58:14.338+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:14.339+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70065-20', ...]
+[2025-04-24T15:58:15.520+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:15.522+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70067-30', ...]
+[2025-04-24T15:58:16.997+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:17.005+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70069-40', ...]
+[2025-04-24T15:58:17.989+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:17.990+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70071-50', ...]
+[2025-04-24T15:58:19.650+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:19.654+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70073-60', ...]
+[2025-04-24T15:58:21.483+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:21.489+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70075-70', ...]
+[2025-04-24T15:58:22.529+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:22.532+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70077-80', ...]
+[2025-04-24T15:58:23.470+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:23.471+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70079-90', ...]
+[2025-04-24T15:58:25.672+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:25.676+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70081-100',...]
+[2025-04-24T15:58:26.569+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:26.575+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70083-110',...]
+[2025-04-24T15:58:29.980+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:29.982+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70095-120',...]
+[2025-04-24T15:58:31.081+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:31.083+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70097-180',...]
+[2025-04-24T15:58:32.130+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:32.130+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70099-190',...]
+[2025-04-24T15:58:33.003+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-24T15:58:33.003+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_SCHEDULES AS target USING (SELECT 'schedule-67970196-70101-200',...]

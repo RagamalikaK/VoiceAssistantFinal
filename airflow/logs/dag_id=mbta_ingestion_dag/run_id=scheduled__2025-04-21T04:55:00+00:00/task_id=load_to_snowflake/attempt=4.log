@@ -1,0 +1,194 @@
+[2025-04-21T05:17:29.409+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T04:55:00+00:00 [queued]>
+[2025-04-21T05:17:29.435+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T04:55:00+00:00 [queued]>
+[2025-04-21T05:17:29.436+0000] {taskinstance.py:2170} INFO - Starting attempt 4 of 2
+[2025-04-21T05:17:29.472+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_snowflake> on 2025-04-21 04:55:00+00:00
+[2025-04-21T05:17:29.493+0000] {standard_task_runner.py:60} INFO - Started process 214 to run task
+[2025-04-21T05:17:29.502+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_ingestion_dag', 'load_to_snowflake', 'scheduled__2025-04-21T04:55:00+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/mbta_ingestion_dag.py', '--cfg-path', '/tmp/tmpfgjwsvk0']
+[2025-04-21T05:17:29.511+0000] {standard_task_runner.py:88} INFO - Job 53: Subtask load_to_snowflake
+[2025-04-21T05:17:29.556+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.9/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-04-21T05:17:29.631+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T04:55:00+00:00 [running]> on host 475a22d1a86e
+[2025-04-21T05:17:29.826+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_ingestion_dag' AIRFLOW_CTX_TASK_ID='load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-04-21T04:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-21T04:55:00+00:00'
+[2025-04-21T05:17:29.831+0000] {mbta_ingestion_dag.py:35} INFO - 🚀 Launching Kafka consumer to process and load data into Snowflake...
+[2025-04-21T05:17:29.833+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-21T05:17:29.837+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-21T05:17:30.622+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-21T05:17:30.623+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-21T05:17:30.633+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-21T05:17:30.643+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2025-04-21T05:17:30.644+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-21T05:17:30.646+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-21T05:17:30.648+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-21T05:17:30.665+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_vehicles', 0), ('mbta_routes', 0), ('mbta_predictions', 0), ('mbta_stops', 0), ('mbta_alerts', 0)]
+[2025-04-21T05:17:30.673+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-21T05:17:30.681+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-21T05:17:30.681+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2025-04-21T05:17:32.840+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 104 records from topic: mbta_alerts
+[2025-04-21T05:17:37.925+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ALERTS:
+[2025-04-21T05:17:37.928+0000] {mbta_kafka_consumer.py:57} INFO - 
+  ALERT_ID  ...                 CREATED_AT
+0   638240  ...  2025-04-16T10:52:04-04:00
+1   638657  ...  2025-04-18T10:54:16-04:00
+2   435698  ...  2022-03-15T10:13:31-04:00
+3   634497  ...  2025-03-27T14:21:07-04:00
+4   634495  ...  2025-03-27T14:18:44-04:00
+
+[5 rows x 6 columns]
+[2025-04-21T05:17:37.956+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ALERTS WHERE ALERT_ID IN ('638240','638657','435698','634497'...]
+[2025-04-21T05:17:38.179+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:38.186+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-21T05:17:38.896+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 104 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ALERTS
+[2025-04-21T05:17:38.897+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 104 records already up-to-date in MBTA_ALERTS, no merge needed.
+[2025-04-21T05:17:38.898+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 103 records from topic: mbta_alerts
+[2025-04-21T05:17:38.900+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ALERTS:
+[2025-04-21T05:17:38.901+0000] {mbta_kafka_consumer.py:57} INFO - 
+  ALERT_ID  ...                 CREATED_AT
+0   638240  ...  2025-04-16T10:52:04-04:00
+1   638657  ...  2025-04-18T10:54:16-04:00
+2   435698  ...  2022-03-15T10:13:31-04:00
+3   634497  ...  2025-03-27T14:21:07-04:00
+4   634495  ...  2025-03-27T14:18:44-04:00
+
+[5 rows x 6 columns]
+[2025-04-21T05:17:38.913+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ALERTS WHERE ALERT_ID IN ('638240','638657','435698','634497'...]
+[2025-04-21T05:17:39.063+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:39.064+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-21T05:17:39.217+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 103 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ALERTS
+[2025-04-21T05:17:39.218+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 103 records already up-to-date in MBTA_ALERTS, no merge needed.
+[2025-04-21T05:17:39.218+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 103 records from topic: mbta_alerts
+[2025-04-21T05:17:39.224+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ALERTS:
+[2025-04-21T05:17:39.232+0000] {mbta_kafka_consumer.py:57} INFO - 
+  ALERT_ID  ...                 CREATED_AT
+0   638240  ...  2025-04-16T10:52:04-04:00
+1   638657  ...  2025-04-18T10:54:16-04:00
+2   435698  ...  2022-03-15T10:13:31-04:00
+3   634497  ...  2025-03-27T14:21:07-04:00
+4   634495  ...  2025-03-27T14:18:44-04:00
+
+[5 rows x 6 columns]
+[2025-04-21T05:17:39.239+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ALERTS WHERE ALERT_ID IN ('638240','638657','435698','634497'...]
+[2025-04-21T05:17:39.398+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:39.400+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-21T05:17:39.551+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 103 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ALERTS
+[2025-04-21T05:17:39.552+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 103 records already up-to-date in MBTA_ALERTS, no merge needed.
+[2025-04-21T05:17:39.553+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 218 records from topic: mbta_vehicles
+[2025-04-21T05:17:39.562+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_VEHICLES:
+[2025-04-21T05:17:39.562+0000] {mbta_kafka_consumer.py:57} INFO - 
+  VEHICLE_ID         ROUTE_ID  ...         STATUS                 CREATED_AT
+0    G-10062          Green-B  ...    INCOMING_AT 2025-04-21 05:17:39.554627
+1       1832    CR-Providence  ...  IN_TRANSIT_TO 2025-04-21 05:17:39.554645
+2      y3136               93  ...  IN_TRANSIT_TO 2025-04-21 05:17:39.554652
+3      y1619              34E  ...  IN_TRANSIT_TO 2025-04-21 05:17:39.554654
+4      y1709  Shuttle-Generic  ...  IN_TRANSIT_TO 2025-04-21 05:17:39.554664
+
+[5 rows x 8 columns]
+[2025-04-21T05:17:39.575+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_VEHICLES WHERE VEHICLE_ID IN ('G-10062','1832','y3136','y1619...]
+[2025-04-21T05:17:39.819+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:39.820+0000] {cursor.py:1205} INFO - Number of results in first chunk: 234
+[2025-04-21T05:17:39.842+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 22 new/updated records out of 218 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_VEHICLES
+[2025-04-21T05:17:39.842+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1680', '34E', 42.26075714, -7...]
+[2025-04-21T05:17:41.061+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:41.064+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'B-54829F7A', 'Blue', 42.41352,...]
+[2025-04-21T05:17:42.743+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:42.747+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1312', '743', 42.34659145, -7...]
+[2025-04-21T05:17:44.795+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:44.798+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y2090', '78', 42.40402149, -71...]
+[2025-04-21T05:17:46.988+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:46.992+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1721', '15', 42.30635876, -71...]
+[2025-04-21T05:17:49.170+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:49.184+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y2116', '109', 42.3792438, -71...]
+[2025-04-21T05:17:52.216+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:52.300+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1987', '77', 42.40057302, -71...]
+[2025-04-21T05:17:53.688+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:53.703+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'G-10046', 'Green-E', 42.40839,...]
+[2025-04-21T05:17:56.057+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:56.072+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1331', '741', 42.36934575, -7...]
+[2025-04-21T05:17:58.519+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:17:58.524+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1943', '73', 42.37506287, -71...]
+[2025-04-21T05:18:01.192+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:01.195+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1329', '741', 42.3468387, -71...]
+[2025-04-21T05:18:03.758+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:03.760+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1814', '23', 42.32900689, -71...]
+[2025-04-21T05:18:06.114+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:06.115+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'O-5482961B', 'Orange', 42.3167...]
+[2025-04-21T05:18:08.780+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:08.783+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'O-54829630', 'Orange', 42.3012...]
+[2025-04-21T05:18:11.067+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:11.071+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1861', '66', 42.32917, -71.08...]
+[2025-04-21T05:18:13.266+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:13.267+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'G-10014', 'Mattapan', 42.274, ...]
+[2025-04-21T05:18:15.642+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:15.647+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y3305', '116', 42.41371, -70.9...]
+[2025-04-21T05:18:18.615+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:18.624+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y3122', '69', 42.373445779, -7...]
+[2025-04-21T05:18:22.246+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:22.247+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1291', '749', 42.329695059, -...]
+[2025-04-21T05:18:26.622+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:26.632+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y3115', '71', 42.37311651, -71...]
+[2025-04-21T05:18:30.277+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:30.279+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'G-10065', 'Green-B', 42.34567,...]
+[2025-04-21T05:18:34.081+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:34.085+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT '1866', 'CR-NewBedford', 42.205...]
+[2025-04-21T05:18:37.793+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:37.798+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T05:18:37.932+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:37.932+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T05:18:37.933+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 22 new/changed records into Snowflake table: MBTA_VEHICLES in 58.36 seconds
+[2025-04-21T05:18:37.938+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 165 records from topic: mbta_vehicles
+[2025-04-21T05:18:37.961+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_VEHICLES:
+[2025-04-21T05:18:37.962+0000] {mbta_kafka_consumer.py:57} INFO - 
+   VEHICLE_ID ROUTE_ID  ...         STATUS                 CREATED_AT
+0       y1619      34E  ...     STOPPED_AT 2025-04-21 05:18:37.938559
+1     G-10223  Green-B  ...     STOPPED_AT 2025-04-21 05:18:37.938786
+2  R-54829A82      Red  ...  IN_TRANSIT_TO 2025-04-21 05:18:37.938789
+3       y1874        1  ...  IN_TRANSIT_TO 2025-04-21 05:18:37.938791
+4       y1202       39  ...  IN_TRANSIT_TO 2025-04-21 05:18:37.938804
+
+[5 rows x 8 columns]
+[2025-04-21T05:18:37.971+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_VEHICLES WHERE VEHICLE_ID IN ('y1619','G-10223','R-54829A82',...]
+[2025-04-21T05:18:38.161+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:38.162+0000] {cursor.py:1205} INFO - Number of results in first chunk: 165
+[2025-04-21T05:18:38.176+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 158 new/updated records out of 165 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_VEHICLES
+[2025-04-21T05:18:38.176+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1619', '34E', 42.261534269, -...]
+[2025-04-21T05:18:42.101+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:42.107+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'G-10223', 'Green-B', 42.35065,...]
+[2025-04-21T05:18:46.803+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:46.808+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'R-54829A82', 'Red', 42.21293, ...]
+[2025-04-21T05:18:50.321+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:50.322+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1874', '1', 42.36439512, -71....]
+[2025-04-21T05:18:54.348+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:54.350+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1202', '39', 42.34738225, -71...]
+[2025-04-21T05:18:58.921+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:18:59.252+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1680', '31', 42.2675, -71.091...]
+[2025-04-21T05:19:03.000+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:03.015+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'B-54829F7A', 'Blue', 42.35905,...]
+[2025-04-21T05:19:06.480+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:07.084+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1312', '743', 42.348468029, -...]
+[2025-04-21T05:19:10.551+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:10.563+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y2090', '78', 42.38223552, -71...]
+[2025-04-21T05:19:14.452+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:14.455+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1721', '15', 42.3374938, -71....]
+[2025-04-21T05:19:18.216+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:18.219+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y2116', '109', 42.37926, -71.0...]
+[2025-04-21T05:19:22.102+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:22.105+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1987', '77', 42.39143828, -71...]
+[2025-04-21T05:19:22.443+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-21T05:19:22.731+0000] {process_utils.py:131} INFO - Sending 15 to group 214. PIDs of all processes in the group: [214]
+[2025-04-21T05:19:22.750+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 214
+[2025-04-21T05:19:22.781+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-21T05:19:22.871+0000] {mbta_kafka_consumer.py:212} ERROR - ❌ Error processing topic mbta_vehicles: Task received SIGTERM signal
+[2025-04-21T05:19:22.925+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 165 records from topic: mbta_vehicles
+[2025-04-21T05:19:23.078+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_VEHICLES:
+[2025-04-21T05:19:23.098+0000] {mbta_kafka_consumer.py:57} INFO - 
+   VEHICLE_ID ROUTE_ID  ...         STATUS                 CREATED_AT
+0       y1619      34E  ...     STOPPED_AT 2025-04-21 05:19:22.927655
+1     G-10223  Green-B  ...    INCOMING_AT 2025-04-21 05:19:22.927719
+2  R-54829A82      Red  ...  IN_TRANSIT_TO 2025-04-21 05:19:22.927725
+3       y1874        1  ...  IN_TRANSIT_TO 2025-04-21 05:19:22.927728
+4       y1202       39  ...  IN_TRANSIT_TO 2025-04-21 05:19:22.927748
+
+[5 rows x 8 columns]
+[2025-04-21T05:19:23.266+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_VEHICLES WHERE VEHICLE_ID IN ('y1619','G-10223','R-54829A82',...]
+[2025-04-21T05:19:24.172+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T05:19:24.184+0000] {cursor.py:1205} INFO - Number of results in first chunk: 165
+[2025-04-21T05:19:24.312+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 156 new/updated records out of 165 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_VEHICLES
+[2025-04-21T05:19:24.314+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y1619', '34E', 42.26281996, -7...]

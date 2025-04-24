@@ -1,0 +1,725 @@
+[2025-04-18T01:00:02.351+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-18T01:00:02.359+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-18T01:00:02.359+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-18T01:00:02.366+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-18 00:00:00+00:00
+[2025-04-18T01:00:02.374+0000] {standard_task_runner.py:60} INFO - Started process 4853 to run task
+[2025-04-18T01:00:02.379+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-18T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpqtzo6tgb']
+[2025-04-18T01:00:02.385+0000] {standard_task_runner.py:88} INFO - Job 22: Subtask run_kafka_consumer
+[2025-04-18T01:00:02.519+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [running]> on host 4c52e6b69c7a
+[2025-04-18T01:00:02.638+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-18T00:00:00+00:00'
+[2025-04-18T01:00:02.642+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-18T01:00:02.646+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-18T01:00:03.557+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-18T01:00:03.560+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-18T01:00:03.567+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T01:00:03.606+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 9092)]>: Broker version identified as 2.6
+[2025-04-18T01:00:03.607+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-18T01:00:03.611+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-18T01:00:03.612+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-18T01:00:03.622+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_predictions', 0), ('mbta_vehicles', 0), ('mbta_stops', 0)]
+[2025-04-18T01:00:03.625+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T01:00:03.625+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-18T01:00:03.625+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-18T01:00:35.487+0000] {conn.py:1153} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: socket disconnected
+[2025-04-18T01:00:35.519+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: socket disconnected
+[2025-04-18T01:00:35.522+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:35.524+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: KafkaConnectionError: socket disconnected
+[2025-04-18T01:00:35.530+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:35.551+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T01:00:35.559+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-04-18T01:00:35.563+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-04-18T01:00:35.569+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:35.625+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:35.628+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T01:00:35.638+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-04-18T01:00:35.647+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-04-18T01:00:35.653+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:35.856+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:35.858+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T01:00:35.858+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-04-18T01:00:35.859+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-04-18T01:00:35.859+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:36.318+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:36.353+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:36.354+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:36.356+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:36.357+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:37.039+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:37.044+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:37.045+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:37.045+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:37.045+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:38.584+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:38.593+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:38.593+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:38.593+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:38.594+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:41.607+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:41.622+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:41.622+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:41.623+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:41.624+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:47.335+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:47.345+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:47.346+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:47.346+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:47.347+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:00:59.300+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:00:59.312+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:00:59.313+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:00:59.313+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:00:59.314+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:01:28.609+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:01:28.625+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:01:28.625+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:01:28.626+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:01:28.626+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:02:01.893+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:02:01.909+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:02:01.909+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:02:01.910+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:02:01.911+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:02:35.000+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:02:35.015+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:02:35.015+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:02:35.016+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:02:35.017+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:03:10.748+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:03:10.786+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:03:10.786+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:03:10.787+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:03:10.788+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:03:35.390+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:03:35.412+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:03:35.413+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:03:35.414+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:03:35.415+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:04:02.836+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:04:02.848+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:04:02.849+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:04:02.850+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:04:02.850+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:04:38.394+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:04:38.403+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:04:38.403+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:04:38.404+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:04:38.404+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:05:07.674+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:05:07.687+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:05:07.688+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:05:07.688+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:05:07.689+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:05:36.825+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:05:36.844+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:05:36.845+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:05:36.845+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:05:36.847+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:06:08.199+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:06:08.212+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:06:08.213+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:06:08.214+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:06:08.214+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:06:41.399+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:06:41.410+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:06:41.411+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:06:41.411+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:06:41.412+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:07:14.561+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:07:14.591+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:07:14.593+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:07:14.595+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:07:14.596+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:07:41.569+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:07:41.592+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:07:41.592+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:07:41.593+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:07:41.594+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:08:08.006+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:08:08.019+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:08:08.020+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:08:08.020+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:08:08.021+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:08:41.312+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:08:41.333+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:08:41.334+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:08:41.335+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:08:41.336+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:09:15.022+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:09:15.049+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:09:15.051+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:09:15.053+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:09:15.057+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:09:45.520+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:09:45.536+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:09:45.537+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:09:45.537+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:09:45.538+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:10:21.149+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:10:21.171+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:10:21.172+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:10:21.173+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:10:21.173+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:10:55.891+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:10:55.911+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:10:55.912+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:10:55.913+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:10:55.913+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:11:30.131+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:11:30.147+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:11:30.148+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:11:30.148+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:11:30.149+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:12:01.548+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:12:01.557+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:12:01.557+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:12:01.558+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:12:01.559+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:12:37.264+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:12:37.290+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:12:37.290+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:12:37.291+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:12:37.291+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:13:05.913+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:13:05.932+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:13:05.932+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:13:05.933+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:13:05.935+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:13:32.645+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:13:32.654+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:13:32.654+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:13:32.655+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:13:32.656+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:14:07.022+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:14:07.039+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:14:07.040+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:14:07.041+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:14:07.041+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:14:35.175+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:14:35.210+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:14:35.211+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:14:35.212+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:14:35.213+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:15:06.475+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:15:06.493+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:15:06.494+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:15:06.496+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:15:06.497+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:15:41.344+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:15:41.356+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:15:41.357+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:15:41.357+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:15:41.358+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:16:10.780+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:16:10.802+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:16:10.803+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:16:10.804+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:16:10.805+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:16:46.517+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:16:46.531+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:16:46.532+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:16:46.532+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:16:46.533+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:17:21.233+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:17:21.251+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:17:21.252+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:17:21.253+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:17:21.255+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:17:55.218+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:17:55.227+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:17:55.228+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:17:55.228+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:17:55.229+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:18:24.309+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:18:24.327+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:18:24.328+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:18:24.328+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:18:24.329+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:18:49.855+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:18:49.862+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:18:49.862+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:18:49.863+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:18:49.863+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:19:18.104+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:19:18.114+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:19:18.115+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:19:18.116+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:19:18.117+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:19:52.695+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:19:52.719+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:19:52.720+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:19:52.722+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:19:52.723+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:20:23.883+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:20:23.896+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:20:23.897+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:20:23.898+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:20:23.899+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:20:50.013+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:20:50.035+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:20:50.036+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:20:50.037+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:20:50.038+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:21:14.343+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:21:14.351+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:21:14.352+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:21:14.352+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:21:14.353+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:21:44.612+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:21:44.636+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:21:44.637+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:21:44.638+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:21:44.639+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:22:15.999+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:22:16.015+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:22:16.016+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:22:16.017+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:22:16.018+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:22:42.344+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:22:42.354+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:22:42.355+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:22:42.356+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:22:42.357+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:23:15.370+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:23:15.390+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:23:15.391+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:23:15.392+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:23:15.393+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:23:48.624+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:23:48.638+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:23:48.639+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:23:48.640+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:23:48.640+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:24:17.871+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:24:17.899+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:24:17.900+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:24:17.900+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:24:17.901+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:24:53.123+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:24:53.133+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:24:53.133+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:24:53.134+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:24:53.135+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:25:23.386+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:25:23.400+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:25:23.401+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:25:23.402+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:25:23.403+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:25:55.377+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:25:55.389+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:25:55.389+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:25:55.390+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:25:55.391+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:26:23.531+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:26:23.547+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:26:23.548+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:26:23.549+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:26:23.550+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:26:54.698+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:26:54.708+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:26:54.708+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:26:54.709+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:26:54.712+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:27:26.425+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:27:26.441+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:27:26.441+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:27:26.443+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:27:26.444+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:28:01.824+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:28:01.839+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:28:01.840+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:28:01.840+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:28:01.841+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:28:28.504+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:28:28.515+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:28:28.515+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:28:28.516+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:28:28.517+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:28:59.088+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:28:59.102+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:28:59.103+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:28:59.103+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:28:59.104+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:29:26.564+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:29:26.576+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:29:26.576+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:29:26.577+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:29:26.578+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:29:54.702+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:29:54.710+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:29:54.710+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:29:54.711+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:29:54.711+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:30:19.301+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:30:19.315+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:30:19.315+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:30:19.315+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:30:19.316+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:30:54.476+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:30:54.489+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:30:54.489+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:30:54.490+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:30:54.490+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:31:26.886+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:31:26.892+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:31:26.893+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:31:26.893+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:31:26.893+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:31:53.790+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:31:53.803+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:31:53.804+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:31:53.805+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:31:53.806+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:32:26.544+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:32:26.558+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:32:26.558+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:32:26.559+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:32:26.560+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:32:55.330+0000] {fetcher.py:735} ERROR - Fetch to node 1 failed: NodeNotReadyError: 1
+[2025-04-18T01:32:55.342+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-18T01:32:55.343+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-18T01:32:55.343+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-18T01:32:55.344+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-18T01:33:00.987+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-18T01:33:01.281+0000] {process_utils.py:131} INFO - Sending 15 to group 4853. PIDs of all processes in the group: [4853]
+[2025-04-18T01:33:01.288+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 4853
+[2025-04-18T01:33:01.307+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-18T01:33:01.356+0000] {connection.py:718} INFO - closed
+[2025-04-18T01:33:03.196+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-18T01:33:03.374+0000] {mbta_kafka_consumer.py:239} INFO - ✅ Snowflake Connection Closed.
+[2025-04-18T01:33:03.508+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/mbta_kafka_consumer.py", line 229, in consume_messages
+    for message in consumer:
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1188, in __next__
+    return next(self._iterator)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1160, in _message_generator_v2
+    record_map = self.poll(timeout_ms=timeout_ms, update_offsets=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 693, in poll
+    records = self._poll_once(inner_timeout_ms(), max_records, update_offsets=update_offsets)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 736, in _poll_once
+    self._client.poll(timeout_ms=inner_timeout_ms(self._coordinator.time_to_next_poll() * 1000))
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 684, in poll
+    self._poll(timeout / 1000)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 727, in _poll
+    ready = self._selector.select(timeout)
+  File "/usr/local/lib/python3.9/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-04-18T01:33:03.551+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mbta_kafka_consumer_dag, task_id=run_kafka_consumer, execution_date=20250418T000000, start_date=20250418T010002, end_date=20250418T013303
+[2025-04-18T01:33:03.634+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 22 for task run_kafka_consumer (Task received SIGTERM signal; 4853)
+[2025-04-18T01:33:03.726+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=4853, status='terminated', exitcode=1, started='01:00:01') (4853) terminated with exit code 1
+[2025-04-18T01:33:03.756+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2025-04-18T01:33:03.963+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-18T01:47:07.673+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-18T01:47:07.678+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [queued]>
+[2025-04-18T01:47:07.679+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-18T01:47:07.686+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-18 00:00:00+00:00
+[2025-04-18T01:47:07.693+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-18T00:00:00+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpp_kxi6t9']
+[2025-04-18T01:47:07.696+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask run_kafka_consumer
+[2025-04-18T01:47:07.692+0000] {standard_task_runner.py:60} INFO - Started process 292 to run task
+[2025-04-18T01:47:07.823+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T00:00:00+00:00 [running]> on host 62d421885c4a
+[2025-04-18T01:47:07.911+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-18T00:00:00+00:00'
+[2025-04-18T01:47:07.913+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-18T01:47:07.914+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-18T01:47:08.575+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-18T01:47:08.576+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-18T01:47:08.582+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-18T01:47:08.608+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2025-04-18T01:47:08.608+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-18T01:47:08.610+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-18T01:47:08.611+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-18T01:47:08.621+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_vehicles', 0), ('mbta_predictions', 0), ('mbta_stops', 0)]
+[2025-04-18T01:47:08.622+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-18T01:47:08.623+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-18T01:47:08.623+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2025-04-18T01:56:47.108+0000] {mbta_kafka_consumer.py:232} INFO - 📥 Received 120 records from topic: mbta_alerts
+[2025-04-18T01:56:47.293+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ALERTS:
+[2025-04-18T01:56:47.294+0000] {mbta_kafka_consumer.py:57} INFO - 
+  ALERT_ID  ...                 CREATED_AT
+0   638240  ...  2025-04-16T10:52:04-04:00
+1   435698  ...  2022-03-15T10:13:31-04:00
+2   634497  ...  2025-03-27T14:21:07-04:00
+3   634495  ...  2025-03-27T14:18:44-04:00
+4   416078  ...  2021-11-04T15:14:54-04:00
+
+[5 rows x 6 columns]
+[2025-04-18T01:56:47.422+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ALERTS WHERE ALERT_ID IN ('638240','435698','634497','634495'...]
+[2025-04-18T01:56:48.894+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:48.909+0000] {cursor.py:1205} INFO - Number of results in first chunk: 256
+[2025-04-18T01:56:49.709+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 562 new/updated records out of 120 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ALERTS
+[2025-04-18T01:56:49.717+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638240', 'Orange Line: Shuttle b...]
+[2025-04-18T01:56:51.109+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:51.115+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:53.549+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:53.550+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:56.365+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:56.369+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:59.033+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:59.034+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:01.529+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:01.531+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:04.053+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:04.055+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:06.651+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:06.657+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:09.169+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:09.176+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:12.256+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:12.257+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:15.114+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:15.118+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:17.642+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:17.644+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:19.902+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:19.905+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:22.560+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:22.562+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:24.982+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:24.991+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:27.450+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:27.466+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:29.823+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:29.829+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:32.307+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:32.310+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:34.776+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:34.778+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:37.563+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:37.564+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '634497', 'On Saturday, April 5th...]
+[2025-04-18T01:57:39.953+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:39.958+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '634495', 'On Saturday, April 5th...]
+[2025-04-18T01:57:42.762+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:42.764+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:45.307+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:45.310+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:47.790+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:47.791+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:50.241+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:50.243+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:52.766+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:52.768+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:55.171+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:55.172+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:57.656+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:57.662+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:00.332+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:00.332+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:02.690+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:02.690+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:05.142+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:05.144+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:07.712+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:07.713+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:10.333+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:10.338+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:12.849+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:12.854+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:15.307+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:15.308+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:18.089+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:18.091+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:20.300+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:20.303+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:22.778+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:22.780+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:25.631+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:25.633+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:28.070+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:28.076+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637996', 'Route 52 service will ...]
+[2025-04-18T01:58:31.097+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:31.098+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637987', 'Route 66 will be rerou...]
+[2025-04-18T01:58:34.241+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:34.248+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638452', 'Route 44 is experienci...]
+[2025-04-18T01:58:36.851+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:36.857+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '636938', 'Due to Boston Marathon...]
+[2025-04-18T01:58:39.437+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:39.449+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '633908', 'From March 24 to June ...]
+[2025-04-18T01:58:41.860+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:41.863+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637986', 'Route 504 will be rero...]
+[2025-04-18T01:58:44.356+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:44.361+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:47.204+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:47.211+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:49.926+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:49.929+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:52.500+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:52.501+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:55.076+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:55.078+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:57.574+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:57.577+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:00.074+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:00.076+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:02.698+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:02.702+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:05.418+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:05.423+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:08.149+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:08.161+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:11.065+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:11.070+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:14.011+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:14.014+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:16.392+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:16.393+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:18.901+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:18.906+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:21.538+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:21.544+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:24.360+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:24.366+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:27.084+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:27.089+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:29.673+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:29.675+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:32.230+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:32.230+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637983', 'Route 62 and 76 detour...]
+[2025-04-18T01:59:34.905+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:34.909+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637989', 'Route 59 will be rerou...]
+[2025-04-18T01:59:37.920+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:37.923+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:40.817+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:40.822+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:43.218+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:43.218+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:45.970+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:45.976+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:48.321+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:48.324+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:50.919+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:50.924+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:53.543+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:53.548+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:56.012+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:56.014+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:58.553+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:58.556+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:01.570+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:01.571+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:04.298+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:04.303+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:06.935+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:06.939+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:09.615+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:09.618+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:12.196+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:12.201+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:16.017+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:16.021+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:18.609+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:18.622+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:21.441+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:21.449+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:24.055+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:24.059+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:27.252+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:27.314+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638576', 'Route 77 is experienci...]
+[2025-04-18T02:00:30.494+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:30.499+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637998', 'Route 47 will be rerou...]
+[2025-04-18T02:00:33.375+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:33.380+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638540', 'Route 23 is experienci...]
+[2025-04-18T02:00:36.447+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:36.451+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '633776', 'Long Wharf South is cl...]
+[2025-04-18T02:00:39.126+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:39.136+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:41.987+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:41.988+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:44.824+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:44.830+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:47.687+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:47.692+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:50.220+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:50.225+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:53.574+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:53.580+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:56.468+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:56.470+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:59.103+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:59.105+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:01.839+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:01.843+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:04.719+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:04.881+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:07.529+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:07.531+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:10.693+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:10.697+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:13.421+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:13.423+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:16.002+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:16.004+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:18.635+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:18.643+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:21.580+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:21.587+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:24.877+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:24.885+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:27.838+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:27.842+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:30.485+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:30.490+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637949', 'Park Street Escalator ...]
+[2025-04-18T02:01:33.141+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:33.147+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638604', 'Route 62 is experienci...]
+[2025-04-18T02:01:36.025+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:36.028+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637835', 'Due to the 250th anniv...]
+[2025-04-18T02:01:39.736+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:39.740+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:43.039+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:43.043+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:45.984+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:45.989+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:48.684+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:48.687+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:51.101+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:51.108+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:54.165+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:54.175+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:56.941+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:56.945+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:00.944+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:00.952+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:03.510+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:03.525+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:05.975+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:05.986+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:08.923+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:08.932+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:11.960+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:11.964+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:14.504+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:14.506+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:17.282+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:17.299+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:20.255+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:20.259+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:22.953+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:22.963+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:24.173+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-18T02:02:24.238+0000] {process_utils.py:131} INFO - Sending 15 to group 292. PIDs of all processes in the group: [292]
+[2025-04-18T02:02:24.244+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 292
+[2025-04-18T02:02:24.261+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-18T02:02:24.332+0000] {mbta_kafka_consumer.py:212} ERROR - ❌ Error processing topic mbta_alerts: Task received SIGTERM signal
+[2025-04-18T02:02:32.666+0000] {mbta_kafka_consumer.py:232} INFO - 📥 Received 354 records from topic: mbta_vehicles
+[2025-04-18T02:02:32.714+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_VEHICLES:
+[2025-04-18T02:02:32.715+0000] {mbta_kafka_consumer.py:57} INFO - 
+   VEHICLE_ID ROUTE_ID  ...         STATUS                 CREATED_AT
+0     dLF 958      714  ...  IN_TRANSIT_TO 2025-04-18 02:02:32.670436
+1  O-5482910A   Orange  ...     STOPPED_AT 2025-04-18 02:02:32.670475
+2       y2078      137  ...     STOPPED_AT 2025-04-18 02:02:32.670491
+3       y3258       11  ...     STOPPED_AT 2025-04-18 02:02:32.670502
+4       y0832      240  ...     STOPPED_AT 2025-04-18 02:02:32.670505
+
+[5 rows x 8 columns]
+[2025-04-18T02:02:32.743+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_VEHICLES WHERE VEHICLE_ID IN ('dLF 958','O-5482910A','y2078',...]
+[2025-04-18T02:02:33.456+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:33.478+0000] {cursor.py:1205} INFO - Number of results in first chunk: 227
+[2025-04-18T02:02:33.640+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 386 new/updated records out of 354 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_VEHICLES
+[2025-04-18T02:02:33.651+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'dLF 958', '714', 42.265598249,...]

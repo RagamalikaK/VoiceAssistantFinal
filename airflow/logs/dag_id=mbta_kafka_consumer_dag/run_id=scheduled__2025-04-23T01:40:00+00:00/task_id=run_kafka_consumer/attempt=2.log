@@ -1,0 +1,22 @@
+[2025-04-23T01:59:25.665+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T01:40:00+00:00 [queued]>
+[2025-04-23T01:59:25.672+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T01:40:00+00:00 [queued]>
+[2025-04-23T01:59:25.673+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-04-23T01:59:25.689+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-23 01:40:00+00:00
+[2025-04-23T01:59:25.693+0000] {standard_task_runner.py:60} INFO - Started process 194 to run task
+[2025-04-23T01:59:25.702+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-23T01:40:00+00:00', '--job-id', '332', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpqm4x8ud6']
+[2025-04-23T01:59:25.705+0000] {standard_task_runner.py:88} INFO - Job 332: Subtask run_kafka_consumer
+[2025-04-23T01:59:25.792+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T01:40:00+00:00 [running]> on host f6fee51db313
+[2025-04-23T01:59:26.029+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T01:40:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-23T01:40:00+00:00'
+[2025-04-23T01:59:26.031+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-23T01:59:26.032+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-23T01:59:26.833+0000] {mbta_kafka_consumer.py:330} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-23T01:59:26.835+0000] {mbta_kafka_consumer.py:429} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-23T01:59:26.841+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-23T01:59:26.867+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2025-04-23T01:59:26.867+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-23T01:59:26.869+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-23T01:59:26.869+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions', 'mbta_schedules', 'mbta_lines', 'mbta_facilities')
+[2025-04-23T01:59:26.894+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_schedules', 0), ('mbta_facilities', 0), ('mbta_predictions', 0), ('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_vehicles', 0), ('mbta_stops', 0), ('mbta_lines', 0)]
+[2025-04-23T01:59:26.896+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-23T01:59:26.897+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-23T01:59:26.897+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 

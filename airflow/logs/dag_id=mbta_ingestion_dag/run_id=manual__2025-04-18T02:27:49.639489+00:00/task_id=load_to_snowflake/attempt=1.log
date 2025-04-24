@@ -1,0 +1,66 @@
+[2025-04-18T02:27:53.614+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake manual__2025-04-18T02:27:49.639489+00:00 [queued]>
+[2025-04-18T02:27:53.620+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake manual__2025-04-18T02:27:49.639489+00:00 [queued]>
+[2025-04-18T02:27:53.620+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-18T02:27:53.628+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_snowflake> on 2025-04-18 02:27:49.639489+00:00
+[2025-04-18T02:27:53.634+0000] {standard_task_runner.py:60} INFO - Started process 279 to run task
+[2025-04-18T02:27:53.639+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_ingestion_dag', 'load_to_snowflake', 'manual__2025-04-18T02:27:49.639489+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/mbta_ingestion_dag.py', '--cfg-path', '/tmp/tmp2_7flu4n']
+[2025-04-18T02:27:53.647+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask load_to_snowflake
+[2025-04-18T02:27:53.787+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_ingestion_dag.load_to_snowflake manual__2025-04-18T02:27:49.639489+00:00 [running]> on host 7188a92ca6fd
+[2025-04-18T02:27:53.880+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_ingestion_dag' AIRFLOW_CTX_TASK_ID='load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T02:27:49.639489+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T02:27:49.639489+00:00'
+[2025-04-18T02:27:53.883+0000] {mbta_ingestion_dag.py:35} INFO - 🚀 Launching Kafka consumer to process and load data into Snowflake...
+[2025-04-18T02:27:53.884+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-18T02:27:53.887+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-18T02:27:54.497+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-18T02:27:54.498+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-18T02:27:54.502+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T02:27:54.506+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 9092)]>: Broker version identified as 2.6
+[2025-04-18T02:27:54.506+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-18T02:27:54.508+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-18T02:27:54.508+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-18T02:27:54.510+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_vehicles', 0), ('mbta_stops', 0), ('mbta_routes', 0), ('mbta_predictions', 0), ('mbta_alerts', 0)]
+[2025-04-18T02:27:54.510+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-18T02:27:54.511+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-18T02:27:54.511+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-18T02:38:47.872+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-18T02:38:48.127+0000] {process_utils.py:131} INFO - Sending 15 to group 279. PIDs of all processes in the group: [279]
+[2025-04-18T02:38:48.153+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 279
+[2025-04-18T02:38:48.273+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-18T02:38:48.377+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-18T02:38:48.397+0000] {fetcher.py:735} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>
+[2025-04-18T02:38:48.417+0000] {connection.py:718} INFO - closed
+[2025-04-18T02:38:49.739+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-18T02:38:49.875+0000] {mbta_kafka_consumer.py:239} INFO - ✅ Snowflake Connection Closed.
+[2025-04-18T02:38:50.019+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/mbta_ingestion_dag.py", line 36, in load_to_snowflake
+    consume_messages()  # pulls and merges into Snowflake
+  File "/opt/airflow/dags/mbta_kafka_consumer.py", line 229, in consume_messages
+    try:
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1188, in __next__
+    return next(self._iterator)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1160, in _message_generator_v2
+    record_map = self.poll(timeout_ms=timeout_ms, update_offsets=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 693, in poll
+    records = self._poll_once(inner_timeout_ms(), max_records, update_offsets=update_offsets)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 736, in _poll_once
+    self._client.poll(timeout_ms=inner_timeout_ms(self._coordinator.time_to_next_poll() * 1000))
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 684, in poll
+    self._poll(timeout / 1000)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 727, in _poll
+    ready = self._selector.select(timeout)
+  File "/usr/local/lib/python3.9/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-04-18T02:38:50.083+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mbta_ingestion_dag, task_id=load_to_snowflake, execution_date=20250418T022749, start_date=20250418T022753, end_date=20250418T023850
+[2025-04-18T02:38:50.162+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task load_to_snowflake (Task received SIGTERM signal; 279)
+[2025-04-18T02:38:50.255+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=279, status='terminated', exitcode=1, started='02:27:52') (279) terminated with exit code 1
+[2025-04-18T02:38:50.273+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2025-04-18T02:38:50.433+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

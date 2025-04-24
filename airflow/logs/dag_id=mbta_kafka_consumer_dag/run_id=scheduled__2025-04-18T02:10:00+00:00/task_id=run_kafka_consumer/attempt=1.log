@@ -1,0 +1,69 @@
+[2025-04-18T02:17:36.976+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T02:10:00+00:00 [queued]>
+[2025-04-18T02:17:36.981+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T02:10:00+00:00 [queued]>
+[2025-04-18T02:17:36.981+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-18T02:17:36.988+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-18 02:10:00+00:00
+[2025-04-18T02:17:36.992+0000] {standard_task_runner.py:60} INFO - Started process 244 to run task
+[2025-04-18T02:17:36.994+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-18T02:10:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmp2b723b5a']
+[2025-04-18T02:17:36.996+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask run_kafka_consumer
+[2025-04-18T02:17:37.021+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-18T02:10:00+00:00 [running]> on host 0d976db5b1d5
+[2025-04-18T02:17:37.062+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T02:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-18T02:10:00+00:00'
+[2025-04-18T02:17:37.063+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-18T02:17:37.064+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-18T02:17:38.149+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-18T02:17:38.150+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-18T02:17:38.153+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-18T02:17:38.232+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2025-04-18T02:17:38.233+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-18T02:17:38.236+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-18T02:17:38.239+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-18T02:17:38.417+0000] {cluster.py:314} WARNING - Topic mbta_alerts is not available during auto-create initialization
+[2025-04-18T02:17:38.418+0000] {cluster.py:314} WARNING - Topic mbta_predictions is not available during auto-create initialization
+[2025-04-18T02:17:38.418+0000] {cluster.py:314} WARNING - Topic mbta_routes is not available during auto-create initialization
+[2025-04-18T02:17:38.418+0000] {cluster.py:314} WARNING - Topic mbta_vehicles is not available during auto-create initialization
+[2025-04-18T02:17:38.418+0000] {cluster.py:314} WARNING - Topic mbta_stops is not available during auto-create initialization
+[2025-04-18T02:17:38.418+0000] {subscription_state.py:254} INFO - Updated partition assignment: []
+[2025-04-18T02:22:38.492+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-18T02:22:38.545+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-18T02:22:38.553+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2025-04-18T02:22:38.601+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_vehicles', 0), ('mbta_stops', 0), ('mbta_alerts', 0), ('mbta_predictions', 0), ('mbta_routes', 0)]
+[2025-04-18T02:24:32.035+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-18T02:24:32.255+0000] {process_utils.py:131} INFO - Sending 15 to group 244. PIDs of all processes in the group: [244]
+[2025-04-18T02:24:32.259+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 244
+[2025-04-18T02:24:32.269+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-18T02:24:32.296+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2025-04-18T02:24:32.300+0000] {fetcher.py:735} INFO - Fetch to node 1 failed: Cancelled: <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>
+[2025-04-18T02:24:32.306+0000] {connection.py:718} INFO - closed
+[2025-04-18T02:24:33.341+0000] {connection.py:724} INFO - No async queries seem to be running, deleting session
+[2025-04-18T02:24:33.486+0000] {mbta_kafka_consumer.py:239} INFO - ✅ Snowflake Connection Closed.
+[2025-04-18T02:24:33.577+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/mbta_kafka_consumer.py", line 229, in consume_messages
+    for message in consumer:
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1188, in __next__
+    return next(self._iterator)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 1160, in _message_generator_v2
+    record_map = self.poll(timeout_ms=timeout_ms, update_offsets=False)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 693, in poll
+    records = self._poll_once(inner_timeout_ms(), max_records, update_offsets=update_offsets)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 736, in _poll_once
+    self._client.poll(timeout_ms=inner_timeout_ms(self._coordinator.time_to_next_poll() * 1000))
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 684, in poll
+    self._poll(timeout / 1000)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 727, in _poll
+    ready = self._selector.select(timeout)
+  File "/usr/local/lib/python3.9/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2025-04-18T02:24:33.607+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=mbta_kafka_consumer_dag, task_id=run_kafka_consumer, execution_date=20250418T021000, start_date=20250418T021736, end_date=20250418T022433
+[2025-04-18T02:24:33.673+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task run_kafka_consumer (Task received SIGTERM signal; 244)
+[2025-04-18T02:24:33.715+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=244, status='terminated', exitcode=1, started='02:17:36') (244) terminated with exit code 1
+[2025-04-18T02:24:33.727+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 143
+[2025-04-18T02:24:33.817+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

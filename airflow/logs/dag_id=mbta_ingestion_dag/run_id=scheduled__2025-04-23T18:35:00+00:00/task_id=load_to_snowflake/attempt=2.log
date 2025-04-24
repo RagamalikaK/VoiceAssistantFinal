@@ -1,0 +1,61 @@
+[2025-04-23T18:48:15.680+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-23T18:35:00+00:00 [queued]>
+[2025-04-23T18:48:15.694+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-23T18:35:00+00:00 [queued]>
+[2025-04-23T18:48:15.694+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-04-23T18:48:15.710+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_snowflake> on 2025-04-23 18:35:00+00:00
+[2025-04-23T18:48:15.727+0000] {standard_task_runner.py:60} INFO - Started process 411 to run task
+[2025-04-23T18:48:15.733+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_ingestion_dag', 'load_to_snowflake', 'scheduled__2025-04-23T18:35:00+00:00', '--job-id', '527', '--raw', '--subdir', 'DAGS_FOLDER/mbta_ingestion_dag.py', '--cfg-path', '/tmp/tmpmhvak68f']
+[2025-04-23T18:48:15.744+0000] {standard_task_runner.py:88} INFO - Job 527: Subtask load_to_snowflake
+[2025-04-23T18:48:15.914+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-23T18:35:00+00:00 [running]> on host f5dfe1f680f3
+[2025-04-23T18:48:16.169+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_ingestion_dag' AIRFLOW_CTX_TASK_ID='load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T18:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-23T18:35:00+00:00'
+[2025-04-23T18:48:16.172+0000] {mbta_ingestion_dag.py:35} INFO - 🚀 Launching Kafka consumer to process and load data into Snowflake...
+[2025-04-23T18:48:16.172+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-23T18:48:16.174+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-23T18:48:17.090+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-23T18:48:17.093+0000] {mbta_kafka_consumer.py:220} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-23T18:48:17.109+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:17.110+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:17.113+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:17.115+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.04 secs
+[2025-04-23T18:48:17.173+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:17.175+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:17.176+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:17.177+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.08 secs
+[2025-04-23T18:48:17.262+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:17.263+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:17.264+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:17.265+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.17 secs
+[2025-04-23T18:48:17.445+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:17.447+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:17.448+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:17.449+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.43 secs
+[2025-04-23T18:48:17.886+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:17.887+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:17.888+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:17.889+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.78 secs
+[2025-04-23T18:48:18.688+0000] {conn.py:1532} WARNING - DNS lookup failed for kafka:9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2025-04-23T18:48:18.693+0000] {conn.py:322} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: DNS lookup failed for kafka:9092 (0)
+[2025-04-23T18:48:18.695+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [unspecified None]>: Closing connection. KafkaConnectionError: DNS failure
+[2025-04-23T18:48:18.699+0000] {client_async.py:1048} WARNING - No node available during check_version; sleeping 0.40 secs
+[2025-04-23T18:48:19.110+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/mbta_ingestion_dag.py", line 36, in load_to_snowflake
+    consume_messages()  # pulls and merges into Snowflake
+  File "/opt/airflow/dags/mbta_kafka_consumer.py", line 221, in consume_messages
+    consumer = KafkaConsumer(
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/consumer/group.py", line 383, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+  File "/home/airflow/.local/lib/python3.9/site-packages/kafka/client_async.py", line 1073, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2025-04-23T18:48:19.316+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=mbta_ingestion_dag, task_id=load_to_snowflake, execution_date=20250423T183500, start_date=20250423T184815, end_date=20250423T184819
+[2025-04-23T18:48:19.685+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 527 for task load_to_snowflake (NoBrokersAvailable; 411)
+[2025-04-23T18:48:19.784+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-04-23T18:48:19.928+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

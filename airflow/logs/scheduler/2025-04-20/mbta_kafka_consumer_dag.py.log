@@ -1,0 +1,984 @@
+[2025-04-20T15:14:31.627+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:14:31.635+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:14:31.639+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:14:31.638+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:14:33.458+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:14:33.504+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:14:33.503+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:14:33.541+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:14:33.541+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:10:00+00:00, run_after=2025-04-20 15:15:00+00:00
+[2025-04-20T15:14:33.586+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.963 seconds
+[2025-04-20T15:15:03.956+0000] {processor.py:161} INFO - Started process (PID=206) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:03.957+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:15:03.959+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:03.958+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:04.551+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:04.750+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:04.749+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:15:04.774+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:04.774+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:15:04.789+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.838 seconds
+[2025-04-20T15:15:35.215+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:35.218+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:15:35.220+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:35.219+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:36.087+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:15:36.142+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:36.142+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:15:36.197+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:15:36.197+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:15:36.230+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.025 seconds
+[2025-04-20T15:16:07.154+0000] {processor.py:161} INFO - Started process (PID=238) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:07.157+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:16:07.160+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:07.159+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:08.698+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:08.748+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:08.747+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:16:08.779+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:08.778+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:16:08.792+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.672 seconds
+[2025-04-20T15:16:39.451+0000] {processor.py:161} INFO - Started process (PID=252) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:39.453+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:16:39.454+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:39.454+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:40.188+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:16:40.235+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:40.235+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:16:40.256+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:16:40.256+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:16:40.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.831 seconds
+[2025-04-20T15:17:10.852+0000] {processor.py:161} INFO - Started process (PID=266) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:10.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:17:10.858+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:10.858+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:11.478+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:11.502+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:11.502+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:17:11.517+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:11.517+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:17:11.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.694 seconds
+[2025-04-20T15:17:41.911+0000] {processor.py:161} INFO - Started process (PID=280) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:41.918+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:17:41.920+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:41.919+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:42.499+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:17:42.521+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:42.521+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:17:42.534+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:17:42.534+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:17:42.550+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.646 seconds
+[2025-04-20T15:18:12.940+0000] {processor.py:161} INFO - Started process (PID=294) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:12.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:18:12.945+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:12.944+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:13.453+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:13.480+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:13.480+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:18:13.493+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:13.493+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:18:13.506+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.572 seconds
+[2025-04-20T15:18:43.886+0000] {processor.py:161} INFO - Started process (PID=308) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:43.888+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:18:43.890+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:43.890+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:44.433+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:18:44.458+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:44.458+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:18:44.472+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:18:44.472+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:18:44.487+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.613 seconds
+[2025-04-20T15:19:14.828+0000] {processor.py:161} INFO - Started process (PID=322) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:14.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:19:14.831+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:14.830+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:15.237+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:15.255+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:15.255+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:19:15.268+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:15.267+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:19:15.282+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.462 seconds
+[2025-04-20T15:19:45.615+0000] {processor.py:161} INFO - Started process (PID=336) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:45.617+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:19:45.619+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:45.619+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:46.114+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:19:46.130+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:46.129+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:19:46.141+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:19:46.141+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:15:00+00:00, run_after=2025-04-20 15:20:00+00:00
+[2025-04-20T15:19:46.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.544 seconds
+[2025-04-20T15:20:16.680+0000] {processor.py:161} INFO - Started process (PID=366) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:16.688+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:20:16.692+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:16.690+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:17.358+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:17.376+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:17.376+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:20:17.389+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:17.389+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:20:17.402+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.736 seconds
+[2025-04-20T15:20:47.827+0000] {processor.py:161} INFO - Started process (PID=380) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:47.833+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:20:47.837+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:47.835+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:48.405+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:20:48.445+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:48.445+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:20:48.463+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:20:48.463+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:20:48.476+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.674 seconds
+[2025-04-20T15:21:18.949+0000] {processor.py:161} INFO - Started process (PID=394) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:18.951+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:21:18.953+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:18.952+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:19.519+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:19.541+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:19.541+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:21:19.559+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:19.559+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:21:19.583+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.645 seconds
+[2025-04-20T15:21:49.954+0000] {processor.py:161} INFO - Started process (PID=408) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:49.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:21:49.957+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:49.957+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:50.504+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:21:50.524+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:50.524+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:21:50.542+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:21:50.541+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:21:50.556+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.609 seconds
+[2025-04-20T15:22:20.940+0000] {processor.py:161} INFO - Started process (PID=422) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:20.944+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:22:20.945+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:20.945+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:21.501+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:21.525+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:21.525+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:22:21.539+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:21.539+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:22:21.552+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.622 seconds
+[2025-04-20T15:22:51.933+0000] {processor.py:161} INFO - Started process (PID=436) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:51.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:22:51.940+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:51.939+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:52.585+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:22:52.608+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:52.607+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:22:52.624+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:22:52.624+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:22:52.638+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.720 seconds
+[2025-04-20T15:23:22.996+0000] {processor.py:161} INFO - Started process (PID=450) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:22.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:23:23.002+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:23.001+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:23.534+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:23.556+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:23.556+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:23:23.570+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:23.570+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:23:23.582+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.596 seconds
+[2025-04-20T15:23:53.914+0000] {processor.py:161} INFO - Started process (PID=464) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:53.917+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:23:53.918+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:53.918+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:54.345+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:23:54.363+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:54.363+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:23:54.380+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:23:54.380+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:23:54.394+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.487 seconds
+[2025-04-20T15:24:24.724+0000] {processor.py:161} INFO - Started process (PID=478) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:24.726+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:24:24.728+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:24.727+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:25.298+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:25.322+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:25.322+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:24:25.335+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:25.335+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:24:25.348+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.636 seconds
+[2025-04-20T15:24:55.697+0000] {processor.py:161} INFO - Started process (PID=492) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:55.699+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:24:55.701+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:55.701+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:56.267+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:24:56.287+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:56.287+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:24:56.302+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:24:56.302+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:20:00+00:00, run_after=2025-04-20 15:25:00+00:00
+[2025-04-20T15:24:56.317+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.630 seconds
+[2025-04-20T15:25:26.814+0000] {processor.py:161} INFO - Started process (PID=522) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:26.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:25:26.822+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:26.822+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:27.486+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:27.511+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:27.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:25:27.525+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:27.524+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:25:27.534+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.737 seconds
+[2025-04-20T15:25:57.889+0000] {processor.py:161} INFO - Started process (PID=536) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:57.897+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:25:57.898+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:57.898+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:58.453+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:25:58.481+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:58.480+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:25:58.493+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:25:58.493+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:25:58.505+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.637 seconds
+[2025-04-20T15:26:28.844+0000] {processor.py:161} INFO - Started process (PID=550) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:26:28.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:26:28.851+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:26:28.851+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:26:29.398+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:26:29.419+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:26:29.419+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:26:29.434+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:26:29.434+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:26:29.446+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.617 seconds
+[2025-04-20T15:26:59.804+0000] {processor.py:161} INFO - Started process (PID=564) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:26:59.807+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:26:59.812+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:26:59.809+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:27:00.393+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:27:00.422+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:27:00.421+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:27:00.438+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:27:00.438+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:27:00.452+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.660 seconds
+[2025-04-20T15:27:30.835+0000] {processor.py:161} INFO - Started process (PID=578) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:27:30.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:27:30.839+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:27:30.838+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:27:31.324+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:27:31.342+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:27:31.342+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:27:31.357+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:27:31.356+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:27:31.369+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.547 seconds
+[2025-04-20T15:28:01.762+0000] {processor.py:161} INFO - Started process (PID=592) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:01.764+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:28:01.766+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:01.766+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:02.266+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:02.283+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:02.283+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:28:02.296+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:02.296+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:28:02.309+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.555 seconds
+[2025-04-20T15:28:32.674+0000] {processor.py:161} INFO - Started process (PID=606) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:32.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:28:32.677+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:32.676+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:33.240+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:28:33.259+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:33.259+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:28:33.272+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:28:33.272+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:28:33.284+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.633 seconds
+[2025-04-20T15:29:03.684+0000] {processor.py:161} INFO - Started process (PID=620) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:03.686+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:29:03.687+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:03.687+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:04.200+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:04.230+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:04.230+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:29:04.245+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:04.245+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:29:04.255+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.579 seconds
+[2025-04-20T15:29:34.572+0000] {processor.py:161} INFO - Started process (PID=634) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:34.579+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:29:34.581+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:34.580+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:35.123+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:29:35.143+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:35.142+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:29:35.161+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:29:35.161+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:25:00+00:00, run_after=2025-04-20 15:30:00+00:00
+[2025-04-20T15:29:35.175+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.612 seconds
+[2025-04-20T15:30:05.511+0000] {processor.py:161} INFO - Started process (PID=664) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:05.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:30:05.514+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:05.514+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:06.141+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:06.158+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:06.158+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:30:06.181+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:06.181+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:30:00+00:00, run_after=2025-04-20 15:35:00+00:00
+[2025-04-20T15:30:06.197+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.690 seconds
+[2025-04-20T15:30:36.619+0000] {processor.py:161} INFO - Started process (PID=678) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:36.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:30:36.627+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:36.627+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:37.244+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:30:37.259+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:37.259+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:30:37.272+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:30:37.272+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:30:00+00:00, run_after=2025-04-20 15:35:00+00:00
+[2025-04-20T15:30:37.287+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.741 seconds
+[2025-04-20T15:31:07.702+0000] {processor.py:161} INFO - Started process (PID=692) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:31:07.704+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:31:07.705+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:31:07.705+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:31:08.275+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:31:08.290+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:31:08.290+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:31:08.302+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:31:08.302+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:30:00+00:00, run_after=2025-04-20 15:35:00+00:00
+[2025-04-20T15:31:08.314+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.621 seconds
+[2025-04-20T15:46:53.940+0000] {processor.py:161} INFO - Started process (PID=716) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:46:54.012+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:46:54.018+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:46:54.018+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:46:55.648+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:46:55.714+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:46:55.713+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:46:55.755+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:46:55.754+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:45:00+00:00, run_after=2025-04-20 15:50:00+00:00
+[2025-04-20T15:46:55.780+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.850 seconds
+[2025-04-20T15:47:26.298+0000] {processor.py:161} INFO - Started process (PID=754) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:47:26.300+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:47:26.302+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:47:26.301+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:47:26.950+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:47:26.974+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:47:26.974+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:47:26.986+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:47:26.986+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:45:00+00:00, run_after=2025-04-20 15:50:00+00:00
+[2025-04-20T15:47:27.004+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.718 seconds
+[2025-04-20T15:49:49.997+0000] {processor.py:161} INFO - Started process (PID=768) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:49:49.999+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:49:50.001+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:49:50.000+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:49:50.523+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:49:50.545+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:49:50.544+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:49:50.564+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:49:50.563+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:45:00+00:00, run_after=2025-04-20 15:50:00+00:00
+[2025-04-20T15:49:50.578+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.594 seconds
+[2025-04-20T15:50:20.944+0000] {processor.py:161} INFO - Started process (PID=798) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:20.947+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:50:20.949+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:20.949+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:21.570+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:21.584+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:21.583+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:50:21.597+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:21.597+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:50:00+00:00, run_after=2025-04-20 15:55:00+00:00
+[2025-04-20T15:50:21.607+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.678 seconds
+[2025-04-20T15:50:51.880+0000] {processor.py:161} INFO - Started process (PID=812) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:51.881+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:50:51.886+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:51.885+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:52.500+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:50:52.515+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:52.515+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:50:52.532+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:50:52.532+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:50:00+00:00, run_after=2025-04-20 15:55:00+00:00
+[2025-04-20T15:50:52.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.675 seconds
+[2025-04-20T15:51:22.907+0000] {processor.py:161} INFO - Started process (PID=826) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:22.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:51:22.912+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:22.911+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:23.495+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:23.511+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:23.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:51:23.522+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:23.522+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:50:00+00:00, run_after=2025-04-20 15:55:00+00:00
+[2025-04-20T15:51:23.535+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.638 seconds
+[2025-04-20T15:51:54.018+0000] {processor.py:161} INFO - Started process (PID=840) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:54.026+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:51:54.029+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:54.028+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:54.774+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:51:54.792+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:54.792+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:51:54.807+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:51:54.807+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:50:00+00:00, run_after=2025-04-20 15:55:00+00:00
+[2025-04-20T15:51:54.825+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.828 seconds
+[2025-04-20T15:55:09.807+0000] {processor.py:161} INFO - Started process (PID=860) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:09.811+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:55:09.813+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:09.813+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:12.996+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:13.040+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:13.039+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:55:13.063+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:13.063+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:55:13.073+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 3.275 seconds
+[2025-04-20T15:55:43.416+0000] {processor.py:161} INFO - Started process (PID=886) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:43.419+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:55:43.420+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:43.420+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:43.984+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:55:44.015+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:44.015+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:55:44.032+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:55:44.032+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:55:44.049+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.646 seconds
+[2025-04-20T15:56:14.384+0000] {processor.py:161} INFO - Started process (PID=900) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:14.386+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:56:14.388+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:14.387+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:14.999+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:15.017+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:15.017+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:56:15.031+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:15.030+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:56:15.039+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.661 seconds
+[2025-04-20T15:56:45.313+0000] {processor.py:161} INFO - Started process (PID=914) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:45.315+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:56:45.316+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:45.316+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:45.882+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:56:45.897+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:45.896+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:56:45.909+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:56:45.909+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:56:45.923+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.621 seconds
+[2025-04-20T15:57:16.302+0000] {processor.py:161} INFO - Started process (PID=928) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:16.306+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:57:16.307+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:16.306+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:16.881+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:16.898+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:16.898+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:57:16.912+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:16.911+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:57:16.924+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.634 seconds
+[2025-04-20T15:57:47.299+0000] {processor.py:161} INFO - Started process (PID=942) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:47.301+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:57:47.302+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:47.302+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:47.890+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:57:47.905+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:47.905+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:57:47.920+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:57:47.920+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:57:47.929+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.638 seconds
+[2025-04-20T15:58:18.264+0000] {processor.py:161} INFO - Started process (PID=956) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:18.271+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:58:18.272+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:18.272+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:18.877+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:18.895+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:18.895+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:58:18.909+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:18.909+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:58:18.919+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.668 seconds
+[2025-04-20T15:58:49.279+0000] {processor.py:161} INFO - Started process (PID=970) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:49.281+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T15:58:49.282+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:49.282+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:49.877+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T15:58:49.896+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:49.895+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T15:58:49.912+0000] {logging_mixin.py:188} INFO - [2025-04-20T15:58:49.912+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 15:55:00+00:00, run_after=2025-04-20 16:00:00+00:00
+[2025-04-20T15:58:49.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.654 seconds
+[2025-04-20T16:08:17.281+0000] {processor.py:161} INFO - Started process (PID=996) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:17.288+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:08:17.296+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:17.296+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:18.447+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:18.461+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:18.460+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:08:18.490+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:18.489+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:05:00+00:00, run_after=2025-04-20 16:10:00+00:00
+[2025-04-20T16:08:18.513+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.243 seconds
+[2025-04-20T16:08:48.842+0000] {processor.py:161} INFO - Started process (PID=1032) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:48.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:08:48.847+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:48.847+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:49.461+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:08:49.485+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:49.485+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:08:49.497+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:08:49.497+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:05:00+00:00, run_after=2025-04-20 16:10:00+00:00
+[2025-04-20T16:08:49.510+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.681 seconds
+[2025-04-20T16:09:19.961+0000] {processor.py:161} INFO - Started process (PID=1046) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:19.965+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:09:19.966+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:19.966+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:20.572+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:20.602+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:20.602+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:09:20.620+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:20.620+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:05:00+00:00, run_after=2025-04-20 16:10:00+00:00
+[2025-04-20T16:09:20.634+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.699 seconds
+[2025-04-20T16:09:51.089+0000] {processor.py:161} INFO - Started process (PID=1060) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:51.096+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:09:51.098+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:51.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:51.752+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:09:51.780+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:51.779+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:09:51.798+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:09:51.797+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:05:00+00:00, run_after=2025-04-20 16:10:00+00:00
+[2025-04-20T16:09:51.813+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.739 seconds
+[2025-04-20T16:15:44.327+0000] {processor.py:161} INFO - Started process (PID=1090) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:15:44.331+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:15:44.332+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:15:44.331+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:15:45.586+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:15:45.609+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:15:45.609+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:15:45.636+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:15:45.636+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:15:45.655+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.334 seconds
+[2025-04-20T16:16:15.988+0000] {processor.py:161} INFO - Started process (PID=1120) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:15.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:16:15.992+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:15.991+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:16.578+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:16.611+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:16.610+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:16:16.630+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:16.630+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:16:16.645+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.668 seconds
+[2025-04-20T16:16:47.017+0000] {processor.py:161} INFO - Started process (PID=1134) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:47.019+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:16:47.021+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:47.020+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:47.635+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:16:47.669+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:47.669+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:16:47.691+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:16:47.691+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:16:47.705+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.701 seconds
+[2025-04-20T16:17:18.107+0000] {processor.py:161} INFO - Started process (PID=1148) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:18.110+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:17:18.113+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:18.112+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:18.706+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:18.735+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:18.734+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:17:18.752+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:18.752+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:17:18.768+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.676 seconds
+[2025-04-20T16:17:49.156+0000] {processor.py:161} INFO - Started process (PID=1162) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:49.159+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:17:49.161+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:49.160+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:49.762+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:17:49.798+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:49.794+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:17:49.828+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:17:49.828+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:17:49.848+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.704 seconds
+[2025-04-20T16:18:20.200+0000] {processor.py:161} INFO - Started process (PID=1176) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:20.202+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:18:20.204+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:20.204+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:20.796+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:20.827+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:20.826+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:18:20.843+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:20.843+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:18:20.860+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.671 seconds
+[2025-04-20T16:18:51.236+0000] {processor.py:161} INFO - Started process (PID=1190) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:51.238+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:18:51.242+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:51.241+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:52.047+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:18:52.101+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:52.101+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:18:52.122+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:18:52.122+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:15:00+00:00, run_after=2025-04-20 16:20:00+00:00
+[2025-04-20T16:18:52.136+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.910 seconds
+[2025-04-20T16:38:12.096+0000] {processor.py:161} INFO - Started process (PID=1204) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:12.097+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:38:12.098+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:12.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:13.820+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:13.951+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:13.948+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:38:14.052+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:14.052+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:35:00+00:00, run_after=2025-04-20 16:40:00+00:00
+[2025-04-20T16:38:14.136+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 2.046 seconds
+[2025-04-20T16:38:44.638+0000] {processor.py:161} INFO - Started process (PID=1250) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:44.640+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:38:44.642+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:44.642+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:45.228+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:38:45.254+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:45.254+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:38:45.270+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:38:45.270+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:35:00+00:00, run_after=2025-04-20 16:40:00+00:00
+[2025-04-20T16:38:45.286+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.658 seconds
+[2025-04-20T16:39:15.730+0000] {processor.py:161} INFO - Started process (PID=1264) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:15.733+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:39:15.735+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:15.734+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:16.313+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:16.343+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:16.343+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:39:16.361+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:16.361+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:35:00+00:00, run_after=2025-04-20 16:40:00+00:00
+[2025-04-20T16:39:16.377+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.657 seconds
+[2025-04-20T16:39:46.821+0000] {processor.py:161} INFO - Started process (PID=1278) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:46.823+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:39:46.825+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:46.824+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:47.427+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:39:47.454+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:47.454+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:39:47.477+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:39:47.477+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:35:00+00:00, run_after=2025-04-20 16:40:00+00:00
+[2025-04-20T16:39:47.495+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.692 seconds
+[2025-04-20T16:40:17.907+0000] {processor.py:161} INFO - Started process (PID=1308) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:17.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:40:17.915+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:17.914+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:18.515+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:18.536+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:18.535+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:40:18.555+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:18.555+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:40:18.570+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.671 seconds
+[2025-04-20T16:40:48.969+0000] {processor.py:161} INFO - Started process (PID=1322) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:48.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:40:48.973+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:48.973+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:49.540+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:40:49.571+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:49.571+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:40:49.590+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:40:49.590+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:40:49.604+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.662 seconds
+[2025-04-20T16:42:15.240+0000] {processor.py:161} INFO - Started process (PID=1336) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:15.245+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:42:15.249+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:15.248+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:16.014+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:16.048+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:16.047+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:42:16.071+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:16.071+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:42:16.087+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.863 seconds
+[2025-04-20T16:42:46.460+0000] {processor.py:161} INFO - Started process (PID=1352) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:46.464+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:42:46.465+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:46.465+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:47.093+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:42:47.129+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:47.129+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:42:47.148+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:42:47.147+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:42:47.170+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.723 seconds
+[2025-04-20T16:43:17.588+0000] {processor.py:161} INFO - Started process (PID=1366) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:17.590+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:43:17.593+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:17.591+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:18.203+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:18.232+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:18.231+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:43:18.248+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:18.248+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:43:18.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.684 seconds
+[2025-04-20T16:43:48.624+0000] {processor.py:161} INFO - Started process (PID=1380) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:48.628+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:43:48.631+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:48.631+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:49.221+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:43:49.247+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:49.247+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:43:49.263+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:43:49.263+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:43:49.275+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.666 seconds
+[2025-04-20T16:44:19.548+0000] {processor.py:161} INFO - Started process (PID=1394) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:19.553+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:44:19.555+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:19.554+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:20.200+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:20.228+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:20.228+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:44:20.245+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:20.245+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:44:20.261+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.719 seconds
+[2025-04-20T16:44:50.670+0000] {processor.py:161} INFO - Started process (PID=1408) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:50.673+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:44:50.674+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:50.674+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:51.315+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:44:51.344+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:51.343+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:44:51.363+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:44:51.363+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:40:00+00:00, run_after=2025-04-20 16:45:00+00:00
+[2025-04-20T16:44:51.380+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.723 seconds
+[2025-04-20T16:45:21.713+0000] {processor.py:161} INFO - Started process (PID=1438) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:21.715+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:45:21.716+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:21.716+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:22.291+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:22.311+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:22.311+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:45:22.329+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:22.329+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:45:22.341+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.635 seconds
+[2025-04-20T16:45:52.663+0000] {processor.py:161} INFO - Started process (PID=1452) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:52.665+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:45:52.666+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:52.665+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:53.263+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:45:53.280+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:53.280+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:45:53.297+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:45:53.297+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:45:53.311+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.659 seconds
+[2025-04-20T16:46:23.675+0000] {processor.py:161} INFO - Started process (PID=1466) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:23.683+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:46:23.686+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:23.685+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:24.285+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:24.310+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:24.310+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:46:24.327+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:24.327+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:46:24.342+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.681 seconds
+[2025-04-20T16:46:54.746+0000] {processor.py:161} INFO - Started process (PID=1480) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:54.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:46:54.750+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:54.749+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:55.390+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:46:55.411+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:55.411+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:46:55.427+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:46:55.427+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:46:55.443+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.711 seconds
+[2025-04-20T16:47:25.957+0000] {processor.py:161} INFO - Started process (PID=1494) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:25.960+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:47:25.962+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:25.961+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:26.624+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:26.644+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:26.643+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:47:26.657+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:26.657+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:47:26.671+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.739 seconds
+[2025-04-20T16:47:57.032+0000] {processor.py:161} INFO - Started process (PID=1508) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:57.034+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:47:57.036+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:57.036+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:57.801+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:47:57.827+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:57.826+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:47:57.841+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:47:57.841+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:47:57.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.845 seconds
+[2025-04-20T16:48:28.372+0000] {processor.py:161} INFO - Started process (PID=1522) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:48:28.376+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:48:28.377+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:48:28.376+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:48:29.041+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:48:29.061+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:48:29.061+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:48:29.074+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:48:29.074+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:48:29.089+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.731 seconds
+[2025-04-20T16:48:59.434+0000] {processor.py:161} INFO - Started process (PID=1536) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:48:59.437+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:48:59.439+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:48:59.438+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:49:00.182+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:49:00.222+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:49:00.222+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:49:00.241+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:49:00.240+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:49:00.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.836 seconds
+[2025-04-20T16:49:30.723+0000] {processor.py:161} INFO - Started process (PID=1550) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:49:30.726+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:49:30.730+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:49:30.728+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:49:32.152+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:49:32.226+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:49:32.225+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:49:32.355+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:49:32.354+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:45:00+00:00, run_after=2025-04-20 16:50:00+00:00
+[2025-04-20T16:49:32.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.710 seconds
+[2025-04-20T16:50:02.968+0000] {processor.py:161} INFO - Started process (PID=1572) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:02.970+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:50:02.971+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:02.970+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:03.592+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:03.611+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:03.611+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:50:03.628+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:03.628+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:50:03.642+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.678 seconds
+[2025-04-20T16:50:33.977+0000] {processor.py:161} INFO - Started process (PID=1594) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:33.979+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:50:33.981+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:33.980+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:34.570+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:50:34.599+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:34.598+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:50:34.616+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:50:34.616+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:50:34.629+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.661 seconds
+[2025-04-20T16:51:05.028+0000] {processor.py:161} INFO - Started process (PID=1608) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:05.035+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:51:05.036+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:05.036+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:05.648+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:05.673+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:05.672+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:51:05.688+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:05.688+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:51:05.700+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.688 seconds
+[2025-04-20T16:51:36.170+0000] {processor.py:161} INFO - Started process (PID=1622) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:36.172+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:51:36.174+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:36.173+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:36.774+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:51:36.795+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:36.795+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:51:36.807+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:51:36.807+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:51:36.820+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.666 seconds
+[2025-04-20T16:52:07.221+0000] {processor.py:161} INFO - Started process (PID=1636) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:07.224+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:52:07.226+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:07.225+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:07.830+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:07.850+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:07.849+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:52:07.864+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:07.864+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:52:07.876+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.666 seconds
+[2025-04-20T16:52:38.389+0000] {processor.py:161} INFO - Started process (PID=1650) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:38.392+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:52:38.393+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:38.393+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:39.162+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:52:39.181+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:39.181+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:52:39.199+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:52:39.199+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:52:39.218+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.845 seconds
+[2025-04-20T16:53:09.579+0000] {processor.py:161} INFO - Started process (PID=1664) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:09.583+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:53:09.585+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:09.585+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:10.248+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:10.269+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:10.269+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:53:10.286+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:10.286+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:53:10.303+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.733 seconds
+[2025-04-20T16:53:40.645+0000] {processor.py:161} INFO - Started process (PID=1678) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:40.648+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:53:40.650+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:40.650+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:41.325+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:53:41.354+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:41.354+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:53:41.380+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:53:41.379+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:53:41.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.767 seconds
+[2025-04-20T16:54:11.729+0000] {processor.py:161} INFO - Started process (PID=1692) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:11.734+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:54:11.737+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:11.736+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:12.313+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:12.331+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:12.331+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:54:12.346+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:12.345+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:54:12.358+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.637 seconds
+[2025-04-20T16:54:42.727+0000] {processor.py:161} INFO - Started process (PID=1706) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:42.731+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:54:42.733+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:42.732+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:43.344+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:54:43.359+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:43.359+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:54:43.376+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:54:43.376+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:50:00+00:00, run_after=2025-04-20 16:55:00+00:00
+[2025-04-20T16:54:43.389+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.671 seconds
+[2025-04-20T16:55:13.740+0000] {processor.py:161} INFO - Started process (PID=1736) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:13.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:55:13.747+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:13.746+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:14.365+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:14.387+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:14.386+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:55:14.400+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:14.400+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:55:14.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.690 seconds
+[2025-04-20T16:55:44.789+0000] {processor.py:161} INFO - Started process (PID=1750) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:44.792+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:55:44.794+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:44.793+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:45.488+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:55:45.528+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:45.526+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:55:45.552+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:55:45.552+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:55:45.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.793 seconds
+[2025-04-20T16:56:15.923+0000] {processor.py:161} INFO - Started process (PID=1764) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:15.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:56:15.927+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:15.927+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:16.574+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:16.603+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:16.603+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:56:16.619+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:16.619+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:56:16.634+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.722 seconds
+[2025-04-20T16:56:46.916+0000] {processor.py:161} INFO - Started process (PID=1778) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:46.919+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:56:46.920+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:46.920+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:47.634+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:56:47.662+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:47.662+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:56:47.681+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:56:47.681+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:56:47.695+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.791 seconds
+[2025-04-20T16:57:18.204+0000] {processor.py:161} INFO - Started process (PID=1792) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:18.210+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:57:18.213+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:18.212+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:18.820+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:18.836+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:18.836+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:57:18.849+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:18.848+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:57:18.860+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.668 seconds
+[2025-04-20T16:57:49.190+0000] {processor.py:161} INFO - Started process (PID=1806) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:49.196+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:57:49.198+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:49.198+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:49.893+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:57:49.908+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:49.908+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:57:49.922+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:57:49.922+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:57:49.936+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.761 seconds
+[2025-04-20T16:58:20.274+0000] {processor.py:161} INFO - Started process (PID=1820) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:20.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:58:20.278+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:20.278+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:20.808+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:20.822+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:20.821+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:58:20.835+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:20.835+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:58:20.850+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.586 seconds
+[2025-04-20T16:58:51.148+0000] {processor.py:161} INFO - Started process (PID=1834) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:51.152+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:58:51.153+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:51.153+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:51.815+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:58:51.833+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:51.832+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:58:51.851+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:58:51.851+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:58:51.867+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.728 seconds
+[2025-04-20T16:59:22.285+0000] {processor.py:161} INFO - Started process (PID=1848) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:59:22.288+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T16:59:22.290+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:59:22.289+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:59:22.903+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T16:59:22.939+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:59:22.939+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T16:59:22.961+0000] {logging_mixin.py:188} INFO - [2025-04-20T16:59:22.961+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 16:55:00+00:00, run_after=2025-04-20 17:00:00+00:00
+[2025-04-20T16:59:22.987+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.722 seconds
+[2025-04-20T18:16:23.782+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:23.784+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:16:23.784+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:23.784+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:25.610+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:25.766+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.766+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:mbta_kafka_consumer_dag
+[2025-04-20T18:16:25.772+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.772+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:mbta_kafka_consumer_dag
+[2025-04-20T18:16:25.775+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.775+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:mbta_kafka_consumer_dag
+[2025-04-20T18:16:25.776+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.776+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:16:25.783+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.783+0000] {dag.py:3058} INFO - Creating ORM DAG for mbta_kafka_consumer_dag
+[2025-04-20T18:16:25.792+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:25.792+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:10:00+00:00, run_after=2025-04-20 18:15:00+00:00
+[2025-04-20T18:16:25.807+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 2.028 seconds
+[2025-04-20T18:16:56.139+0000] {processor.py:161} INFO - Started process (PID=177) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:56.142+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:16:56.144+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:56.143+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:56.679+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:16:56.698+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:56.697+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:16:56.713+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:16:56.713+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:10:00+00:00, run_after=2025-04-20 18:15:00+00:00
+[2025-04-20T18:16:56.726+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.603 seconds
+[2025-04-20T18:17:27.323+0000] {processor.py:161} INFO - Started process (PID=191) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:27.325+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:17:27.326+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:27.325+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:27.876+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:27.894+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:27.894+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:17:27.910+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:27.909+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:10:00+00:00, run_after=2025-04-20 18:15:00+00:00
+[2025-04-20T18:17:27.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.608 seconds
+[2025-04-20T18:17:58.291+0000] {processor.py:161} INFO - Started process (PID=221) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:58.294+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:17:58.297+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:58.297+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:58.831+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:17:58.855+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:58.855+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:17:58.871+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:17:58.871+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:15:00+00:00, run_after=2025-04-20 18:20:00+00:00
+[2025-04-20T18:17:58.882+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.603 seconds
+[2025-04-20T18:18:29.239+0000] {processor.py:161} INFO - Started process (PID=235) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:18:29.245+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:18:29.249+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:18:29.248+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:18:29.827+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:18:29.845+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:18:29.844+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:18:29.860+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:18:29.860+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:15:00+00:00, run_after=2025-04-20 18:20:00+00:00
+[2025-04-20T18:18:29.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.643 seconds
+[2025-04-20T18:19:00.227+0000] {processor.py:161} INFO - Started process (PID=249) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:00.231+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:19:00.233+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:00.233+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:00.773+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:00.800+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:00.800+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:19:00.811+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:00.811+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:15:00+00:00, run_after=2025-04-20 18:20:00+00:00
+[2025-04-20T18:19:00.825+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.604 seconds
+[2025-04-20T18:19:31.193+0000] {processor.py:161} INFO - Started process (PID=263) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:31.195+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:19:31.197+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:31.196+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:31.729+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:19:31.770+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:31.770+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:19:31.809+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:19:31.808+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:15:00+00:00, run_after=2025-04-20 18:20:00+00:00
+[2025-04-20T18:19:31.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.642 seconds
+[2025-04-20T18:35:55.179+0000] {processor.py:161} INFO - Started process (PID=285) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:35:55.181+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T18:35:55.183+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:35:55.182+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:35:56.814+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T18:35:56.903+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:35:56.903+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T18:35:56.971+0000] {logging_mixin.py:188} INFO - [2025-04-20T18:35:56.971+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 18:35:00+00:00, run_after=2025-04-20 18:40:00+00:00
+[2025-04-20T18:35:57.033+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.865 seconds
+[2025-04-20T19:04:45.594+0000] {processor.py:161} INFO - Started process (PID=325) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:04:45.601+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:04:45.604+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:04:45.604+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:04:56.192+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:04:56.338+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:04:56.334+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:04:56.423+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:04:56.422+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:00:00+00:00, run_after=2025-04-20 19:05:00+00:00
+[2025-04-20T19:04:56.758+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 11.178 seconds
+[2025-04-20T19:05:27.480+0000] {processor.py:161} INFO - Started process (PID=389) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:27.484+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:05:27.487+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:27.487+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:28.143+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:28.167+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:28.166+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:05:28.186+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:28.185+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:05:00+00:00, run_after=2025-04-20 19:10:00+00:00
+[2025-04-20T19:05:28.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.731 seconds
+[2025-04-20T19:05:58.601+0000] {processor.py:161} INFO - Started process (PID=403) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:58.603+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:05:58.606+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:58.604+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:59.271+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:05:59.293+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:59.293+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:05:59.307+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:05:59.307+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:05:00+00:00, run_after=2025-04-20 19:10:00+00:00
+[2025-04-20T19:05:59.324+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.732 seconds
+[2025-04-20T19:06:29.713+0000] {processor.py:161} INFO - Started process (PID=417) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:06:29.715+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:06:29.716+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:06:29.715+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:06:30.352+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:06:30.377+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:06:30.377+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:06:30.392+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:06:30.392+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:05:00+00:00, run_after=2025-04-20 19:10:00+00:00
+[2025-04-20T19:06:30.403+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.698 seconds
+[2025-04-20T19:07:00.760+0000] {processor.py:161} INFO - Started process (PID=431) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:00.763+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:07:00.768+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:00.765+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:01.535+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:01.559+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:01.558+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:07:01.574+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:01.574+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:05:00+00:00, run_after=2025-04-20 19:10:00+00:00
+[2025-04-20T19:07:01.588+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.841 seconds
+[2025-04-20T19:07:31.966+0000] {processor.py:161} INFO - Started process (PID=445) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:31.968+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:07:31.970+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:31.969+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:32.532+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:07:32.547+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:32.547+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:07:32.560+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:07:32.560+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:05:00+00:00, run_after=2025-04-20 19:10:00+00:00
+[2025-04-20T19:07:32.575+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.626 seconds
+[2025-04-20T19:50:01.969+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:01.972+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:50:01.977+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:01.976+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:04.583+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:04.710+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:04.710+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:50:04.783+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:04.782+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:50:04.875+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 2.910 seconds
+[2025-04-20T19:50:35.210+0000] {processor.py:161} INFO - Started process (PID=209) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:35.212+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:50:35.214+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:35.213+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:35.795+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:50:35.926+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:35.926+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:50:35.939+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:50:35.939+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:50:35.955+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.753 seconds
+[2025-04-20T19:51:06.333+0000] {processor.py:161} INFO - Started process (PID=223) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:06.336+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:51:06.342+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:06.341+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:07.006+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:07.032+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:07.032+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:51:07.059+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:07.059+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:51:07.073+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.746 seconds
+[2025-04-20T19:51:37.471+0000] {processor.py:161} INFO - Started process (PID=237) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:37.474+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:51:37.475+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:37.475+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:38.421+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:51:38.449+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:38.448+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:51:38.480+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:51:38.480+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:51:38.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.050 seconds
+[2025-04-20T19:52:08.899+0000] {processor.py:161} INFO - Started process (PID=251) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:08.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:52:08.902+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:08.901+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:09.499+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:09.519+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:09.519+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:52:09.533+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:09.533+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:52:09.549+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.658 seconds
+[2025-04-20T19:52:39.797+0000] {processor.py:161} INFO - Started process (PID=265) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:39.800+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:52:39.802+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:39.802+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:40.358+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:52:40.375+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:40.374+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:52:40.389+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:52:40.389+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:52:40.404+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.611 seconds
+[2025-04-20T19:53:10.757+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:10.759+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:53:10.760+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:10.760+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:11.305+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:11.319+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:11.319+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:53:11.331+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:11.331+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:53:11.346+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.596 seconds
+[2025-04-20T19:53:41.653+0000] {processor.py:161} INFO - Started process (PID=293) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:41.658+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:53:41.659+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:41.659+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:42.197+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:53:42.214+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:42.214+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:53:42.227+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:53:42.227+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:53:42.241+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.596 seconds
+[2025-04-20T19:54:12.561+0000] {processor.py:161} INFO - Started process (PID=307) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:12.563+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:54:12.565+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:12.564+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:13.200+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:13.216+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:13.216+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:54:13.234+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:13.234+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:54:13.248+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.694 seconds
+[2025-04-20T19:54:43.527+0000] {processor.py:161} INFO - Started process (PID=321) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:43.528+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:54:43.529+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:43.529+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:43.986+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:54:44.006+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:44.005+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:54:44.022+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:54:44.022+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:50:00+00:00, run_after=2025-04-20 19:55:00+00:00
+[2025-04-20T19:54:44.038+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.518 seconds
+[2025-04-20T19:55:14.391+0000] {processor.py:161} INFO - Started process (PID=351) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:14.394+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:55:14.396+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:14.396+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:14.998+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:15.017+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:15.017+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:55:15.031+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:15.031+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:55:15.043+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.662 seconds
+[2025-04-20T19:55:45.669+0000] {processor.py:161} INFO - Started process (PID=365) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:45.675+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:55:45.677+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:45.676+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:46.768+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:55:46.804+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:46.803+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:55:46.830+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:55:46.830+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:55:46.852+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.204 seconds
+[2025-04-20T19:56:17.105+0000] {processor.py:161} INFO - Started process (PID=379) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:17.108+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:56:17.110+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:17.109+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:17.675+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:17.697+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:17.697+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:56:17.709+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:17.709+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:56:17.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.626 seconds
+[2025-04-20T19:56:48.088+0000] {processor.py:161} INFO - Started process (PID=409) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:48.090+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:56:48.091+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:48.090+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:48.561+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:56:48.580+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:48.580+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:56:48.595+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:56:48.595+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:56:48.609+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.527 seconds
+[2025-04-20T19:57:18.951+0000] {processor.py:161} INFO - Started process (PID=423) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:18.955+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:57:18.957+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:18.956+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:19.493+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:19.510+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:19.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:57:19.524+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:19.524+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:57:19.537+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.601 seconds
+[2025-04-20T19:57:49.955+0000] {processor.py:161} INFO - Started process (PID=437) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:49.958+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:57:49.960+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:49.959+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:50.566+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:57:50.592+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:50.592+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:57:50.605+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:57:50.605+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:57:50.619+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.673 seconds
+[2025-04-20T19:58:20.944+0000] {processor.py:161} INFO - Started process (PID=451) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:20.948+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:58:20.951+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:20.951+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:21.597+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:21.619+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:21.619+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:58:21.635+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:21.634+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:58:21.649+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.715 seconds
+[2025-04-20T19:58:52.183+0000] {processor.py:161} INFO - Started process (PID=465) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:52.189+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:58:52.190+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:52.189+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:52.746+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:58:52.770+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:52.769+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:58:52.783+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:58:52.783+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:58:52.800+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.625 seconds
+[2025-04-20T19:59:23.095+0000] {processor.py:161} INFO - Started process (PID=479) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:59:23.097+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T19:59:23.098+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:59:23.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:59:23.694+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T19:59:23.723+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:59:23.723+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T19:59:23.740+0000] {logging_mixin.py:188} INFO - [2025-04-20T19:59:23.740+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 19:55:00+00:00, run_after=2025-04-20 20:00:00+00:00
+[2025-04-20T19:59:23.756+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.667 seconds
+[2025-04-20T20:00:57.188+0000] {processor.py:161} INFO - Started process (PID=192) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:00:57.189+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:00:57.190+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:00:57.190+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:00:57.959+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:00:57.996+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:00:57.996+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:00:58.027+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:00:58.027+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:00:58.058+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.877 seconds
+[2025-04-20T20:01:28.413+0000] {processor.py:161} INFO - Started process (PID=228) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:01:28.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:01:28.416+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:01:28.415+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:01:28.970+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:01:29.038+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:01:29.038+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:01:29.050+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:01:29.050+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:01:29.065+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.663 seconds
+[2025-04-20T20:01:59.444+0000] {processor.py:161} INFO - Started process (PID=242) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:01:59.449+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:01:59.451+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:01:59.450+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:02:00.055+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:02:00.085+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:02:00.085+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:02:00.105+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:02:00.104+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:02:00.118+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.685 seconds
+[2025-04-20T20:02:30.499+0000] {processor.py:161} INFO - Started process (PID=256) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:02:30.500+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:02:30.501+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:02:30.500+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:02:31.086+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:02:31.114+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:02:31.114+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:02:31.128+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:02:31.128+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:02:31.141+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.650 seconds
+[2025-04-20T20:03:01.483+0000] {processor.py:161} INFO - Started process (PID=270) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:01.484+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:03:01.486+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:01.485+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:02.047+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:02.064+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:02.064+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:03:02.077+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:02.077+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:03:02.090+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.613 seconds
+[2025-04-20T20:03:32.399+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:32.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:03:32.404+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:32.402+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:33.412+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:03:33.458+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:33.457+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:03:33.489+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:03:33.488+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:00:00+00:00, run_after=2025-04-20 20:05:00+00:00
+[2025-04-20T20:03:33.510+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 1.124 seconds
+[2025-04-20T20:30:02.509+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:02.513+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:30:02.516+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:02.515+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:04.402+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:04.707+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:04.703+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:30:04.807+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:04.806+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:30:00+00:00, run_after=2025-04-20 20:35:00+00:00
+[2025-04-20T20:30:04.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 2.355 seconds
+[2025-04-20T20:30:11.702+0000] {processor.py:161} INFO - Started process (PID=201) to work on /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:11.706+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_kafka_consumer_dag.py for tasks to queue
+[2025-04-20T20:30:11.708+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:11.707+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:12.470+0000] {processor.py:840} INFO - DAG(s) 'mbta_kafka_consumer_dag' retrieved from /opt/airflow/dags/mbta_kafka_consumer_dag.py
+[2025-04-20T20:30:12.510+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:12.510+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-20T20:30:12.529+0000] {logging_mixin.py:188} INFO - [2025-04-20T20:30:12.529+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_kafka_consumer_dag to 2025-04-20 20:30:00+00:00, run_after=2025-04-20 20:35:00+00:00
+[2025-04-20T20:30:12.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_kafka_consumer_dag.py took 0.905 seconds

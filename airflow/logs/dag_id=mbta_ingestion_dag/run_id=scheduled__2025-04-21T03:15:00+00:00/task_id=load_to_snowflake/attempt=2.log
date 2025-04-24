@@ -1,0 +1,560 @@
+[2025-04-21T03:51:18.449+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T03:15:00+00:00 [queued]>
+[2025-04-21T03:51:18.467+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T03:15:00+00:00 [queued]>
+[2025-04-21T03:51:18.469+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2025-04-21T03:51:18.500+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_to_snowflake> on 2025-04-21 03:15:00+00:00
+[2025-04-21T03:51:18.517+0000] {standard_task_runner.py:60} INFO - Started process 215 to run task
+[2025-04-21T03:51:18.536+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_ingestion_dag', 'load_to_snowflake', 'scheduled__2025-04-21T03:15:00+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/mbta_ingestion_dag.py', '--cfg-path', '/tmp/tmpaz7u_f4e']
+[2025-04-21T03:51:18.542+0000] {standard_task_runner.py:88} INFO - Job 103: Subtask load_to_snowflake
+[2025-04-21T03:51:18.580+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.9/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-04-21T03:51:18.633+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_ingestion_dag.load_to_snowflake scheduled__2025-04-21T03:15:00+00:00 [running]> on host bf0ac457d6ab
+[2025-04-21T03:51:18.785+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_ingestion_dag' AIRFLOW_CTX_TASK_ID='load_to_snowflake' AIRFLOW_CTX_EXECUTION_DATE='2025-04-21T03:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-21T03:15:00+00:00'
+[2025-04-21T03:51:18.787+0000] {mbta_ingestion_dag.py:35} INFO - 🚀 Launching Kafka consumer to process and load data into Snowflake...
+[2025-04-21T03:51:18.787+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-21T03:51:18.790+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-21T03:51:20.932+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-21T03:51:20.940+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-21T03:51:20.958+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-21T03:51:21.008+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.5', 9092)]>: Broker version identified as 2.6
+[2025-04-21T03:51:21.011+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-21T03:51:21.022+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-21T03:51:21.024+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-21T03:51:21.071+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_vehicles', 0), ('mbta_predictions', 0), ('mbta_alerts', 0), ('mbta_stops', 0), ('mbta_routes', 0)]
+[2025-04-21T03:51:21.076+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.5', 9092)]>: connecting to kafka:9092 [('172.18.0.5', 9092) IPv4]
+[2025-04-21T03:51:21.077+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Connection complete.
+[2025-04-21T03:51:21.078+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.5', 9092)]>: Closing connection. 
+[2025-04-21T03:51:27.685+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 20 records from topic: mbta_predictions
+[2025-04-21T03:51:27.746+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:51:27.748+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0   prediction-68172520-70079-90-Red      Red  ...   None 2025-04-21 03:51:27.692513
+1  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:51:27.692995
+2   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:51:27.697967
+3   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:51:27.698000
+4  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:51:27.698007
+
+[5 rows x 9 columns]
+[2025-04-21T03:51:27.817+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172520-7007...]
+[2025-04-21T03:51:28.090+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:28.092+0000] {cursor.py:1205} INFO - Number of results in first chunk: 20
+[2025-04-21T03:51:28.182+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 20 new/updated records out of 20 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:51:28.187+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172520-70079-9...]
+[2025-04-21T03:51:28.635+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:28.639+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:51:29.817+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:29.820+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:51:31.325+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:31.330+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:51:32.939+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:32.947+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:51:34.196+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:34.202+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:51:35.749+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:35.752+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:51:37.165+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:37.166+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:51:38.621+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:38.621+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:51:40.196+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:40.198+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:51:42.296+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:42.300+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:51:44.497+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:44.501+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:51:46.753+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:46.754+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:51:48.925+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:48.929+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:51:51.544+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:51.557+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:51:53.701+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:53.704+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:51:55.970+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:55.975+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:51:58.228+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:51:58.231+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:52:00.486+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:00.492+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:52:03.177+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:03.180+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:52:05.382+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:05.386+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:52:05.512+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:05.513+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:52:05.515+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 20 new/changed records into Snowflake table: MBTA_PREDICTIONS in 37.70 seconds
+[2025-04-21T03:52:05.529+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 19 records from topic: mbta_predictions
+[2025-04-21T03:52:05.568+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:52:05.568+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:52:05.530492
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:52:05.530508
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:52:05.530510
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:52:05.530512
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:52:05.530523
+
+[5 rows x 9 columns]
+[2025-04-21T03:52:05.585+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:52:05.753+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:05.753+0000] {cursor.py:1205} INFO - Number of results in first chunk: 19
+[2025-04-21T03:52:05.765+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 19 new/updated records out of 19 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:52:05.766+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:52:07.562+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:07.565+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:52:09.790+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:09.791+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:52:12.020+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:12.025+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:52:14.215+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:14.218+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:52:16.468+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:16.472+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:52:18.553+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:18.556+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:52:20.678+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:20.682+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:52:22.909+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:22.911+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:52:25.054+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:25.062+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:52:27.257+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:27.263+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:52:29.599+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:29.605+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:52:32.355+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:32.358+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:52:35.527+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:35.527+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:52:37.622+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:37.631+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:52:39.842+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:39.843+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:52:42.044+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:42.045+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:52:44.905+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:44.906+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:52:47.268+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:47.271+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:52:49.619+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:49.620+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:52:49.746+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:49.747+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:52:49.747+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 19 new/changed records into Snowflake table: MBTA_PREDICTIONS in 44.16 seconds
+[2025-04-21T03:52:49.752+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 20 records from topic: mbta_predictions
+[2025-04-21T03:52:49.782+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:52:49.783+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:52:49.753031
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:52:49.753045
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:52:49.753051
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:52:49.753052
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:52:49.753072
+
+[5 rows x 9 columns]
+[2025-04-21T03:52:49.803+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:52:50.021+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:50.021+0000] {cursor.py:1205} INFO - Number of results in first chunk: 20
+[2025-04-21T03:52:50.045+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 20 new/updated records out of 20 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:52:50.046+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:52:52.006+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:52.010+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:52:54.430+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:54.433+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:52:56.281+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:56.282+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:52:58.772+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:52:58.782+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:53:01.035+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:01.044+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:53:03.255+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:03.257+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:53:05.311+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:05.312+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:53:07.647+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:07.648+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:53:09.774+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:09.780+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:53:11.641+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:11.642+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:53:13.903+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:13.906+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:53:16.354+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:16.357+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:53:18.825+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:18.827+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:53:21.007+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:21.009+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:53:23.251+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:23.254+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:53:26.046+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:26.048+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:53:28.474+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:28.475+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:53:31.041+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:31.048+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172531-70079-9...]
+[2025-04-21T03:53:36.208+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:38.008+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:53:40.615+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:40.622+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:53:40.784+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:40.794+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:53:40.795+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 20 new/changed records into Snowflake table: MBTA_PREDICTIONS in 50.99 seconds
+[2025-04-21T03:53:40.802+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 20 records from topic: mbta_predictions
+[2025-04-21T03:53:40.878+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:53:40.882+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:53:40.804696
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:53:40.804783
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:53:40.804791
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:53:40.804826
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:53:40.804829
+
+[5 rows x 9 columns]
+[2025-04-21T03:53:40.902+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:53:41.128+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:41.129+0000] {cursor.py:1205} INFO - Number of results in first chunk: 20
+[2025-04-21T03:53:41.151+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 20 new/updated records out of 20 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:53:41.152+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:53:43.193+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:43.195+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:53:45.447+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:45.458+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:53:47.691+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:47.694+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:53:49.858+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:49.865+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:53:52.248+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:52.250+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:53:54.474+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:54.476+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:53:56.809+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:56.810+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:53:58.956+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:53:58.961+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:54:00.908+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:00.911+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:54:03.161+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:03.168+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:54:05.729+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:05.735+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:54:08.793+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:08.798+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:54:11.034+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:11.035+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:54:13.236+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:13.248+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:54:16.766+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:17.648+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:54:20.189+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:20.823+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:54:25.708+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:26.122+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:54:29.479+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:30.260+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172531-70079-9...]
+[2025-04-21T03:54:32.360+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:32.453+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:54:34.177+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:34.197+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:54:34.421+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:34.451+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:54:34.462+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 20 new/changed records into Snowflake table: MBTA_PREDICTIONS in 53.56 seconds
+[2025-04-21T03:54:34.490+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 20 records from topic: mbta_predictions
+[2025-04-21T03:54:34.839+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:54:34.855+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:54:34.519133
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:54:34.523638
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:54:34.523647
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:54:34.523666
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:54:34.523682
+
+[5 rows x 9 columns]
+[2025-04-21T03:54:36.367+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:54:37.072+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:37.126+0000] {cursor.py:1205} INFO - Number of results in first chunk: 20
+[2025-04-21T03:54:38.135+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 20 new/updated records out of 20 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:54:38.159+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:54:39.511+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:39.518+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:54:41.913+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:41.920+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:54:44.511+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:44.517+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:54:46.925+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:46.926+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:54:49.525+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:49.532+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:54:51.910+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:52.078+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:54:53.963+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:53.967+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:54:56.253+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:56.258+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:54:58.544+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:54:58.572+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:55:02.268+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:02.277+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:55:04.730+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:04.785+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:55:07.090+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:07.097+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:55:09.525+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:09.558+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:55:12.311+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:12.322+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:55:14.532+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:14.552+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:55:16.805+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:16.808+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:55:19.363+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:19.371+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:55:22.502+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:22.510+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172531-70079-9...]
+[2025-04-21T03:55:26.820+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:26.823+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:55:30.487+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:30.490+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:55:30.623+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:30.624+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:55:30.625+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 20 new/changed records into Snowflake table: MBTA_PREDICTIONS in 54.27 seconds
+[2025-04-21T03:55:30.632+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 20 records from topic: mbta_predictions
+[2025-04-21T03:55:30.669+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:55:30.671+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:55:30.633229
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:55:30.633236
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:55:30.633249
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:55:30.633251
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:55:30.633252
+
+[5 rows x 9 columns]
+[2025-04-21T03:55:30.718+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:55:30.957+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:30.961+0000] {cursor.py:1205} INFO - Number of results in first chunk: 20
+[2025-04-21T03:55:30.992+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 20 new/updated records out of 20 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:55:30.994+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:55:34.578+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:34.584+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:55:37.912+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:37.919+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:55:41.581+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:41.588+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:55:45.632+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:45.677+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:55:48.486+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:48.502+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:55:51.263+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:51.272+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:55:54.278+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:54.285+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172525-70079-9...]
+[2025-04-21T03:55:57.676+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:55:57.692+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172379-70080-1...]
+[2025-04-21T03:56:01.232+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:01.236+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172526-70079-9...]
+[2025-04-21T03:56:04.414+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:04.419+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172380-70080-1...]
+[2025-04-21T03:56:07.694+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:07.697+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172527-70079-9...]
+[2025-04-21T03:56:11.055+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:11.057+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172381-70080-1...]
+[2025-04-21T03:56:14.117+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:14.118+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172528-70079-9...]
+[2025-04-21T03:56:17.293+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:17.295+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172382-70080-1...]
+[2025-04-21T03:56:20.251+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:20.252+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172529-70079-9...]
+[2025-04-21T03:56:23.761+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:23.763+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172383-70080-1...]
+[2025-04-21T03:56:26.957+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:26.960+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172384-70080-1...]
+[2025-04-21T03:56:30.015+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:30.021+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172531-70079-9...]
+[2025-04-21T03:56:33.303+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:33.307+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172385-70080-1...]
+[2025-04-21T03:56:36.680+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:36.684+0000] {cursor.py:1028} INFO - query: [COMMIT]
+[2025-04-21T03:56:36.811+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:36.811+0000] {cursor.py:1205} INFO - Number of results in first chunk: 1
+[2025-04-21T03:56:36.811+0000] {mbta_kafka_consumer.py:139} INFO - ✅ Merged 20 new/changed records into Snowflake table: MBTA_PREDICTIONS in 66.10 seconds
+[2025-04-21T03:56:36.814+0000] {mbta_kafka_consumer.py:233} INFO - 📥 Received 21 records from topic: mbta_predictions
+[2025-04-21T03:56:36.832+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_PREDICTIONS:
+[2025-04-21T03:56:36.832+0000] {mbta_kafka_consumer.py:57} INFO - 
+                       PREDICTION_ID ROUTE_ID  ... STATUS                 CREATED_AT
+0  prediction-68172375-70080-130-Red      Red  ...   None 2025-04-21 03:56:36.814686
+1   prediction-68172521-70079-90-Red      Red  ...   None 2025-04-21 03:56:36.814693
+2   prediction-68172522-70079-90-Red      Red  ...   None 2025-04-21 03:56:36.814695
+3  prediction-68172376-70080-130-Red      Red  ...   None 2025-04-21 03:56:36.814700
+4   prediction-68172523-70079-90-Red      Red  ...   None 2025-04-21 03:56:36.814712
+
+[5 rows x 9 columns]
+[2025-04-21T03:56:36.844+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_PREDICTIONS WHERE PREDICTION_ID IN ('prediction-68172375-7008...]
+[2025-04-21T03:56:36.978+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:36.979+0000] {cursor.py:1205} INFO - Number of results in first chunk: 21
+[2025-04-21T03:56:36.990+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 21 new/updated records out of 21 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_PREDICTIONS
+[2025-04-21T03:56:36.990+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172375-70080-1...]
+[2025-04-21T03:56:40.053+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:40.059+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172521-70079-9...]
+[2025-04-21T03:56:43.449+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:43.452+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172522-70079-9...]
+[2025-04-21T03:56:46.805+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:46.809+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172376-70080-1...]
+[2025-04-21T03:56:49.883+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:49.899+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172523-70079-9...]
+[2025-04-21T03:56:52.000+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-21T03:56:53.564+0000] {process_utils.py:131} INFO - Sending 15 to group 215. PIDs of all processes in the group: [215]
+[2025-04-21T03:56:53.609+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 215
+[2025-04-21T03:56:53.634+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-21T03:56:53.668+0000] {logging_mixin.py:188} WARNING - --- Logging error ---
+[2025-04-21T03:56:53.794+0000] {logging_mixin.py:188} WARNING - Traceback (most recent call last):
+[2025-04-21T03:56:53.805+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 1083, in emit
+    msg = self.format(record)
+[2025-04-21T03:56:53.816+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 927, in format
+    return fmt.format(record)
+[2025-04-21T03:56:53.819+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 665, in format
+    record.asctime = self.formatTime(record, self.datefmt)
+[2025-04-21T03:56:53.821+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/log/timezone_aware.py", line 42, in formatTime
+    dt = pendulum.from_timestamp(record.created, tz=pendulum.local_timezone())
+[2025-04-21T03:56:53.831+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/pendulum/__init__.py", line 302, in from_timestamp
+    dt = dt.in_timezone(tz)
+[2025-04-21T03:56:53.843+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/pendulum/datetime.py", line 357, in in_timezone
+    return tz.convert(dt)
+[2025-04-21T03:56:53.846+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/pendulum/tz/timezone.py", line 136, in convert
+    return cast(_DT, dt.astimezone(self))
+[2025-04-21T03:56:53.852+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/pendulum/datetime.py", line 1278, in astimezone
+    dt = super().astimezone(tz)
+[2025-04-21T03:56:53.854+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/pendulum/datetime.py", line 1243, in __add__
+    caller = traceback.extract_stack(limit=2)[0].name
+[2025-04-21T03:56:53.855+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+[2025-04-21T03:56:53.856+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/traceback.py", line 362, in extract
+    linecache.checkcache(filename)
+[2025-04-21T03:56:53.857+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/linecache.py", line 58, in checkcache
+    elif filename in cache:
+[2025-04-21T03:56:53.859+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/models/taskinstance.py", line 2452, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+[2025-04-21T03:56:53.863+0000] {logging_mixin.py:188} WARNING - ***.exceptions.AirflowException: Task received SIGTERM signal
+[2025-04-21T03:56:53.869+0000] {logging_mixin.py:188} WARNING - Call stack:
+[2025-04-21T03:56:54.540+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/bin/***", line 8, in <module>
+    sys.exit(main())
+[2025-04-21T03:56:54.567+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/__main__.py", line 57, in main
+    args.func(args)
+[2025-04-21T03:56:54.570+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-21T03:56:54.579+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+[2025-04-21T03:56:54.589+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/providers_configuration_loader.py", line 55, in wrapped_function
+    return func(*args, **kwargs)
+[2025-04-21T03:56:54.599+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/scheduler_command.py", line 67, in scheduler
+    run_command_with_daemon_option(
+[2025-04-21T03:56:54.611+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/daemon_utils.py", line 86, in run_command_with_daemon_option
+    callback()
+[2025-04-21T03:56:54.659+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/scheduler_command.py", line 70, in <lambda>
+    callback=lambda: _run_scheduler_job(args),
+[2025-04-21T03:56:54.664+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/scheduler_command.py", line 52, in _run_scheduler_job
+    run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2025-04-21T03:56:54.665+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-21T03:56:54.672+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/job.py", line 393, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2025-04-21T03:56:54.685+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/job.py", line 422, in execute_job
+    ret = execute_callable()
+[2025-04-21T03:56:54.693+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/scheduler_job_runner.py", line 846, in _execute
+    self.job.executor.start()
+[2025-04-21T03:56:54.694+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 372, in start
+    self.impl.start()
+[2025-04-21T03:56:54.721+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 311, in start
+    worker.start()
+[2025-04-21T03:56:54.724+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+[2025-04-21T03:56:54.725+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+[2025-04-21T03:56:54.727+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+[2025-04-21T03:56:54.734+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+[2025-04-21T03:56:54.744+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+[2025-04-21T03:56:54.747+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/process.py", line 315, in _bootstrap
+    self.run()
+[2025-04-21T03:56:54.755+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 77, in run
+    return super().run()
+[2025-04-21T03:56:54.782+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+[2025-04-21T03:56:54.811+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 201, in do_work
+    self.execute_work(key=key, command=command)
+[2025-04-21T03:56:54.840+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 94, in execute_work
+    state = self._execute_work_in_fork(command)
+[2025-04-21T03:56:54.865+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/executors/local_executor.py", line 134, in _execute_work_in_fork
+    args.func(args)
+[2025-04-21T03:56:54.869+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-21T03:56:54.873+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+[2025-04-21T03:56:54.901+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 438, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-04-21T03:56:54.908+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 216, in _run_task_by_selected_method
+    return _run_task_by_local_task_job(args, ti)
+[2025-04-21T03:56:54.939+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 278, in _run_task_by_local_task_job
+    ret = run_job(job=job_runner.job, execute_callable=job_runner._execute)
+[2025-04-21T03:56:54.952+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-21T03:56:54.974+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/job.py", line 393, in run_job
+    return execute_job(job, execute_callable=execute_callable)
+[2025-04-21T03:56:54.987+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/job.py", line 422, in execute_job
+    ret = execute_callable()
+[2025-04-21T03:56:55.003+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/jobs/local_task_job_runner.py", line 165, in _execute
+    self.task_runner.start()
+[2025-04-21T03:56:55.007+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/task/task_runner/standard_task_runner.py", line 48, in start
+    self.process = self._start_by_fork()
+[2025-04-21T03:56:55.012+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/task/task_runner/standard_task_runner.py", line 100, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+[2025-04-21T03:56:55.020+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+[2025-04-21T03:56:55.022+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/cli.py", line 114, in wrapper
+    return f(*args, **kwargs)
+[2025-04-21T03:56:55.031+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 438, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+[2025-04-21T03:56:55.045+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 218, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+[2025-04-21T03:56:55.084+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/cli/commands/task_command.py", line 297, in _run_raw_task
+    return ti._run_raw_task(
+[2025-04-21T03:56:55.102+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/session.py", line 79, in wrapper
+    return func(*args, session=session, **kwargs)
+[2025-04-21T03:56:55.104+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/models/taskinstance.py", line 2334, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode, session=session)
+[2025-04-21T03:56:55.106+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/models/taskinstance.py", line 2499, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+[2025-04-21T03:56:55.107+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/models/taskinstance.py", line 2516, in _execute_task
+    return _execute_task(self, context, task_orig)
+[2025-04-21T03:56:55.110+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+[2025-04-21T03:56:55.120+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+[2025-04-21T03:56:55.136+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+[2025-04-21T03:56:55.168+0000] {logging_mixin.py:188} WARNING -   File "/opt/***/dags/mbta_ingestion_dag.py", line 36, in load_to_snowflake
+    consume_messages()  # pulls and merges into Snowflake
+[2025-04-21T03:56:55.181+0000] {logging_mixin.py:188} WARNING -   File "/opt/***/dags/mbta_kafka_consumer.py", line 234, in consume_messages
+    handle_table_insert(conn, topic, data)
+[2025-04-21T03:56:55.195+0000] {logging_mixin.py:188} WARNING -   File "/opt/***/dags/mbta_kafka_consumer.py", line 209, in handle_table_insert
+    merge_into_snowflake(conn, table, df, keys)
+[2025-04-21T03:56:55.208+0000] {logging_mixin.py:188} WARNING -   File "/opt/***/dags/mbta_kafka_consumer.py", line 134, in merge_into_snowflake
+    cursor.execute(merge_sql, row_dict)
+[2025-04-21T03:56:55.217+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/snowflake/connector/cursor.py", line 1041, in execute
+    logger.info("query execution done")
+[2025-04-21T03:56:55.233+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 1446, in info
+    self._log(INFO, msg, args, **kwargs)
+[2025-04-21T03:56:55.238+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 1589, in _log
+    self.handle(record)
+[2025-04-21T03:56:55.248+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 1599, in handle
+    self.callHandlers(record)
+[2025-04-21T03:56:55.253+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 1661, in callHandlers
+    hdlr.handle(record)
+[2025-04-21T03:56:55.259+0000] {logging_mixin.py:188} WARNING -   File "/usr/local/lib/python3.9/logging/__init__.py", line 952, in handle
+    self.emit(record)
+[2025-04-21T03:56:55.264+0000] {logging_mixin.py:188} WARNING -   File "/home/***/.local/lib/python3.9/site-packages/***/utils/log/file_task_handler.py", line 247, in emit
+    self.handler.emit(record)
+[2025-04-21T03:56:55.289+0000] {logging_mixin.py:188} WARNING - Message: 'query execution done'
+Arguments: ()
+[2025-04-21T03:56:55.443+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172524-70079-9...]
+[2025-04-21T03:56:56.748+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-21T03:56:56.762+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_PREDICTIONS AS target USING (SELECT 'prediction-68172378-70080-1...]
+[2025-04-21T03:56:58.838+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses

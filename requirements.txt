@@ -1,0 +1,17 @@
+# Airflow core
+apache-airflow==2.8.1
+
+# Airflow providers
+apache-airflow-providers-postgres
+apache-airflow-providers-snowflake
+apache-airflow-providers-apache-kafka
+
+# Snowflake + Kafka
+snowflake-connector-python
+confluent-kafka
+kafka-python
+
+# Utils
+requests
+python-dotenv
+pandas

@@ -1,0 +1,301 @@
+[2025-04-18T01:47:07.673+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer manual__2025-04-18T01:47:06.164797+00:00 [queued]>
+[2025-04-18T01:47:07.677+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer manual__2025-04-18T01:47:06.164797+00:00 [queued]>
+[2025-04-18T01:47:07.678+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-18T01:47:07.685+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-18 01:47:06.164797+00:00
+[2025-04-18T01:47:07.692+0000] {standard_task_runner.py:60} INFO - Started process 293 to run task
+[2025-04-18T01:47:07.706+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'manual__2025-04-18T01:47:06.164797+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpt_wapfom']
+[2025-04-18T01:47:07.724+0000] {standard_task_runner.py:88} INFO - Job 8: Subtask run_kafka_consumer
+[2025-04-18T01:47:07.855+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer manual__2025-04-18T01:47:06.164797+00:00 [running]> on host 62d421885c4a
+[2025-04-18T01:47:07.953+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-18T01:47:06.164797+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-18T01:47:06.164797+00:00'
+[2025-04-18T01:47:07.956+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-18T01:47:07.958+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-18T01:47:08.575+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-18T01:47:08.576+0000] {mbta_kafka_consumer.py:219} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-18T01:47:08.581+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-18T01:47:08.605+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.6', 9092)]>: Broker version identified as 2.6
+[2025-04-18T01:47:08.607+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-18T01:47:08.608+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-18T01:47:08.608+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-18T01:47:08.621+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_vehicles', 0), ('mbta_predictions', 0), ('mbta_stops', 0)]
+[2025-04-18T01:47:08.622+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.6', 9092)]>: connecting to kafka:9092 [('172.18.0.6', 9092) IPv4]
+[2025-04-18T01:47:08.623+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Connection complete.
+[2025-04-18T01:47:08.623+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.6', 9092)]>: Closing connection. 
+[2025-04-18T01:56:47.155+0000] {mbta_kafka_consumer.py:232} INFO - 📥 Received 120 records from topic: mbta_alerts
+[2025-04-18T01:56:47.348+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ALERTS:
+[2025-04-18T01:56:47.350+0000] {mbta_kafka_consumer.py:57} INFO - 
+  ALERT_ID  ...                 CREATED_AT
+0   638240  ...  2025-04-16T10:52:04-04:00
+1   435698  ...  2022-03-15T10:13:31-04:00
+2   634497  ...  2025-03-27T14:21:07-04:00
+3   634495  ...  2025-03-27T14:18:44-04:00
+4   416078  ...  2021-11-04T15:14:54-04:00
+
+[5 rows x 6 columns]
+[2025-04-18T01:56:47.446+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ALERTS WHERE ALERT_ID IN ('638240','435698','634497','634495'...]
+[2025-04-18T01:56:48.873+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:48.889+0000] {cursor.py:1205} INFO - Number of results in first chunk: 256
+[2025-04-18T01:56:49.885+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 562 new/updated records out of 120 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ALERTS
+[2025-04-18T01:56:49.887+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638240', 'Orange Line: Shuttle b...]
+[2025-04-18T01:56:51.844+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:51.851+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:54.549+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:54.551+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:57.173+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:57.174+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:56:59.850+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:56:59.853+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:02.314+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:02.317+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:05.068+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:05.069+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:07.435+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:07.439+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:10.320+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:10.326+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:13.140+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:13.143+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:16.145+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:16.150+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:18.301+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:18.304+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:20.759+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:20.765+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:23.377+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:23.379+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:25.693+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:25.710+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:28.294+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:28.303+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:30.689+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:30.696+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:33.135+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:33.136+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:35.565+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:35.567+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '435698', 'Bowdoin Escalator 125 ...]
+[2025-04-18T01:57:38.373+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:38.378+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '634497', 'On Saturday, April 5th...]
+[2025-04-18T01:57:40.865+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:40.867+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '634495', 'On Saturday, April 5th...]
+[2025-04-18T01:57:43.753+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:43.754+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:46.082+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:46.084+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:48.573+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:48.575+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:51.123+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:51.125+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:53.684+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:53.686+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:56.060+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:56.061+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:57:58.573+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:57:58.576+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:00.990+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:00.991+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:03.489+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:03.491+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:06.020+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:06.023+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:08.654+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:08.656+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:11.118+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:11.120+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:13.616+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:13.624+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:16.213+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:16.215+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:18.765+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:18.767+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:21.196+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:21.197+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:23.681+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:23.683+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:26.462+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:26.463+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '416078', 'Lynn Parking Garage ar...]
+[2025-04-18T01:58:29.298+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:29.304+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637996', 'Route 52 service will ...]
+[2025-04-18T01:58:32.396+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:32.396+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637987', 'Route 66 will be rerou...]
+[2025-04-18T01:58:35.049+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:35.053+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638452', 'Route 44 is experienci...]
+[2025-04-18T01:58:37.625+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:37.631+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '636938', 'Due to Boston Marathon...]
+[2025-04-18T01:58:40.297+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:40.314+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '633908', 'From March 24 to June ...]
+[2025-04-18T01:58:42.702+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:42.706+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637986', 'Route 504 will be rero...]
+[2025-04-18T01:58:45.389+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:45.391+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:48.332+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:48.348+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:50.869+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:50.870+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:53.458+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:53.460+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:55.933+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:55.934+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:58:58.410+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:58:58.414+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:00.854+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:00.855+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:03.578+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:03.584+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:06.299+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:06.302+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:09.057+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:09.065+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:12.012+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:12.019+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:14.749+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:14.754+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:17.402+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:17.425+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:19.712+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:19.717+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:22.332+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:22.337+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:25.432+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:25.441+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:28.035+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:28.040+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:30.502+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:30.502+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '630009', 'There is no accessible...]
+[2025-04-18T01:59:33.187+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:33.191+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637983', 'Route 62 and 76 detour...]
+[2025-04-18T01:59:35.822+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:35.823+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637989', 'Route 59 will be rerou...]
+[2025-04-18T01:59:38.834+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:38.837+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:41.613+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:41.616+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:44.200+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:44.205+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:46.690+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:46.701+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:49.304+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:49.306+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:51.798+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:51.802+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:54.229+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:54.230+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:56.876+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:56.890+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T01:59:59.371+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T01:59:59.371+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:02.565+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:02.568+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:05.183+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:05.190+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:07.772+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:07.775+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:10.517+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:10.524+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:13.493+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:13.499+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:16.874+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:16.880+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:19.457+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:19.460+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:22.423+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:22.427+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:24.927+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:24.931+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '626250', 'Aquarium Escalator 405...]
+[2025-04-18T02:00:28.105+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:28.110+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638576', 'Route 77 is experienci...]
+[2025-04-18T02:00:31.473+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:31.479+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637998', 'Route 47 will be rerou...]
+[2025-04-18T02:00:34.706+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:34.712+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638540', 'Route 23 is experienci...]
+[2025-04-18T02:00:37.260+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:37.264+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '633776', 'Long Wharf South is cl...]
+[2025-04-18T02:00:39.938+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:39.943+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:43.123+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:43.124+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:45.622+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:45.628+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:48.571+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:48.579+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:51.156+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:51.158+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:54.633+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:54.644+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:57.361+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:57.362+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:00:59.978+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:00:59.979+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:02.959+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:02.967+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:05.561+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:05.710+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:08.761+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:08.763+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:11.614+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:11.615+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:14.251+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:14.252+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:17.193+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:17.197+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:19.680+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:19.683+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:22.600+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:22.608+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:25.900+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:25.903+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:28.733+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:28.746+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '625935', 'Littleton/Route 495 pa...]
+[2025-04-18T02:01:31.375+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:31.379+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637949', 'Park Street Escalator ...]
+[2025-04-18T02:01:34.096+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:34.100+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '638604', 'Route 62 is experienci...]
+[2025-04-18T02:01:37.001+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:37.004+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '637835', 'Due to the 250th anniv...]
+[2025-04-18T02:01:40.676+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:40.682+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:44.092+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:44.097+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:46.875+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:46.878+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:49.482+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:49.485+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:51.949+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:51.958+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:55.075+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:55.078+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:01:57.879+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:01:57.883+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:01.773+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:01.776+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:04.290+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:04.298+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:06.959+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:06.963+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:09.834+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:09.838+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:12.827+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:12.830+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:15.606+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:15.628+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:18.096+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:18.104+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:21.156+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:21.160+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:23.943+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-18T02:02:23.948+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_ALERTS AS target USING (SELECT '584862', 'Commuter Rail train se...]
+[2025-04-18T02:02:24.187+0000] {local_task_job_runner.py:121} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-04-18T02:02:24.236+0000] {process_utils.py:131} INFO - Sending 15 to group 293. PIDs of all processes in the group: [293]
+[2025-04-18T02:02:24.245+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 293
+[2025-04-18T02:02:24.269+0000] {taskinstance.py:2450} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-04-18T02:02:24.325+0000] {mbta_kafka_consumer.py:212} ERROR - ❌ Error processing topic mbta_alerts: Task received SIGTERM signal
+[2025-04-18T02:02:32.615+0000] {mbta_kafka_consumer.py:232} INFO - 📥 Received 1000 records from topic: mbta_stops
+[2025-04-18T02:02:32.669+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_STOPS:
+[2025-04-18T02:02:32.671+0000] {mbta_kafka_consumer.py:57} INFO - 
+          STOP_ID  ...                 CREATED_AT
+0            5682  ... 2025-04-18 02:02:32.624688
+1           50620  ... 2025-04-18 02:02:32.624712
+2  node-417-lobby  ... 2025-04-18 02:02:32.624716
+3            4042  ... 2025-04-18 02:02:32.624729
+4          109822  ... 2025-04-18 02:02:32.624764
+
+[5 rows x 5 columns]
+[2025-04-18T02:02:32.707+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_STOPS WHERE STOP_ID IN ('5682','50620','node-417-lobby','4042...]

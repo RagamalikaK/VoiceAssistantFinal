@@ -1,0 +1,234 @@
+[2025-04-23T18:21:30.830+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T18:15:00+00:00 [queued]>
+[2025-04-23T18:21:30.910+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T18:15:00+00:00 [queued]>
+[2025-04-23T18:21:30.917+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-23T18:21:31.001+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): run_kafka_consumer> on 2025-04-23 18:15:00+00:00
+[2025-04-23T18:21:31.015+0000] {standard_task_runner.py:60} INFO - Started process 221 to run task
+[2025-04-23T18:21:31.026+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_kafka_consumer_dag', 'run_kafka_consumer', 'scheduled__2025-04-23T18:15:00+00:00', '--job-id', '474', '--raw', '--subdir', 'DAGS_FOLDER/mbta_kafka_consumer_dag.py', '--cfg-path', '/tmp/tmpji59loh_']
+[2025-04-23T18:21:31.043+0000] {standard_task_runner.py:88} INFO - Job 474: Subtask run_kafka_consumer
+[2025-04-23T18:21:31.327+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_kafka_consumer_dag.run_kafka_consumer scheduled__2025-04-23T18:15:00+00:00 [running]> on host 867e51213d1f
+[2025-04-23T18:21:31.929+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_kafka_consumer_dag' AIRFLOW_CTX_TASK_ID='run_kafka_consumer' AIRFLOW_CTX_EXECUTION_DATE='2025-04-23T18:15:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-23T18:15:00+00:00'
+[2025-04-23T18:21:31.948+0000] {connection.py:370} INFO - Snowflake Connector for Python Version: 3.6.0, Python Version: 3.9.18, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-04-23T18:21:31.952+0000] {connection.py:1171} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-04-23T18:21:33.280+0000] {mbta_kafka_consumer.py:45} INFO - ✅ Connected to Snowflake successfully.
+[2025-04-23T18:21:33.303+0000] {mbta_kafka_consumer.py:220} INFO - 🚀 Starting MBTA Kafka Consumer...
+[2025-04-23T18:21:33.355+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.3', 9092)]>: connecting to kafka:9092 [('172.18.0.3', 9092) IPv4]
+[2025-04-23T18:21:34.193+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.3', 9092)]>: Broker version identified as 2.6
+[2025-04-23T18:21:34.209+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.3', 9092)]>: Connection complete.
+[2025-04-23T18:21:34.249+0000] {consumer.py:119} WARNING - group_id is None: disabling auto-commit.
+[2025-04-23T18:21:34.252+0000] {subscription_state.py:182} INFO - Updating subscribed topics to: ('mbta_alerts', 'mbta_routes', 'mbta_stops', 'mbta_vehicles', 'mbta_predictions')
+[2025-04-23T18:21:34.505+0000] {subscription_state.py:254} INFO - Updated partition assignment: [('mbta_predictions', 0), ('mbta_vehicles', 0), ('mbta_routes', 0), ('mbta_alerts', 0), ('mbta_stops', 0)]
+[2025-04-23T18:21:34.509+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.3', 9092)]>: connecting to kafka:9092 [('172.18.0.3', 9092) IPv4]
+[2025-04-23T18:21:34.511+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.3', 9092)]>: Connection complete.
+[2025-04-23T18:21:34.511+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-2.1.5, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.3', 9092)]>: Closing connection. 
+[2025-04-23T18:21:48.153+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:48.204+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:48.205+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:48.164533
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:48.164538
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:48.164539
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:48.164541
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:48.164543
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:48.262+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:48.570+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:48.572+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:49.206+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:49.207+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:49.253+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:49.259+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:49.261+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:49.254084
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:49.254102
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:49.254108
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:49.254109
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:49.254119
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:49.273+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:49.477+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:49.481+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:49.887+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:49.889+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:49.891+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:49.902+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:49.903+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:49.892684
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:49.892701
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:49.892704
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:49.892706
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:49.892718
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:49.911+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:50.106+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:50.113+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:50.436+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:50.437+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:50.441+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:50.457+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:50.462+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:50.442525
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:50.442540
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:50.442542
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:50.442543
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:50.442545
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:50.482+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:50.658+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:50.660+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:51.015+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:51.016+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:51.017+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:51.026+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:51.027+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:51.018213
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:51.018225
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:51.018230
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:51.018243
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:51.018245
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:51.033+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:51.200+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:51.201+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:51.671+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:51.673+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:51.675+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:51.689+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:51.691+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:51.676364
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:51.676366
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:51.676367
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:51.676372
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:51.676373
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:51.711+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:51.893+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:51.904+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:52.690+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:52.692+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:52.696+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:52.706+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:52.706+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:52.697494
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:52.697504
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:52.697505
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:52.697506
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:52.697517
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:52.742+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:52.921+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:52.924+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:53.457+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:53.459+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:53.460+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:53.471+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:53.473+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:53.461028
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:53.461039
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:53.461041
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:53.461046
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:53.461048
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:53.490+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:53.654+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:53.658+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:54.158+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:54.159+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:54.163+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:54.182+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:54.186+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:54.163810
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:54.163831
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:54.163861
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:54.163865
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:54.163882
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:54.206+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:54.388+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:54.394+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:54.855+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:54.857+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:54.858+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:54.870+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:54.871+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:54.859125
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:54.859137
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:54.859138
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:54.859147
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:54.859149
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:54.884+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:55.084+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:55.091+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:55.421+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:55.426+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:55.428+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 178 records from topic: mbta_routes
+[2025-04-23T18:21:55.462+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_ROUTES:
+[2025-04-23T18:21:55.464+0000] {mbta_kafka_consumer.py:57} INFO - 
+   ROUTE_ID        ROUTE_NAME  ...  ROUTE_COLOR                 CREATED_AT
+0       Red          Red Line  ...       DA291C 2025-04-23 18:21:55.430036
+1  Mattapan  Mattapan Trolley  ...       DA291C 2025-04-23 18:21:55.430041
+2    Orange       Orange Line  ...       ED8B00 2025-04-23 18:21:55.430053
+3   Green-B      Green Line B  ...       00843D 2025-04-23 18:21:55.430055
+4   Green-C      Green Line C  ...       00843D 2025-04-23 18:21:55.430056
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:55.497+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_ROUTES WHERE ROUTE_ID IN ('Red','Mattapan','Orange','Green-B'...]
+[2025-04-23T18:21:55.672+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:55.689+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:56.111+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 178 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_ROUTES
+[2025-04-23T18:21:56.117+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 178 records already up-to-date in MBTA_ROUTES, no merge needed.
+[2025-04-23T18:21:56.119+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 1000 records from topic: mbta_stops
+[2025-04-23T18:21:56.147+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_STOPS:
+[2025-04-23T18:21:56.147+0000] {mbta_kafka_consumer.py:57} INFO - 
+          STOP_ID  ...                 CREATED_AT
+0            5682  ... 2025-04-23 18:21:56.120572
+1           50620  ... 2025-04-23 18:21:56.120583
+2  node-417-lobby  ... 2025-04-23 18:21:56.120607
+3            4042  ... 2025-04-23 18:21:56.120610
+4          109822  ... 2025-04-23 18:21:56.120630
+
+[5 rows x 5 columns]
+[2025-04-23T18:21:56.154+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_STOPS WHERE STOP_ID IN ('5682','50620','node-417-lobby','4042...]
+[2025-04-23T18:21:56.345+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:56.363+0000] {cursor.py:1205} INFO - Number of results in first chunk: 0
+[2025-04-23T18:21:57.591+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 0 new/updated records out of 1000 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_STOPS
+[2025-04-23T18:21:57.594+0000] {mbta_kafka_consumer.py:107} INFO - ✅ All 1000 records already up-to-date in MBTA_STOPS, no merge needed.
+[2025-04-23T18:21:57.597+0000] {mbta_kafka_consumer.py:234} INFO - 📥 Received 281 records from topic: mbta_vehicles
+[2025-04-23T18:21:57.614+0000] {mbta_kafka_consumer.py:56} INFO - 🔍 Sample data for MBTA_VEHICLES:
+[2025-04-23T18:21:57.622+0000] {mbta_kafka_consumer.py:57} INFO - 
+   VEHICLE_ID ROUTE_ID  ...         STATUS                 CREATED_AT
+0       y1830       10  ...     STOPPED_AT 2025-04-23 18:21:57.598213
+1     G-10268  Green-C  ...     STOPPED_AT 2025-04-23 18:21:57.598286
+2     G-10469  Green-D  ...    INCOMING_AT 2025-04-23 18:21:57.598292
+3  O-5482A351   Orange  ...     STOPPED_AT 2025-04-23 18:21:57.598308
+4       y3309      426  ...  IN_TRANSIT_TO 2025-04-23 18:21:57.598329
+
+[5 rows x 8 columns]
+[2025-04-23T18:21:57.650+0000] {cursor.py:1028} INFO - query: [SELECT * FROM MBTA_VEHICLES WHERE VEHICLE_ID IN ('y1830','G-10268','G-10469','O-...]
+[2025-04-23T18:21:58.025+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:21:58.028+0000] {cursor.py:1205} INFO - Number of results in first chunk: 298
+[2025-04-23T18:21:58.064+0000] {mbta_kafka_consumer.py:104} INFO - 🔁 171 new/updated records out of 281 incoming records (some may be duplicate VEHICLE_IDs) for MBTA_VEHICLES
+[2025-04-23T18:21:58.067+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'R-54829A82', 'Red', 42.35579, ...]
+[2025-04-23T18:22:00.221+0000] {cursor.py:1041} INFO - query execution done
+[2025-04-23T18:22:00.228+0000] {cursor.py:1028} INFO - query: [MERGE INTO MBTA_VEHICLES AS target USING (SELECT 'y2041', '110', 42.40986583, -7...]
+[2025-04-23T18:22:01.803+0000] {local_task_job_runner.py:234} INFO - Task exited with return code -9
+[2025-04-23T18:22:02.462+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
