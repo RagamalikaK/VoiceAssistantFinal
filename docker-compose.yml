@@ -48,6 +48,27 @@ services:
     ports:
       - "9092:9092"
 
+  kafka-topic-init:
+    image: confluentinc/cp-kafka:7.3.0
+    restart: "no"
+    depends_on:
+      - kafka
+    networks:
+      - mbta_pipeline_network    
+    entrypoint: ["/bin/bash", "-c"]
+    command: >
+      bash -c "
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_alerts &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_routes &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_stops &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_vehicles &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_predictions &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_schedules &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_lines &&
+      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_facilities
+      "
+
+
   airflow-webserver:
     build: .
     container_name: airflow-webserver
@@ -98,6 +119,7 @@ services:
     container_name: kafka_producer
     depends_on:
       - kafka
+      - kafka-topic-init
     restart: always
     networks:
       - mbta_pipeline_network
@@ -116,6 +138,7 @@ services:
     container_name: kafka_consumer
     depends_on:
       - kafka
+      - kafka-topic-init
     restart: always
     networks:
       - mbta_pipeline_network

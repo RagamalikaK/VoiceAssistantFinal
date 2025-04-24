@@ -201,15 +201,21 @@ def fetch_and_produce(topic, endpoint):
         logging.error(f"❌ Failed fetching/sending for {topic}: {e}")
 
 # ✅ Get route IDs
-def fetch_all_route_ids():
-    try:
-        url = f"{MBTA_API_URL}/routes?api_key={MBTA_API_KEY}"
-        res = requests.get(url, timeout=10)
-        res.raise_for_status()
-        return [r["id"] for r in res.json()["data"]]
-    except Exception as e:
-        logging.error(f"❌ Error fetching route IDs: {e}")
-        return []
+def fetch_all_route_ids(retries=3, delay=3):
+    for attempt in range(retries):
+        try:
+            url = f"{MBTA_API_URL}/routes?api_key={MBTA_API_KEY}"
+            res = requests.get(url, timeout=10)
+            res.raise_for_status()
+            routes = [r["id"] for r in res.json()["data"]]
+            logging.info(f"✅ Retrieved {len(routes)} route IDs")
+            return routes
+        except Exception as e:
+            logging.warning(f"⚠️ Attempt {attempt + 1} - Error fetching route IDs: {e}")
+            time.sleep(delay)
+    logging.error("❌ Failed to fetch route IDs after multiple attempts.")
+    return []
+
 
 # ✅ Main loop
 logging.info("🚀 Starting MBTA Data Pipeline...")
@@ -222,7 +228,10 @@ try:
 
         # Step 2: Dynamic per-route endpoints
         route_ids = fetch_all_route_ids()
+        if not route_ids:
+            logging.warning("⚠️ No routes returned; skipping predictions and schedules.")
         for route_id in route_ids:
+            logging.info(f"🔍 Fetching predictions and schedules for route: {route_id}")
             pred_ep = f"/predictions?filter[route]={route_id}&include=stop,trip,vehicle&api_key={MBTA_API_KEY}"
             sched_ep = f"/schedules?filter[route]={route_id}&api_key={MBTA_API_KEY}"
             fetch_and_produce(TOPICS["predictions"], pred_ep)
