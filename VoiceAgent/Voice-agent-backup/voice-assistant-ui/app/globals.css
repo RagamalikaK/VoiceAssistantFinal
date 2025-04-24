@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  /* MBTA Line Colors */
+  --mbta-blue: #0d2d83;
+  --mbta-orange: #ce8b2d;
+  --mbta-red: #c02d1d;
+  --mbta-green: #367437;
+
+  /* Default color scheme */
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mbta-gradient-bg {
+  background: linear-gradient(to bottom, var(--mbta-blue), var(--mbta-orange), var(--mbta-red), var(--mbta-green));
+}
+
+.mbta-bg-image {
+  background-image: url("/mbta-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
