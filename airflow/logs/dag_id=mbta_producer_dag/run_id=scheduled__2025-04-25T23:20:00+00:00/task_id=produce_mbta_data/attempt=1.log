@@ -1,0 +1,797 @@
+[2025-04-25T23:25:00.951+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:20:00+00:00 [queued]>
+[2025-04-25T23:25:00.958+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:20:00+00:00 [queued]>
+[2025-04-25T23:25:00.958+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-25T23:25:00.970+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): produce_mbta_data> on 2025-04-25 23:20:00+00:00
+[2025-04-25T23:25:00.973+0000] {standard_task_runner.py:60} INFO - Started process 540 to run task
+[2025-04-25T23:25:00.976+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_producer_dag', 'produce_mbta_data', 'scheduled__2025-04-25T23:20:00+00:00', '--job-id', '1528', '--raw', '--subdir', 'DAGS_FOLDER/mbta_producer_dag.py', '--cfg-path', '/tmp/tmpjbx_m7of']
+[2025-04-25T23:25:00.983+0000] {standard_task_runner.py:88} INFO - Job 1528: Subtask produce_mbta_data
+[2025-04-25T23:25:01.041+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:20:00+00:00 [running]> on host e1ad2afb0b48
+[2025-04-25T23:25:01.321+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_producer_dag' AIRFLOW_CTX_TASK_ID='produce_mbta_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-25T23:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-25T23:20:00+00:00'
+[2025-04-25T23:25:01.323+0000] {mbta_data_pipeline.py:107} INFO - 🚀 Starting MBTA Kafka Producer...
+[2025-04-25T23:25:01.328+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:25:01.349+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 9092)]>: Broker version identified as 2.6
+[2025-04-25T23:25:01.350+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-25T23:25:01.351+0000] {mbta_data_pipeline.py:39} INFO - ✅ Kafka Producer connected successfully.
+[2025-04-25T23:25:01.672+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_alerts: 286.75 KB
+[2025-04-25T23:25:01.678+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:25:01.681+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-25T23:25:01.683+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-25T23:25:01.783+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_alerts (84 records)
+[2025-04-25T23:25:01.922+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_routes: 91.74 KB
+[2025-04-25T23:25:01.953+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_routes (178 records)
+[2025-04-25T23:25:04.574+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_stops: 6052.46 KB
+[2025-04-25T23:25:04.580+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_stops...
+[2025-04-25T23:25:05.678+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_stops (10250 records)
+[2025-04-25T23:25:06.014+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_vehicles: 350.95 KB
+[2025-04-25T23:25:06.261+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_vehicles (575 records)
+[2025-04-25T23:25:06.474+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_lines: 31.42 KB
+[2025-04-25T23:25:06.503+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_lines (142 records)
+[2025-04-25T23:25:07.145+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_facilities: 2131.60 KB
+[2025-04-25T23:25:07.147+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_facilities...
+[2025-04-25T23:25:07.594+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_facilities (1852 records)
+[2025-04-25T23:25:07.796+0000] {mbta_data_pipeline.py:97} INFO - ✅ Retrieved 178 route IDs
+[2025-04-25T23:25:07.973+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 258.21 KB
+[2025-04-25T23:25:08.064+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (418 records)
+[2025-04-25T23:25:09.478+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2940.15 KB
+[2025-04-25T23:25:09.479+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:09.942+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6552 records)
+[2025-04-25T23:25:10.555+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 3.14 KB
+[2025-04-25T23:25:10.557+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (5 records)
+[2025-04-25T23:25:10.902+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1054.84 KB
+[2025-04-25T23:25:10.902+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:11.175+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2352 records)
+[2025-04-25T23:25:11.836+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 275.07 KB
+[2025-04-25T23:25:11.890+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (440 records)
+[2025-04-25T23:25:13.133+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3332.12 KB
+[2025-04-25T23:25:13.134+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:13.663+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7360 records)
+[2025-04-25T23:25:14.334+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 217.26 KB
+[2025-04-25T23:25:14.370+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (350 records)
+[2025-04-25T23:25:16.199+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2957.08 KB
+[2025-04-25T23:25:16.200+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:16.697+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6504 records)
+[2025-04-25T23:25:17.334+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 137.24 KB
+[2025-04-25T23:25:17.367+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (220 records)
+[2025-04-25T23:25:18.383+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2572.36 KB
+[2025-04-25T23:25:18.385+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:18.881+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5658 records)
+[2025-04-25T23:25:19.780+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 123.56 KB
+[2025-04-25T23:25:19.807+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (199 records)
+[2025-04-25T23:25:21.248+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3268.48 KB
+[2025-04-25T23:25:21.248+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:21.811+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7186 records)
+[2025-04-25T23:25:23.684+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 212.14 KB
+[2025-04-25T23:25:23.739+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (341 records)
+[2025-04-25T23:25:25.242+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3588.91 KB
+[2025-04-25T23:25:25.244+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:25.949+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7897 records)
+[2025-04-25T23:25:26.617+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 39.29 KB
+[2025-04-25T23:25:26.628+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (63 records)
+[2025-04-25T23:25:27.649+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2174.87 KB
+[2025-04-25T23:25:27.651+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:28.141+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4787 records)
+[2025-04-25T23:25:29.107+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 49.82 KB
+[2025-04-25T23:25:29.130+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (84 records)
+[2025-04-25T23:25:29.719+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 946.47 KB
+[2025-04-25T23:25:29.912+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2146 records)
+[2025-04-25T23:25:30.530+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 52.26 KB
+[2025-04-25T23:25:30.543+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (88 records)
+[2025-04-25T23:25:30.959+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 876.99 KB
+[2025-04-25T23:25:31.114+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1982 records)
+[2025-04-25T23:25:31.975+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 66.58 KB
+[2025-04-25T23:25:32.001+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (112 records)
+[2025-04-25T23:25:32.893+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1137.96 KB
+[2025-04-25T23:25:32.894+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:33.219+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2573 records)
+[2025-04-25T23:25:34.176+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 106.80 KB
+[2025-04-25T23:25:34.205+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (180 records)
+[2025-04-25T23:25:34.665+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 913.92 KB
+[2025-04-25T23:25:34.870+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2064 records)
+[2025-04-25T23:25:35.639+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 115.37 KB
+[2025-04-25T23:25:35.665+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (195 records)
+[2025-04-25T23:25:36.813+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1286.33 KB
+[2025-04-25T23:25:36.818+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:37.054+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2904 records)
+[2025-04-25T23:25:37.728+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 2.31 KB
+[2025-04-25T23:25:37.749+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (4 records)
+[2025-04-25T23:25:37.975+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 176.85 KB
+[2025-04-25T23:25:38.017+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (404 records)
+[2025-04-25T23:25:38.624+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 21.07 KB
+[2025-04-25T23:25:38.629+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (32 records)
+[2025-04-25T23:25:38.921+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 342.26 KB
+[2025-04-25T23:25:39.000+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (685 records)
+[2025-04-25T23:25:39.631+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.17 KB
+[2025-04-25T23:25:39.635+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (11 records)
+[2025-04-25T23:25:39.885+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 248.96 KB
+[2025-04-25T23:25:39.936+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (494 records)
+[2025-04-25T23:25:40.804+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 28.88 KB
+[2025-04-25T23:25:40.816+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (44 records)
+[2025-04-25T23:25:41.075+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 290.42 KB
+[2025-04-25T23:25:41.155+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (585 records)
+[2025-04-25T23:25:41.838+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 15.77 KB
+[2025-04-25T23:25:41.856+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (24 records)
+[2025-04-25T23:25:42.127+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 397.65 KB
+[2025-04-25T23:25:42.192+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (782 records)
+[2025-04-25T23:25:42.889+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 30.19 KB
+[2025-04-25T23:25:42.901+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (46 records)
+[2025-04-25T23:25:43.167+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 375.37 KB
+[2025-04-25T23:25:43.229+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (742 records)
+[2025-04-25T23:25:43.856+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 9.83 KB
+[2025-04-25T23:25:43.862+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (15 records)
+[2025-04-25T23:25:43.984+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 118.47 KB
+[2025-04-25T23:25:44.015+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (238 records)
+[2025-04-25T23:25:44.626+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 4.84 KB
+[2025-04-25T23:25:44.640+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (7 records)
+[2025-04-25T23:25:44.761+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 120.37 KB
+[2025-04-25T23:25:44.789+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (224 records)
+[2025-04-25T23:25:45.405+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 0.63 KB
+[2025-04-25T23:25:45.408+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (1 records)
+[2025-04-25T23:25:45.596+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 131.48 KB
+[2025-04-25T23:25:45.628+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (266 records)
+[2025-04-25T23:25:46.271+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 1.94 KB
+[2025-04-25T23:25:46.274+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (3 records)
+[2025-04-25T23:25:46.394+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 95.77 KB
+[2025-04-25T23:25:46.418+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (180 records)
+[2025-04-25T23:25:47.301+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.80 KB
+[2025-04-25T23:25:47.308+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (12 records)
+[2025-04-25T23:25:47.555+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 209.45 KB
+[2025-04-25T23:25:47.600+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (424 records)
+[2025-04-25T23:25:48.227+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 5.21 KB
+[2025-04-25T23:25:48.235+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (8 records)
+[2025-04-25T23:25:48.504+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 281.68 KB
+[2025-04-25T23:25:48.549+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (543 records)
+[2025-04-25T23:25:49.166+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 14.45 KB
+[2025-04-25T23:25:49.178+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (22 records)
+[2025-04-25T23:25:49.725+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 359.68 KB
+[2025-04-25T23:25:49.794+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (721 records)
+[2025-04-25T23:25:50.440+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=CR-Foxboro&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:50.552+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /schedules?filter[route]=CR-Foxboro&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:51.159+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-F4&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:51.267+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 81.05 KB
+[2025-04-25T23:25:51.280+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (156 records)
+[2025-04-25T23:25:51.880+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-F1&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:52.235+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 90.15 KB
+[2025-04-25T23:25:52.269+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (176 records)
+[2025-04-25T23:25:52.894+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-EastBoston&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:53.008+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 46.58 KB
+[2025-04-25T23:25:53.026+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (88 records)
+[2025-04-25T23:25:53.672+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-Lynn&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:53.873+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 4.31 KB
+[2025-04-25T23:25:53.876+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (8 records)
+[2025-04-25T23:25:54.499+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-F6&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:54.602+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /schedules?filter[route]=Boat-F6&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:55.231+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=Boat-F7&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:55.342+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /schedules?filter[route]=Boat-F7&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:25:55.974+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 8.97 KB
+[2025-04-25T23:25:55.982+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (15 records)
+[2025-04-25T23:25:56.239+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 373.57 KB
+[2025-04-25T23:25:56.317+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (836 records)
+[2025-04-25T23:25:56.918+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 13.04 KB
+[2025-04-25T23:25:56.922+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (22 records)
+[2025-04-25T23:25:57.190+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 252.97 KB
+[2025-04-25T23:25:57.230+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (571 records)
+[2025-04-25T23:25:57.972+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 159.41 KB
+[2025-04-25T23:25:58.026+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (270 records)
+[2025-04-25T23:25:58.923+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2024.35 KB
+[2025-04-25T23:25:58.924+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:25:59.242+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4584 records)
+[2025-04-25T23:25:59.842+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=4&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:26:00.074+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 192.14 KB
+[2025-04-25T23:26:00.113+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (435 records)
+[2025-04-25T23:26:00.735+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 62.61 KB
+[2025-04-25T23:26:00.751+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (106 records)
+[2025-04-25T23:26:01.290+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 883.16 KB
+[2025-04-25T23:26:01.444+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2000 records)
+[2025-04-25T23:26:02.192+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 160.92 KB
+[2025-04-25T23:26:02.220+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (271 records)
+[2025-04-25T23:26:02.967+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1410.09 KB
+[2025-04-25T23:26:02.967+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:03.189+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3168 records)
+[2025-04-25T23:26:03.964+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 253.16 KB
+[2025-04-25T23:26:04.029+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (428 records)
+[2025-04-25T23:26:05.524+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2018.29 KB
+[2025-04-25T23:26:05.525+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:05.875+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4558 records)
+[2025-04-25T23:26:06.696+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 142.12 KB
+[2025-04-25T23:26:06.727+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (241 records)
+[2025-04-25T23:26:07.255+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1282.55 KB
+[2025-04-25T23:26:07.256+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:07.454+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2884 records)
+[2025-04-25T23:26:08.108+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 145.29 KB
+[2025-04-25T23:26:08.132+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (246 records)
+[2025-04-25T23:26:08.648+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1342.40 KB
+[2025-04-25T23:26:08.651+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:08.868+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3015 records)
+[2025-04-25T23:26:09.485+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 26.81 KB
+[2025-04-25T23:26:09.491+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (45 records)
+[2025-04-25T23:26:10.277+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 726.38 KB
+[2025-04-25T23:26:10.397+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1626 records)
+[2025-04-25T23:26:11.036+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 193.10 KB
+[2025-04-25T23:26:11.077+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (324 records)
+[2025-04-25T23:26:12.176+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2160.76 KB
+[2025-04-25T23:26:12.177+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:12.528+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4842 records)
+[2025-04-25T23:26:13.175+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 179.61 KB
+[2025-04-25T23:26:13.207+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (303 records)
+[2025-04-25T23:26:13.939+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2146.46 KB
+[2025-04-25T23:26:13.939+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:14.281+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4816 records)
+[2025-04-25T23:26:14.968+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 41.05 KB
+[2025-04-25T23:26:14.981+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (69 records)
+[2025-04-25T23:26:15.514+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 918.63 KB
+[2025-04-25T23:26:15.665+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2063 records)
+[2025-04-25T23:26:16.282+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 2.36 KB
+[2025-04-25T23:26:16.284+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (4 records)
+[2025-04-25T23:26:16.431+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 248.13 KB
+[2025-04-25T23:26:16.472+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (558 records)
+[2025-04-25T23:26:17.531+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 18.42 KB
+[2025-04-25T23:26:17.544+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (31 records)
+[2025-04-25T23:26:17.868+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 873.90 KB
+[2025-04-25T23:26:18.013+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1962 records)
+[2025-04-25T23:26:18.794+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 137.14 KB
+[2025-04-25T23:26:18.822+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (252 records)
+[2025-04-25T23:26:19.357+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1285.80 KB
+[2025-04-25T23:26:19.358+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:19.715+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2898 records)
+[2025-04-25T23:26:20.388+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 199.29 KB
+[2025-04-25T23:26:20.427+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (335 records)
+[2025-04-25T23:26:21.557+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2463.23 KB
+[2025-04-25T23:26:21.557+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:22.125+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5530 records)
+[2025-04-25T23:26:22.841+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 245.60 KB
+[2025-04-25T23:26:22.905+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (413 records)
+[2025-04-25T23:26:23.926+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2909.75 KB
+[2025-04-25T23:26:23.927+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:24.496+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6538 records)
+[2025-04-25T23:26:25.156+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 85.84 KB
+[2025-04-25T23:26:25.178+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (144 records)
+[2025-04-25T23:26:25.594+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1312.47 KB
+[2025-04-25T23:26:25.595+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:25.924+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2942 records)
+[2025-04-25T23:26:26.564+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 39.64 KB
+[2025-04-25T23:26:26.572+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (67 records)
+[2025-04-25T23:26:27.831+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 525.73 KB
+[2025-04-25T23:26:27.946+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1188 records)
+[2025-04-25T23:26:28.653+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 400.83 KB
+[2025-04-25T23:26:28.722+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (697 records)
+[2025-04-25T23:26:31.090+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3174.44 KB
+[2025-04-25T23:26:31.091+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:31.654+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7120 records)
+[2025-04-25T23:26:32.317+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 33.93 KB
+[2025-04-25T23:26:32.326+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (57 records)
+[2025-04-25T23:26:32.596+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 556.41 KB
+[2025-04-25T23:26:32.688+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1248 records)
+[2025-04-25T23:26:33.307+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 45.31 KB
+[2025-04-25T23:26:33.318+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (80 records)
+[2025-04-25T23:26:33.607+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 850.57 KB
+[2025-04-25T23:26:33.755+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1908 records)
+[2025-04-25T23:26:34.374+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 71.29 KB
+[2025-04-25T23:26:34.388+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (121 records)
+[2025-04-25T23:26:35.144+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1401.66 KB
+[2025-04-25T23:26:35.144+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:35.390+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3160 records)
+[2025-04-25T23:26:36.128+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 491.37 KB
+[2025-04-25T23:26:36.225+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (900 records)
+[2025-04-25T23:26:37.397+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3204.09 KB
+[2025-04-25T23:26:37.397+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:38.000+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7175 records)
+[2025-04-25T23:26:38.692+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 32.78 KB
+[2025-04-25T23:26:38.708+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (55 records)
+[2025-04-25T23:26:39.013+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 682.39 KB
+[2025-04-25T23:26:39.127+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1529 records)
+[2025-04-25T23:26:39.782+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 167.76 KB
+[2025-04-25T23:26:39.819+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (299 records)
+[2025-04-25T23:26:40.304+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1225.37 KB
+[2025-04-25T23:26:40.304+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:40.513+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2753 records)
+[2025-04-25T23:26:41.255+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 259.62 KB
+[2025-04-25T23:26:41.414+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (433 records)
+[2025-04-25T23:26:42.805+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2854.41 KB
+[2025-04-25T23:26:42.806+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:43.282+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6353 records)
+[2025-04-25T23:26:43.944+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 47.58 KB
+[2025-04-25T23:26:43.953+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (80 records)
+[2025-04-25T23:26:44.451+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1170.35 KB
+[2025-04-25T23:26:44.451+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:44.632+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2629 records)
+[2025-04-25T23:26:45.273+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 76.03 KB
+[2025-04-25T23:26:45.288+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (128 records)
+[2025-04-25T23:26:45.874+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1335.37 KB
+[2025-04-25T23:26:45.875+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:46.078+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3003 records)
+[2025-04-25T23:26:46.686+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 24.94 KB
+[2025-04-25T23:26:46.693+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (42 records)
+[2025-04-25T23:26:47.005+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 839.91 KB
+[2025-04-25T23:26:47.132+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1890 records)
+[2025-04-25T23:26:47.744+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 35.17 KB
+[2025-04-25T23:26:47.752+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (59 records)
+[2025-04-25T23:26:48.050+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 722.94 KB
+[2025-04-25T23:26:48.178+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1620 records)
+[2025-04-25T23:26:48.845+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 203.29 KB
+[2025-04-25T23:26:48.885+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (341 records)
+[2025-04-25T23:26:49.839+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2522.56 KB
+[2025-04-25T23:26:49.841+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:50.389+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5648 records)
+[2025-04-25T23:26:51.043+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 140.19 KB
+[2025-04-25T23:26:51.067+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (261 records)
+[2025-04-25T23:26:51.367+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 638.12 KB
+[2025-04-25T23:26:51.468+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1433 records)
+[2025-04-25T23:26:52.135+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 97.30 KB
+[2025-04-25T23:26:52.168+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (165 records)
+[2025-04-25T23:26:52.431+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 710.63 KB
+[2025-04-25T23:26:52.548+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1592 records)
+[2025-04-25T23:26:53.188+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 64.87 KB
+[2025-04-25T23:26:53.208+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (109 records)
+[2025-04-25T23:26:53.500+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 903.55 KB
+[2025-04-25T23:26:53.647+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2028 records)
+[2025-04-25T23:26:54.264+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 25.53 KB
+[2025-04-25T23:26:54.270+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (43 records)
+[2025-04-25T23:26:54.444+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 348.09 KB
+[2025-04-25T23:26:54.498+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (784 records)
+[2025-04-25T23:26:55.139+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 90.57 KB
+[2025-04-25T23:26:55.166+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (152 records)
+[2025-04-25T23:26:55.667+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1151.64 KB
+[2025-04-25T23:26:55.668+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:55.887+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2580 records)
+[2025-04-25T23:26:56.522+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 73.85 KB
+[2025-04-25T23:26:56.539+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (124 records)
+[2025-04-25T23:26:57.313+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1108.94 KB
+[2025-04-25T23:26:57.314+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:57.561+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2486 records)
+[2025-04-25T23:26:58.187+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 100.69 KB
+[2025-04-25T23:26:58.208+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (169 records)
+[2025-04-25T23:26:59.704+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1539.20 KB
+[2025-04-25T23:26:59.705+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:26:59.953+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3450 records)
+[2025-04-25T23:27:00.672+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 20.22 KB
+[2025-04-25T23:27:00.680+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (34 records)
+[2025-04-25T23:27:00.971+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 664.29 KB
+[2025-04-25T23:27:01.100+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1490 records)
+[2025-04-25T23:27:01.741+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 105.05 KB
+[2025-04-25T23:27:01.764+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (176 records)
+[2025-04-25T23:27:02.212+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1028.76 KB
+[2025-04-25T23:27:02.212+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:02.380+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2300 records)
+[2025-04-25T23:27:02.994+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 0.58 KB
+[2025-04-25T23:27:02.996+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (1 records)
+[2025-04-25T23:27:03.329+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 746.87 KB
+[2025-04-25T23:27:03.453+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1670 records)
+[2025-04-25T23:27:04.059+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=55&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:27:04.178+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 87.97 KB
+[2025-04-25T23:27:04.201+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (199 records)
+[2025-04-25T23:27:05.012+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 282.18 KB
+[2025-04-25T23:27:05.088+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (475 records)
+[2025-04-25T23:27:06.316+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3236.13 KB
+[2025-04-25T23:27:06.317+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:06.838+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7280 records)
+[2025-04-25T23:27:08.311+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 67.54 KB
+[2025-04-25T23:27:08.364+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (113 records)
+[2025-04-25T23:27:08.779+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 977.72 KB
+[2025-04-25T23:27:08.962+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2182 records)
+[2025-04-25T23:27:09.597+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 98.34 KB
+[2025-04-25T23:27:09.617+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (165 records)
+[2025-04-25T23:27:09.883+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 832.29 KB
+[2025-04-25T23:27:10.073+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1865 records)
+[2025-04-25T23:27:10.905+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 30.98 KB
+[2025-04-25T23:27:10.915+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (52 records)
+[2025-04-25T23:27:11.074+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 294.55 KB
+[2025-04-25T23:27:11.137+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (660 records)
+[2025-04-25T23:27:11.834+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 167.76 KB
+[2025-04-25T23:27:11.868+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (281 records)
+[2025-04-25T23:27:12.362+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1305.16 KB
+[2025-04-25T23:27:12.363+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:12.588+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2913 records)
+[2025-04-25T23:27:13.268+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 127.59 KB
+[2025-04-25T23:27:13.296+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (213 records)
+[2025-04-25T23:27:13.560+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 655.49 KB
+[2025-04-25T23:27:13.675+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1461 records)
+[2025-04-25T23:27:14.320+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 35.74 KB
+[2025-04-25T23:27:14.333+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (60 records)
+[2025-04-25T23:27:14.635+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 750.50 KB
+[2025-04-25T23:27:14.765+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1681 records)
+[2025-04-25T23:27:15.407+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 47.06 KB
+[2025-04-25T23:27:15.420+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (79 records)
+[2025-04-25T23:27:15.802+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1133.26 KB
+[2025-04-25T23:27:15.802+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:15.981+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2541 records)
+[2025-04-25T23:27:16.699+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 319.38 KB
+[2025-04-25T23:27:16.765+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (549 records)
+[2025-04-25T23:27:18.091+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3127.89 KB
+[2025-04-25T23:27:18.092+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:18.641+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7002 records)
+[2025-04-25T23:27:19.296+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 41.66 KB
+[2025-04-25T23:27:19.312+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (70 records)
+[2025-04-25T23:27:19.598+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 438.45 KB
+[2025-04-25T23:27:19.693+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (984 records)
+[2025-04-25T23:27:20.348+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=68&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:27:20.527+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 203.85 KB
+[2025-04-25T23:27:20.581+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (459 records)
+[2025-04-25T23:27:21.202+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 32.05 KB
+[2025-04-25T23:27:21.212+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (54 records)
+[2025-04-25T23:27:21.514+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 741.10 KB
+[2025-04-25T23:27:21.643+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1667 records)
+[2025-04-25T23:27:22.341+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 233.15 KB
+[2025-04-25T23:27:22.402+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (391 records)
+[2025-04-25T23:27:23.836+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3245.87 KB
+[2025-04-25T23:27:23.838+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:24.357+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7258 records)
+[2025-04-25T23:27:25.044+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 72.02 KB
+[2025-04-25T23:27:25.061+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (121 records)
+[2025-04-25T23:27:25.653+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1641.58 KB
+[2025-04-25T23:27:25.654+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:25.912+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3686 records)
+[2025-04-25T23:27:26.570+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 107.11 KB
+[2025-04-25T23:27:26.605+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (180 records)
+[2025-04-25T23:27:27.273+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1717.88 KB
+[2025-04-25T23:27:27.273+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:27.539+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3855 records)
+[2025-04-25T23:27:28.166+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 54.13 KB
+[2025-04-25T23:27:28.181+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (91 records)
+[2025-04-25T23:27:28.480+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 761.97 KB
+[2025-04-25T23:27:28.615+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1710 records)
+[2025-04-25T23:27:29.276+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 69.07 KB
+[2025-04-25T23:27:29.302+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (116 records)
+[2025-04-25T23:27:29.620+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 737.99 KB
+[2025-04-25T23:27:29.755+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1656 records)
+[2025-04-25T23:27:30.536+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 184.48 KB
+[2025-04-25T23:27:30.588+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (309 records)
+[2025-04-25T23:27:31.421+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1075.88 KB
+[2025-04-25T23:27:31.422+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:31.598+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2401 records)
+[2025-04-25T23:27:32.276+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 186.69 KB
+[2025-04-25T23:27:32.328+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (321 records)
+[2025-04-25T23:27:33.726+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2768.09 KB
+[2025-04-25T23:27:33.727+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:34.151+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6198 records)
+[2025-04-25T23:27:34.835+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 106.81 KB
+[2025-04-25T23:27:34.865+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (179 records)
+[2025-04-25T23:27:35.332+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1433.61 KB
+[2025-04-25T23:27:35.333+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:35.570+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3207 records)
+[2025-04-25T23:27:36.498+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 68.58 KB
+[2025-04-25T23:27:36.510+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (115 records)
+[2025-04-25T23:27:36.891+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 928.78 KB
+[2025-04-25T23:27:37.083+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2079 records)
+[2025-04-25T23:27:38.044+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 32.14 KB
+[2025-04-25T23:27:38.061+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (54 records)
+[2025-04-25T23:27:38.535+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 691.08 KB
+[2025-04-25T23:27:38.648+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1550 records)
+[2025-04-25T23:27:39.262+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.68 KB
+[2025-04-25T23:27:39.278+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (13 records)
+[2025-04-25T23:27:39.409+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 101.49 KB
+[2025-04-25T23:27:39.431+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (230 records)
+[2025-04-25T23:27:40.177+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 193.28 KB
+[2025-04-25T23:27:40.222+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (345 records)
+[2025-04-25T23:27:40.794+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1373.63 KB
+[2025-04-25T23:27:40.795+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:41.008+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3082 records)
+[2025-04-25T23:27:41.770+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 85.91 KB
+[2025-04-25T23:27:41.804+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (144 records)
+[2025-04-25T23:27:42.408+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1373.67 KB
+[2025-04-25T23:27:42.409+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:42.631+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3074 records)
+[2025-04-25T23:27:43.528+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 81.59 KB
+[2025-04-25T23:27:43.546+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (137 records)
+[2025-04-25T23:27:44.097+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1099.20 KB
+[2025-04-25T23:27:44.098+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:44.275+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2465 records)
+[2025-04-25T23:27:45.180+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 52.33 KB
+[2025-04-25T23:27:45.203+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (88 records)
+[2025-04-25T23:27:45.734+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 978.92 KB
+[2025-04-25T23:27:45.896+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2199 records)
+[2025-04-25T23:27:47.177+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 51.26 KB
+[2025-04-25T23:27:47.196+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (86 records)
+[2025-04-25T23:27:47.473+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 515.98 KB
+[2025-04-25T23:27:47.575+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1158 records)
+[2025-04-25T23:27:48.202+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 35.07 KB
+[2025-04-25T23:27:48.216+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (59 records)
+[2025-04-25T23:27:48.671+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 440.36 KB
+[2025-04-25T23:27:48.757+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (990 records)
+[2025-04-25T23:27:49.394+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 30.46 KB
+[2025-04-25T23:27:49.407+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (52 records)
+[2025-04-25T23:27:49.868+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 333.13 KB
+[2025-04-25T23:27:49.920+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (750 records)
+[2025-04-25T23:27:50.618+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 45.81 KB
+[2025-04-25T23:27:50.633+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (77 records)
+[2025-04-25T23:27:50.980+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 714.33 KB
+[2025-04-25T23:27:51.117+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1603 records)
+[2025-04-25T23:27:51.839+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 62.55 KB
+[2025-04-25T23:27:51.859+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (105 records)
+[2025-04-25T23:27:52.180+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 750.66 KB
+[2025-04-25T23:27:52.305+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1682 records)
+[2025-04-25T23:27:53.047+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 77.03 KB
+[2025-04-25T23:27:53.066+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (131 records)
+[2025-04-25T23:27:53.526+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1019.63 KB
+[2025-04-25T23:27:53.526+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:53.698+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2283 records)
+[2025-04-25T23:27:54.388+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 44.18 KB
+[2025-04-25T23:27:54.414+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (77 records)
+[2025-04-25T23:27:54.689+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 686.95 KB
+[2025-04-25T23:27:54.797+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1539 records)
+[2025-04-25T23:27:55.404+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=97&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:27:55.688+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 289.90 KB
+[2025-04-25T23:27:55.761+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (650 records)
+[2025-04-25T23:27:56.461+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 72.78 KB
+[2025-04-25T23:27:56.482+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (123 records)
+[2025-04-25T23:27:56.817+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 729.43 KB
+[2025-04-25T23:27:56.941+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1632 records)
+[2025-04-25T23:27:57.562+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 40.54 KB
+[2025-04-25T23:27:57.570+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (68 records)
+[2025-04-25T23:27:57.904+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 636.48 KB
+[2025-04-25T23:27:58.010+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1428 records)
+[2025-04-25T23:27:58.966+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 133.46 KB
+[2025-04-25T23:27:58.987+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (225 records)
+[2025-04-25T23:27:59.625+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1496.16 KB
+[2025-04-25T23:27:59.626+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:27:59.882+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3342 records)
+[2025-04-25T23:28:00.628+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 227.37 KB
+[2025-04-25T23:28:00.689+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (380 records)
+[2025-04-25T23:28:02.040+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2501.89 KB
+[2025-04-25T23:28:02.041+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:02.430+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5587 records)
+[2025-04-25T23:28:03.074+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 24.55 KB
+[2025-04-25T23:28:03.082+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (41 records)
+[2025-04-25T23:28:03.384+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 550.93 KB
+[2025-04-25T23:28:03.479+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1230 records)
+[2025-04-25T23:28:04.192+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 87.54 KB
+[2025-04-25T23:28:04.226+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (148 records)
+[2025-04-25T23:28:04.732+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 959.56 KB
+[2025-04-25T23:28:04.881+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2144 records)
+[2025-04-25T23:28:05.621+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 109.52 KB
+[2025-04-25T23:28:05.657+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (183 records)
+[2025-04-25T23:28:06.206+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1294.60 KB
+[2025-04-25T23:28:06.206+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:06.414+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2890 records)
+[2025-04-25T23:28:07.155+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 321.17 KB
+[2025-04-25T23:28:07.208+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (539 records)
+[2025-04-25T23:28:08.633+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3777.48 KB
+[2025-04-25T23:28:08.634+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:09.238+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (8432 records)
+[2025-04-25T23:28:10.012+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 162.02 KB
+[2025-04-25T23:28:10.047+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (271 records)
+[2025-04-25T23:28:11.091+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2390.27 KB
+[2025-04-25T23:28:11.092+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:11.501+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5342 records)
+[2025-04-25T23:28:12.447+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 263.74 KB
+[2025-04-25T23:28:12.501+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (443 records)
+[2025-04-25T23:28:14.064+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 4036.37 KB
+[2025-04-25T23:28:14.065+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:14.822+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (9037 records)
+[2025-04-25T23:28:15.819+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 113.78 KB
+[2025-04-25T23:28:15.857+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (190 records)
+[2025-04-25T23:28:16.189+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 795.99 KB
+[2025-04-25T23:28:16.335+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1775 records)
+[2025-04-25T23:28:16.998+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=114&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:17.161+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 117.59 KB
+[2025-04-25T23:28:17.182+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (264 records)
+[2025-04-25T23:28:17.883+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 351.15 KB
+[2025-04-25T23:28:17.941+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (618 records)
+[2025-04-25T23:28:20.177+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3371.22 KB
+[2025-04-25T23:28:20.179+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:20.730+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7535 records)
+[2025-04-25T23:28:21.612+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 49.08 KB
+[2025-04-25T23:28:21.624+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (82 records)
+[2025-04-25T23:28:21.901+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 616.16 KB
+[2025-04-25T23:28:22.027+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1376 records)
+[2025-04-25T23:28:22.802+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 54.38 KB
+[2025-04-25T23:28:22.821+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (91 records)
+[2025-04-25T23:28:23.236+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 987.58 KB
+[2025-04-25T23:28:23.421+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2208 records)
+[2025-04-25T23:28:24.025+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=121&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:24.134+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 92.13 KB
+[2025-04-25T23:28:24.152+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (208 records)
+[2025-04-25T23:28:24.794+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 28.15 KB
+[2025-04-25T23:28:24.805+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (47 records)
+[2025-04-25T23:28:25.239+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 430.10 KB
+[2025-04-25T23:28:25.316+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (960 records)
+[2025-04-25T23:28:26.027+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 36.75 KB
+[2025-04-25T23:28:26.036+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (63 records)
+[2025-04-25T23:28:26.361+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 678.29 KB
+[2025-04-25T23:28:26.490+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1513 records)
+[2025-04-25T23:28:27.239+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 93.39 KB
+[2025-04-25T23:28:27.267+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (156 records)
+[2025-04-25T23:28:27.790+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1077.62 KB
+[2025-04-25T23:28:27.790+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:27.962+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2404 records)
+[2025-04-25T23:28:28.728+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 107.75 KB
+[2025-04-25T23:28:28.749+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (180 records)
+[2025-04-25T23:28:29.284+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1231.67 KB
+[2025-04-25T23:28:29.285+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:29.483+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2749 records)
+[2025-04-25T23:28:30.099+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=171&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:30.203+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 14.20 KB
+[2025-04-25T23:28:30.209+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (32 records)
+[2025-04-25T23:28:31.075+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 43.49 KB
+[2025-04-25T23:28:31.086+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (73 records)
+[2025-04-25T23:28:32.056+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 490.18 KB
+[2025-04-25T23:28:32.136+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1101 records)
+[2025-04-25T23:28:32.789+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=202&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:33.072+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 186.35 KB
+[2025-04-25T23:28:33.114+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (418 records)
+[2025-04-25T23:28:33.743+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=210&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:34.037+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 514.37 KB
+[2025-04-25T23:28:34.132+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1150 records)
+[2025-04-25T23:28:34.840+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 63.42 KB
+[2025-04-25T23:28:34.856+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (106 records)
+[2025-04-25T23:28:35.660+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 807.75 KB
+[2025-04-25T23:28:35.787+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1804 records)
+[2025-04-25T23:28:36.535+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 174.13 KB
+[2025-04-25T23:28:36.578+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (291 records)
+[2025-04-25T23:28:37.208+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1399.25 KB
+[2025-04-25T23:28:37.208+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:37.426+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3124 records)
+[2025-04-25T23:28:38.182+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 180.67 KB
+[2025-04-25T23:28:38.258+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (302 records)
+[2025-04-25T23:28:39.196+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2511.19 KB
+[2025-04-25T23:28:39.197+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:39.606+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5608 records)
+[2025-04-25T23:28:40.211+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=217&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:40.527+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 273.45 KB
+[2025-04-25T23:28:40.589+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (610 records)
+[2025-04-25T23:28:41.359+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 113.10 KB
+[2025-04-25T23:28:41.401+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (189 records)
+[2025-04-25T23:28:41.921+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1233.52 KB
+[2025-04-25T23:28:41.922+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:42.179+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2754 records)
+[2025-04-25T23:28:42.927+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 129.91 KB
+[2025-04-25T23:28:42.956+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (217 records)
+[2025-04-25T23:28:43.485+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1445.95 KB
+[2025-04-25T23:28:43.486+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:43.720+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3225 records)
+[2025-04-25T23:28:44.439+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 100.48 KB
+[2025-04-25T23:28:44.459+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (168 records)
+[2025-04-25T23:28:45.795+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1238.97 KB
+[2025-04-25T23:28:45.795+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:45.991+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2769 records)
+[2025-04-25T23:28:46.688+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 53.94 KB
+[2025-04-25T23:28:46.710+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (90 records)
+[2025-04-25T23:28:47.025+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 577.88 KB
+[2025-04-25T23:28:47.136+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1288 records)
+[2025-04-25T23:28:47.785+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 93.40 KB
+[2025-04-25T23:28:47.814+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (156 records)
+[2025-04-25T23:28:48.433+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1641.30 KB
+[2025-04-25T23:28:48.433+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:48.713+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3660 records)
+[2025-04-25T23:28:49.447+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 67.75 KB
+[2025-04-25T23:28:49.474+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (113 records)
+[2025-04-25T23:28:49.774+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 534.54 KB
+[2025-04-25T23:28:49.873+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1191 records)
+[2025-04-25T23:28:50.665+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 178.44 KB
+[2025-04-25T23:28:50.710+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (298 records)
+[2025-04-25T23:28:51.198+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1416.85 KB
+[2025-04-25T23:28:51.199+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:51.419+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3160 records)
+[2025-04-25T23:28:52.146+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 232.87 KB
+[2025-04-25T23:28:52.184+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (389 records)
+[2025-04-25T23:28:53.322+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2606.10 KB
+[2025-04-25T23:28:53.323+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:53.733+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5815 records)
+[2025-04-25T23:28:54.371+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.78 KB
+[2025-04-25T23:28:54.388+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (13 records)
+[2025-04-25T23:28:54.682+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 227.27 KB
+[2025-04-25T23:28:54.722+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (507 records)
+[2025-04-25T23:28:55.482+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 143.85 KB
+[2025-04-25T23:28:55.513+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (240 records)
+[2025-04-25T23:28:56.179+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1606.90 KB
+[2025-04-25T23:28:56.179+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:28:56.425+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3581 records)
+[2025-04-25T23:28:57.073+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=351&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:28:57.182+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 59.12 KB
+[2025-04-25T23:28:57.198+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (133 records)
+[2025-04-25T23:28:58.084+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 53.97 KB
+[2025-04-25T23:28:58.101+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (90 records)
+[2025-04-25T23:28:58.443+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 646.68 KB
+[2025-04-25T23:28:58.543+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1442 records)
+[2025-04-25T23:28:59.403+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 28.63 KB
+[2025-04-25T23:28:59.429+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (48 records)
+[2025-04-25T23:28:59.770+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 622.64 KB
+[2025-04-25T23:28:59.920+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1390 records)
+[2025-04-25T23:29:00.837+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=424&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:29:01.091+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 179.11 KB
+[2025-04-25T23:29:01.136+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (400 records)
+[2025-04-25T23:29:02.092+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 78.39 KB
+[2025-04-25T23:29:02.123+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (131 records)
+[2025-04-25T23:29:02.573+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 970.35 KB
+[2025-04-25T23:29:02.739+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2166 records)
+[2025-04-25T23:29:03.354+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=428&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:29:03.755+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 137.17 KB
+[2025-04-25T23:29:03.784+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (306 records)
+[2025-04-25T23:29:04.515+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 88.05 KB
+[2025-04-25T23:29:04.541+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (147 records)
+[2025-04-25T23:29:04.967+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1014.86 KB
+[2025-04-25T23:29:04.968+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:05.142+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2263 records)
+[2025-04-25T23:29:05.870+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 65.98 KB
+[2025-04-25T23:29:05.887+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (113 records)
+[2025-04-25T23:29:06.355+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 768.96 KB
+[2025-04-25T23:29:06.477+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1716 records)
+[2025-04-25T23:29:07.242+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 125.72 KB
+[2025-04-25T23:29:07.277+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (210 records)
+[2025-04-25T23:29:07.747+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1022.64 KB
+[2025-04-25T23:29:07.747+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:07.914+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2280 records)
+[2025-04-25T23:29:08.521+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 22.73 KB
+[2025-04-25T23:29:08.528+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (38 records)
+[2025-04-25T23:29:08.868+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 700.52 KB
+[2025-04-25T23:29:08.990+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1563 records)
+[2025-04-25T23:29:09.614+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=439&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:29:10.030+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 129.25 KB
+[2025-04-25T23:29:10.081+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (289 records)
+[2025-04-25T23:29:10.743+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 25.15 KB
+[2025-04-25T23:29:10.756+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (42 records)
+[2025-04-25T23:29:11.197+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1000.87 KB
+[2025-04-25T23:29:11.197+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:11.353+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2232 records)
+[2025-04-25T23:29:12.286+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 105.38 KB
+[2025-04-25T23:29:12.304+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (176 records)
+[2025-04-25T23:29:12.862+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1459.97 KB
+[2025-04-25T23:29:12.863+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:13.171+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (3256 records)
+[2025-04-25T23:29:14.171+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 145.48 KB
+[2025-04-25T23:29:14.263+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (243 records)
+[2025-04-25T23:29:14.863+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1247.83 KB
+[2025-04-25T23:29:14.866+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:15.081+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2784 records)
+[2025-04-25T23:29:15.728+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 19.12 KB
+[2025-04-25T23:29:15.733+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (32 records)
+[2025-04-25T23:29:15.961+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 201.57 KB
+[2025-04-25T23:29:15.994+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (450 records)
+[2025-04-25T23:29:16.762+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 200.07 KB
+[2025-04-25T23:29:16.823+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (334 records)
+[2025-04-25T23:29:17.757+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2411.69 KB
+[2025-04-25T23:29:17.758+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:29:18.164+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5377 records)
+[2025-04-25T23:29:18.781+0000] {mbta_data_pipeline.py:69} WARNING - ⚠️ No data returned from /predictions?filter[route]=456&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3
+[2025-04-25T23:29:18.980+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 176.92 KB
+[2025-04-25T23:29:19.027+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (395 records)
+[2025-04-25T23:29:19.642+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 24.44 KB
+[2025-04-25T23:29:19.649+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (41 records)
+[2025-04-25T23:29:19.934+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 401.97 KB
+[2025-04-25T23:29:19.998+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (928 records)
+[2025-04-25T23:29:20.644+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 18.96 KB
+[2025-04-25T23:29:20.651+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (32 records)
+[2025-04-25T23:29:20.969+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 330.25 KB
+[2025-04-25T23:29:21.045+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (759 records)
+[2025-04-25T23:29:21.648+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 22.15 KB
+[2025-04-25T23:29:21.654+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (37 records)
+[2025-04-25T23:29:21.950+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 404.22 KB
+[2025-04-25T23:29:22.034+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (902 records)
+[2025-04-25T23:29:22.791+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 80.30 KB
+[2025-04-25T23:29:22.830+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (134 records)
+[2025-04-25T23:29:23.580+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 807.70 KB
+[2025-04-25T23:29:23.773+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1800 records)
+[2025-04-25T23:29:24.651+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 29.33 KB
+[2025-04-25T23:29:24.678+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (49 records)
+[2025-04-25T23:29:25.017+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 261.06 KB
+[2025-04-25T23:29:25.060+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (582 records)
+[2025-04-25T23:29:25.799+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 43.72 KB
+[2025-04-25T23:29:25.811+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (73 records)
+[2025-04-25T23:29:26.042+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 261.45 KB
+[2025-04-25T23:29:26.109+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (583 records)
+[2025-04-25T23:29:26.773+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 13.18 KB
+[2025-04-25T23:29:26.786+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (22 records)
+[2025-04-25T23:29:27.032+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 242.95 KB
+[2025-04-25T23:29:27.090+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (542 records)
+[2025-04-25T23:29:28.257+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 48.66 KB
+[2025-04-25T23:29:28.281+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (81 records)
+[2025-04-25T23:29:29.184+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 782.03 KB
+[2025-04-25T23:29:29.324+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1739 records)
+[2025-04-25T23:29:30.050+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 37.83 KB
+[2025-04-25T23:29:30.061+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (63 records)
+[2025-04-25T23:29:30.433+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 826.96 KB
+[2025-04-25T23:29:30.558+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1838 records)
+[2025-04-25T23:29:31.184+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 24.04 KB
+[2025-04-25T23:29:31.193+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (40 records)
+[2025-04-25T23:29:31.415+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 228.67 KB
+[2025-04-25T23:29:31.477+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (510 records)
+[2025-04-25T23:29:32.102+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.24 KB
+[2025-04-25T23:29:32.108+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (12 records)
+[2025-04-25T23:29:32.326+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 136.65 KB
+[2025-04-25T23:29:32.358+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (305 records)
+[2025-04-25T23:29:32.862+0000] {kafka.py:511} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2025-04-25T23:29:32.876+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-25T23:29:32.877+0000] {mbta_data_pipeline.py:126} INFO - ✅ Kafka Producer closed.
+[2025-04-25T23:29:32.879+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-04-25T23:29:32.922+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=mbta_producer_dag, task_id=produce_mbta_data, execution_date=20250425T232000, start_date=20250425T232500, end_date=20250425T232932
+[2025-04-25T23:29:32.994+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-04-25T23:29:33.044+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

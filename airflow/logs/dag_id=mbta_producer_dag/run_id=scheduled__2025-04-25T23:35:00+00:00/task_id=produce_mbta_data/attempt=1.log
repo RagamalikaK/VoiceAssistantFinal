@@ -1,0 +1,205 @@
+[2025-04-25T23:40:01.483+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:35:00+00:00 [queued]>
+[2025-04-25T23:40:01.495+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:35:00+00:00 [queued]>
+[2025-04-25T23:40:01.495+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-04-25T23:40:01.505+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): produce_mbta_data> on 2025-04-25 23:35:00+00:00
+[2025-04-25T23:40:01.510+0000] {standard_task_runner.py:60} INFO - Started process 951 to run task
+[2025-04-25T23:40:01.514+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'mbta_producer_dag', 'produce_mbta_data', 'scheduled__2025-04-25T23:35:00+00:00', '--job-id', '1534', '--raw', '--subdir', 'DAGS_FOLDER/mbta_producer_dag.py', '--cfg-path', '/tmp/tmphrt9jnfu']
+[2025-04-25T23:40:01.517+0000] {standard_task_runner.py:88} INFO - Job 1534: Subtask produce_mbta_data
+[2025-04-25T23:40:01.573+0000] {task_command.py:423} INFO - Running <TaskInstance: mbta_producer_dag.produce_mbta_data scheduled__2025-04-25T23:35:00+00:00 [running]> on host e1ad2afb0b48
+[2025-04-25T23:40:01.824+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mbta_producer_dag' AIRFLOW_CTX_TASK_ID='produce_mbta_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-25T23:35:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-25T23:35:00+00:00'
+[2025-04-25T23:40:01.825+0000] {mbta_data_pipeline.py:107} INFO - 🚀 Starting MBTA Kafka Producer...
+[2025-04-25T23:40:01.826+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:40:01.836+0000] {conn.py:615} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <checking_api_versions_recv> [IPv4 ('172.18.0.4', 9092)]>: Broker version identified as 2.6
+[2025-04-25T23:40:01.837+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-25T23:40:01.838+0000] {mbta_data_pipeline.py:39} INFO - ✅ Kafka Producer connected successfully.
+[2025-04-25T23:40:02.058+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_alerts: 287.77 KB
+[2025-04-25T23:40:02.059+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:40:02.059+0000] {conn.py:456} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Connection complete.
+[2025-04-25T23:40:02.060+0000] {conn.py:936} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. 
+[2025-04-25T23:40:02.122+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_alerts (85 records)
+[2025-04-25T23:40:02.252+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_routes: 91.74 KB
+[2025-04-25T23:40:02.273+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_routes (178 records)
+[2025-04-25T23:40:04.228+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_stops: 6052.46 KB
+[2025-04-25T23:40:04.238+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_stops...
+[2025-04-25T23:40:05.374+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_stops (10250 records)
+[2025-04-25T23:40:05.581+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_vehicles: 319.14 KB
+[2025-04-25T23:40:05.653+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_vehicles (519 records)
+[2025-04-25T23:40:05.790+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_lines: 31.42 KB
+[2025-04-25T23:40:05.801+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_lines (142 records)
+[2025-04-25T23:40:06.435+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_facilities: 2131.60 KB
+[2025-04-25T23:40:06.436+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_facilities...
+[2025-04-25T23:40:06.840+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_facilities (1852 records)
+[2025-04-25T23:40:06.948+0000] {mbta_data_pipeline.py:97} INFO - ✅ Retrieved 178 route IDs
+[2025-04-25T23:40:07.100+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 265.71 KB
+[2025-04-25T23:40:07.151+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (431 records)
+[2025-04-25T23:40:09.341+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2940.15 KB
+[2025-04-25T23:40:09.341+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:09.833+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6552 records)
+[2025-04-25T23:40:10.443+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 10.48 KB
+[2025-04-25T23:40:10.447+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (17 records)
+[2025-04-25T23:40:10.823+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1054.84 KB
+[2025-04-25T23:40:10.823+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:10.990+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2352 records)
+[2025-04-25T23:40:11.693+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 297.04 KB
+[2025-04-25T23:40:11.738+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (475 records)
+[2025-04-25T23:40:13.357+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3332.12 KB
+[2025-04-25T23:40:13.358+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:13.913+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7360 records)
+[2025-04-25T23:40:14.607+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 218.55 KB
+[2025-04-25T23:40:14.696+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (351 records)
+[2025-04-25T23:40:15.903+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2957.08 KB
+[2025-04-25T23:40:15.904+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:16.376+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (6504 records)
+[2025-04-25T23:40:17.107+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 154.29 KB
+[2025-04-25T23:40:17.134+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (247 records)
+[2025-04-25T23:40:18.042+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2572.36 KB
+[2025-04-25T23:40:18.043+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:18.487+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (5658 records)
+[2025-04-25T23:40:19.278+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 135.69 KB
+[2025-04-25T23:40:19.313+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (220 records)
+[2025-04-25T23:40:20.765+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3268.48 KB
+[2025-04-25T23:40:20.765+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:21.281+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7186 records)
+[2025-04-25T23:40:22.015+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 193.09 KB
+[2025-04-25T23:40:22.053+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (310 records)
+[2025-04-25T23:40:23.397+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 3588.91 KB
+[2025-04-25T23:40:23.397+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:23.961+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (7897 records)
+[2025-04-25T23:40:24.834+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 39.39 KB
+[2025-04-25T23:40:24.844+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (63 records)
+[2025-04-25T23:40:25.687+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 2174.87 KB
+[2025-04-25T23:40:25.688+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:26.045+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (4787 records)
+[2025-04-25T23:40:26.665+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 39.54 KB
+[2025-04-25T23:40:26.672+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (67 records)
+[2025-04-25T23:40:27.065+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 946.47 KB
+[2025-04-25T23:40:27.214+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2146 records)
+[2025-04-25T23:40:27.838+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 60.97 KB
+[2025-04-25T23:40:27.857+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (103 records)
+[2025-04-25T23:40:28.187+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 876.99 KB
+[2025-04-25T23:40:28.332+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (1982 records)
+[2025-04-25T23:40:29.200+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 72.78 KB
+[2025-04-25T23:40:29.221+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (123 records)
+[2025-04-25T23:40:29.951+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1137.96 KB
+[2025-04-25T23:40:29.951+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:30.148+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2573 records)
+[2025-04-25T23:40:30.846+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 96.70 KB
+[2025-04-25T23:40:30.872+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (163 records)
+[2025-04-25T23:40:31.281+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 913.92 KB
+[2025-04-25T23:40:31.433+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2064 records)
+[2025-04-25T23:40:32.875+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 104.33 KB
+[2025-04-25T23:40:32.896+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (177 records)
+[2025-04-25T23:40:33.371+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 1286.33 KB
+[2025-04-25T23:40:33.372+0000] {mbta_data_pipeline.py:77} WARNING - ⚠️ Splitting large payload into chunks for topic mbta_schedules...
+[2025-04-25T23:40:33.591+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (2904 records)
+[2025-04-25T23:40:34.222+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 5.12 KB
+[2025-04-25T23:40:34.226+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (9 records)
+[2025-04-25T23:40:34.748+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 176.85 KB
+[2025-04-25T23:40:34.777+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (404 records)
+[2025-04-25T23:40:35.498+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 14.45 KB
+[2025-04-25T23:40:35.511+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (22 records)
+[2025-04-25T23:40:36.292+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 342.26 KB
+[2025-04-25T23:40:36.370+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (685 records)
+[2025-04-25T23:40:37.046+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 19.08 KB
+[2025-04-25T23:40:37.051+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (29 records)
+[2025-04-25T23:40:37.293+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 248.96 KB
+[2025-04-25T23:40:37.350+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (494 records)
+[2025-04-25T23:40:37.985+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 24.91 KB
+[2025-04-25T23:40:38.000+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (38 records)
+[2025-04-25T23:40:38.261+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 290.42 KB
+[2025-04-25T23:40:38.319+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (585 records)
+[2025-04-25T23:40:38.934+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 8.47 KB
+[2025-04-25T23:40:38.937+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (13 records)
+[2025-04-25T23:40:39.207+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 397.65 KB
+[2025-04-25T23:40:39.281+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (782 records)
+[2025-04-25T23:40:39.900+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 19.63 KB
+[2025-04-25T23:40:39.907+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (30 records)
+[2025-04-25T23:40:40.115+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 375.37 KB
+[2025-04-25T23:40:40.186+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (742 records)
+[2025-04-25T23:40:40.788+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 6.53 KB
+[2025-04-25T23:40:40.791+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (10 records)
+[2025-04-25T23:40:40.908+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 118.47 KB
+[2025-04-25T23:40:40.934+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (238 records)
+[2025-04-25T23:40:41.543+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 2.06 KB
+[2025-04-25T23:40:41.545+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (3 records)
+[2025-04-25T23:40:41.906+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 120.37 KB
+[2025-04-25T23:40:41.930+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (224 records)
+[2025-04-25T23:40:42.538+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 6.49 KB
+[2025-04-25T23:40:42.543+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (10 records)
+[2025-04-25T23:40:42.910+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 131.48 KB
+[2025-04-25T23:40:42.942+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (266 records)
+[2025-04-25T23:40:43.570+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 0.63 KB
+[2025-04-25T23:40:43.575+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (1 records)
+[2025-04-25T23:40:43.699+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 95.77 KB
+[2025-04-25T23:40:43.718+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (180 records)
+[2025-04-25T23:40:44.360+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 1.95 KB
+[2025-04-25T23:40:44.364+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (3 records)
+[2025-04-25T23:40:44.590+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 209.45 KB
+[2025-04-25T23:40:44.650+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (424 records)
+[2025-04-25T23:40:45.509+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 1.92 KB
+[2025-04-25T23:40:45.514+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (3 records)
+[2025-04-25T23:40:45.855+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_schedules: 281.68 KB
+[2025-04-25T23:40:45.902+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_schedules (543 records)
+[2025-04-25T23:40:46.536+0000] {mbta_data_pipeline.py:74} INFO - 📦 Payload size for mbta_predictions: 7.88 KB
+[2025-04-25T23:40:46.552+0000] {mbta_data_pipeline.py:85} INFO - ✅ Data sent to Kafka topic: mbta_predictions (12 records)
+[2025-04-25T23:40:46.592+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=CR-Providence&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:46.612+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connected> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: Socket EVENT_READ without in-flight-requests
+[2025-04-25T23:40:46.613+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-25T23:40:46.617+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:40:46.620+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-04-25T23:40:46.621+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-04-25T23:40:46.621+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-25T23:40:46.697+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:40:46.698+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 111. Disconnecting.
+[2025-04-25T23:40:46.698+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2025-04-25T23:40:46.699+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-25T23:40:46.872+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:40:47.122+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=CR-Foxboro&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:47.145+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=CR-Foxboro&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:47.675+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-F4&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:47.705+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-F4&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:48.234+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-F1&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:48.256+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-F1&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:48.787+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-EastBoston&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:48.808+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-EastBoston&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:49.341+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-Lynn&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:49.362+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-Lynn&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:49.897+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-F6&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:49.920+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-F6&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:50.444+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=Boat-F7&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:50.465+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=Boat-F7&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:50.999+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=747&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:51.023+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=747&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:51.545+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=708&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:51.567+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=708&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:52.100+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=1&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:52.123+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=1&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:52.653+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=4&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:52.677+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=4&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:53.209+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=7&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:53.231+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=7&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:53.757+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=8&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:53.781+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=8&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:54.316+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=9&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:54.338+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=9&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:54.869+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=10&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:54.898+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=10&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:55.426+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=11&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:55.447+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=11&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:55.971+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=14&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:55.992+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=14&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:56.522+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=15&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:56.543+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=15&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:57.071+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=16&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:57.092+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=16&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:57.622+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=17&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:57.645+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=17&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:58.172+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_predictions: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /predictions?filter%5Broute%5D=18&include=stop,trip,vehicle&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:40:58.196+0000] {mbta_data_pipeline.py:87} ERROR - ❌ Failed fetching/sending for mbta_schedules: HTTPSConnectionPool(host='api-v3.mbta.com', port=443): Max retries exceeded with url: /schedules?filter%5Broute%5D=18&api_key=6426e442cb644cae82e86def2e03ecb3 (Caused by SSLError(OSError(5, 'Input/output error')))
+[2025-04-25T23:41:23.246+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 113. Disconnecting.
+[2025-04-25T23:41:23.249+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 113 EHOSTUNREACH
+[2025-04-25T23:41:23.249+0000] {client_async.py:388} WARNING - Node 1 connection failed -- refreshing metadata
+[2025-04-25T23:41:23.251+0000] {conn.py:395} INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: connecting to kafka:9092 [('172.18.0.4', 9092) IPv4]
+[2025-04-25T23:41:26.316+0000] {conn.py:428} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Connect attempt returned error 113. Disconnecting.
+[2025-04-25T23:41:26.316+0000] {conn.py:936} ERROR - <BrokerConnection client_id=kafka-python-producer-1, node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.18.0.4', 9092)]>: Closing connection. KafkaConnectionError: 113 EHOSTUNREACH
+[2025-04-25T23:41:26.316+0000] {client_async.py:388} WARNING - Node 1 

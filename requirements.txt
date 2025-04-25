@@ -1,17 +1,43 @@
-# Airflow core
+# === Airflow Core ===
 apache-airflow==2.8.1
 
-# Airflow providers
+# === Airflow Providers ===
+apache-airflow-providers-apache-kafka
 apache-airflow-providers-postgres
 apache-airflow-providers-snowflake
-apache-airflow-providers-apache-kafka
 
-# Snowflake + Kafka
-snowflake-connector-python
+# === Audio & Speech ===
+audio-recorder-streamlit==0.0.8
+ffmpeg-python==0.2.0
+gtts==2.5.1
+pydub==0.25.1
+pyttsx3==2.90
+SpeechRecognition==3.10.1
+
+# === Backend ===
+flask==2.2.5
+flask-cors==3.0.10
+
+# === LLM & RAG ===
+chromadb==0.4.22
+groq==0.20.0
+httpx==0.26.0
+langchain==0.1.9
+langchain-core==0.1.27
+langchain-groq==0.0.1 
+langchain-openai==0.0.8
+langchain-pinecone==0.0.2
+
+openai==1.12.0
+pinecone==3.0.2
+
+# === Kafka & Snowflake ===
 confluent-kafka
 kafka-python
+snowflake-connector-python
 
-# Utils
-requests
-python-dotenv
+# === Utilities ===
 pandas
+python-dotenv==1.0.1
+requests
+streamlit==1.31.1

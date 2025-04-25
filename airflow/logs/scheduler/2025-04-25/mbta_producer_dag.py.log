@@ -1,0 +1,519 @@
+[2025-04-25T23:06:32.260+0000] {processor.py:161} INFO - Started process (PID=164) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:06:32.261+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:06:32.262+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:06:32.262+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:06:32.273+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:06:32.270+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:06:32.275+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:06:32.318+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.061 seconds
+[2025-04-25T23:07:10.559+0000] {processor.py:161} INFO - Started process (PID=163) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:10.562+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:07:10.563+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:07:10.563+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:10.573+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:07:10.570+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:07:10.573+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:10.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.043 seconds
+[2025-04-25T23:07:40.885+0000] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:40.886+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:07:40.887+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:07:40.887+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:40.896+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:07:40.895+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:07:40.896+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:07:40.929+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.052 seconds
+[2025-04-25T23:08:11.144+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:11.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:08:11.145+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:08:11.145+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:11.150+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:08:11.150+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:08:11.151+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:11.166+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.025 seconds
+[2025-04-25T23:08:41.465+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:41.466+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:08:41.468+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:08:41.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:41.473+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:08:41.472+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:08:41.474+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:08:41.503+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.043 seconds
+[2025-04-25T23:09:11.784+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:09:11.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:09:11.788+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:09:11.788+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:09:11.793+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:09:11.792+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/mbta_producer_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/mbta_producer_dag.py", line 7, in <module>
+    from mbta_data_pipeline import main as produce_data
+ModuleNotFoundError: No module named 'mbta_data_pipeline'
+[2025-04-25T23:09:11.793+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:09:11.813+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.036 seconds
+[2025-04-25T23:11:27.051+0000] {processor.py:161} INFO - Started process (PID=166) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:27.054+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:11:27.058+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:27.056+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:27.267+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:27.356+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:27.355+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:11:27.445+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:27.444+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:05:00+00:00, run_after=2025-04-25 23:10:00+00:00
+[2025-04-25T23:11:27.499+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.453 seconds
+[2025-04-25T23:11:57.908+0000] {processor.py:161} INFO - Started process (PID=203) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:57.909+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:11:57.911+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:57.910+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:58.030+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:11:58.045+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:58.045+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:11:58.068+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:11:58.068+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:05:00+00:00, run_after=2025-04-25 23:10:00+00:00
+[2025-04-25T23:11:58.084+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.181 seconds
+[2025-04-25T23:12:28.336+0000] {processor.py:161} INFO - Started process (PID=215) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:28.338+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:12:28.339+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:28.338+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:28.429+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:28.658+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:28.658+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:12:28.669+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:28.669+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:05:00+00:00, run_after=2025-04-25 23:10:00+00:00
+[2025-04-25T23:12:28.680+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.350 seconds
+[2025-04-25T23:12:58.951+0000] {processor.py:161} INFO - Started process (PID=227) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:58.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:12:58.955+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:58.954+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:59.052+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:12:59.083+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:59.083+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:12:59.102+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:12:59.102+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:05:00+00:00, run_after=2025-04-25 23:10:00+00:00
+[2025-04-25T23:12:59.272+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.331 seconds
+[2025-04-25T23:13:29.711+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:13:29.713+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:13:29.714+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:13:29.714+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:13:29.816+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:13:29.861+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:13:29.861+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:13:30.141+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:13:30.140+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:05:00+00:00, run_after=2025-04-25 23:10:00+00:00
+[2025-04-25T23:13:30.152+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.447 seconds
+[2025-04-25T23:14:00.435+0000] {processor.py:161} INFO - Started process (PID=254) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:00.436+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:14:00.438+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:00.437+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:00.543+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:00.593+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:00.593+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:14:00.840+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:00.840+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:10:00+00:00, run_after=2025-04-25 23:15:00+00:00
+[2025-04-25T23:14:00.850+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.420 seconds
+[2025-04-25T23:14:31.094+0000] {processor.py:161} INFO - Started process (PID=266) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:31.096+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:14:31.097+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:31.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:31.188+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:14:31.405+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:31.405+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:14:31.427+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:14:31.427+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:10:00+00:00, run_after=2025-04-25 23:15:00+00:00
+[2025-04-25T23:14:31.439+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.357 seconds
+[2025-04-25T23:15:01.681+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:01.683+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:15:01.684+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:01.683+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:01.757+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:01.914+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:01.914+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:15:01.933+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:01.933+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:15:01.952+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.275 seconds
+[2025-04-25T23:15:32.165+0000] {processor.py:161} INFO - Started process (PID=303) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:32.167+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:15:32.168+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:32.167+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:32.330+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:15:32.367+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:32.367+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:15:32.399+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:15:32.398+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:15:32.410+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.252 seconds
+[2025-04-25T23:16:02.579+0000] {processor.py:161} INFO - Started process (PID=315) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:02.581+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:16:02.581+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:02.581+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:02.921+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:02.962+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:02.962+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:16:03.020+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:03.019+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:16:03.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.842 seconds
+[2025-04-25T23:16:33.561+0000] {processor.py:161} INFO - Started process (PID=327) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:33.566+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:16:33.568+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:33.568+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:33.698+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:16:33.727+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:33.727+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:16:33.978+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:16:33.978+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:16:33.991+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.436 seconds
+[2025-04-25T23:17:04.129+0000] {processor.py:161} INFO - Started process (PID=339) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:04.131+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:17:04.132+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:04.132+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:04.245+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:04.282+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:04.281+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:17:04.498+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:04.498+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:17:04.508+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.388 seconds
+[2025-04-25T23:17:34.843+0000] {processor.py:161} INFO - Started process (PID=351) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:34.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:17:34.846+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:34.845+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:34.927+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:17:35.227+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:35.227+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:17:35.245+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:17:35.245+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:17:35.256+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.418 seconds
+[2025-04-25T23:18:06.135+0000] {processor.py:161} INFO - Started process (PID=363) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:06.140+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:18:06.146+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:06.145+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:06.333+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:06.384+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:06.383+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:18:06.415+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:06.415+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:18:06.430+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.310 seconds
+[2025-04-25T23:18:36.695+0000] {processor.py:161} INFO - Started process (PID=375) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:36.697+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:18:36.699+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:36.698+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:36.929+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:18:36.962+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:36.962+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:18:36.993+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:18:36.993+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:18:37.011+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.323 seconds
+[2025-04-25T23:19:07.267+0000] {processor.py:161} INFO - Started process (PID=387) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:07.269+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:19:07.272+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:07.270+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:07.380+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:07.427+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:07.427+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:19:07.454+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:07.454+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:19:07.725+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.465 seconds
+[2025-04-25T23:19:38.552+0000] {processor.py:161} INFO - Started process (PID=399) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:38.554+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:19:38.555+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:38.554+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:38.637+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:19:38.665+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:38.665+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:19:38.853+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:19:38.852+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:15:00+00:00, run_after=2025-04-25 23:20:00+00:00
+[2025-04-25T23:19:38.874+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.327 seconds
+[2025-04-25T23:20:09.224+0000] {processor.py:161} INFO - Started process (PID=424) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:09.231+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:20:09.235+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:09.233+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:09.347+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:09.391+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:09.391+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:20:09.648+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:09.648+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:20:09.659+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.454 seconds
+[2025-04-25T23:20:39.785+0000] {processor.py:161} INFO - Started process (PID=436) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:39.787+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:20:39.788+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:39.788+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:39.934+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:20:40.234+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:40.234+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:20:40.251+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:20:40.251+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:20:40.263+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.489 seconds
+[2025-04-25T23:21:10.552+0000] {processor.py:161} INFO - Started process (PID=448) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:10.555+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:21:10.556+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:10.555+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:10.684+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:10.722+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:10.722+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:21:10.748+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:10.747+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:21:10.775+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.233 seconds
+[2025-04-25T23:21:40.924+0000] {processor.py:161} INFO - Started process (PID=460) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:40.926+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:21:40.927+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:40.927+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:41.036+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:21:41.065+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:41.065+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:21:41.092+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:21:41.091+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:21:41.104+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.191 seconds
+[2025-04-25T23:22:11.379+0000] {processor.py:161} INFO - Started process (PID=472) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:11.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:22:11.382+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:11.382+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:11.508+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:11.588+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:11.587+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:22:11.660+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:11.659+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:22:11.903+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.530 seconds
+[2025-04-25T23:22:42.466+0000] {processor.py:161} INFO - Started process (PID=484) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:42.468+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:22:42.469+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:42.468+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:42.581+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:22:42.618+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:42.618+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:22:42.989+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:22:42.989+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:22:43.010+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.549 seconds
+[2025-04-25T23:23:13.391+0000] {processor.py:161} INFO - Started process (PID=496) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:13.392+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:23:13.394+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:13.394+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:13.579+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:13.633+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:13.633+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:23:13.922+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:13.922+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:23:13.941+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.566 seconds
+[2025-04-25T23:23:44.357+0000] {processor.py:161} INFO - Started process (PID=508) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:44.363+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:23:44.370+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:44.369+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:44.595+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:23:45.128+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:45.128+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:23:45.145+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:23:45.145+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:23:45.156+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.822 seconds
+[2025-04-25T23:24:15.562+0000] {processor.py:161} INFO - Started process (PID=520) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:15.567+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:24:15.570+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:15.569+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:15.875+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:15.952+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:15.952+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:24:15.992+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:15.992+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:24:16.010+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.452 seconds
+[2025-04-25T23:24:46.843+0000] {processor.py:161} INFO - Started process (PID=532) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:46.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:24:46.846+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:46.846+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:47.032+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:24:47.064+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:47.063+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:24:47.084+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:24:47.084+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:20:00+00:00, run_after=2025-04-25 23:25:00+00:00
+[2025-04-25T23:24:47.335+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.497 seconds
+[2025-04-25T23:25:17.649+0000] {processor.py:161} INFO - Started process (PID=565) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:17.654+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:25:17.656+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:17.656+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:17.775+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:17.815+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:17.815+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:25:18.206+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:18.206+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:25:18.234+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.593 seconds
+[2025-04-25T23:25:48.650+0000] {processor.py:161} INFO - Started process (PID=577) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:48.651+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:25:48.652+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:48.652+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:48.782+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:25:48.814+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:48.814+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:25:49.094+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:25:49.094+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:25:49.105+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.466 seconds
+[2025-04-25T23:26:19.379+0000] {processor.py:161} INFO - Started process (PID=589) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:19.381+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:26:19.382+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:19.382+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:19.510+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:19.563+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:19.563+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:26:19.891+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:19.891+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:26:19.902+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.531 seconds
+[2025-04-25T23:26:50.092+0000] {processor.py:161} INFO - Started process (PID=601) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:50.093+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:26:50.095+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:50.094+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:50.265+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:26:50.508+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:50.508+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:26:50.523+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:26:50.523+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:26:50.538+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.458 seconds
+[2025-04-25T23:27:20.817+0000] {processor.py:161} INFO - Started process (PID=613) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:20.820+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:27:20.821+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:20.820+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:20.932+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:20.964+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:20.964+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:27:20.993+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:20.993+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:27:21.009+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.197 seconds
+[2025-04-25T23:27:51.118+0000] {processor.py:161} INFO - Started process (PID=625) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:51.120+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:27:51.122+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:51.122+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:51.268+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:27:51.298+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:51.297+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:27:51.321+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:27:51.321+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:27:51.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.483 seconds
+[2025-04-25T23:28:21.929+0000] {processor.py:161} INFO - Started process (PID=637) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:21.935+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:28:21.938+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:21.936+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:22.058+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:22.095+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:22.095+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:28:22.330+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:22.329+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:28:22.352+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.437 seconds
+[2025-04-25T23:28:52.581+0000] {processor.py:161} INFO - Started process (PID=649) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:52.584+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:28:52.586+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:52.585+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:52.699+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:28:52.732+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:52.732+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:28:52.947+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:28:52.947+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:28:52.965+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.403 seconds
+[2025-04-25T23:29:23.318+0000] {processor.py:161} INFO - Started process (PID=661) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:23.322+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:29:23.328+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:23.327+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:23.562+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:23.924+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:23.924+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:29:23.941+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:23.941+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:29:23.960+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.667 seconds
+[2025-04-25T23:29:54.122+0000] {processor.py:161} INFO - Started process (PID=673) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:54.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:29:54.127+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:54.126+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:54.504+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:29:54.533+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:54.533+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:29:54.552+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:29:54.552+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:25:00+00:00, run_after=2025-04-25 23:30:00+00:00
+[2025-04-25T23:29:54.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.451 seconds
+[2025-04-25T23:30:24.669+0000] {processor.py:161} INFO - Started process (PID=716) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:24.670+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:30:24.671+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:24.671+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:24.769+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:24.805+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:24.805+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:30:24.836+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:24.836+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:30:24.855+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.194 seconds
+[2025-04-25T23:30:55.083+0000] {processor.py:161} INFO - Started process (PID=728) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:55.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:30:55.085+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:55.085+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:55.218+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:30:55.254+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:55.254+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:30:55.277+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:30:55.277+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:30:55.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.502 seconds
+[2025-04-25T23:31:25.955+0000] {processor.py:161} INFO - Started process (PID=740) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:25.956+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:31:25.958+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:25.957+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:26.138+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:26.175+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:26.175+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:31:27.158+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:27.157+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:31:27.202+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 1.259 seconds
+[2025-04-25T23:31:57.486+0000] {processor.py:161} INFO - Started process (PID=752) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:57.488+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:31:57.489+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:57.489+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:57.595+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:31:57.629+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:57.628+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:31:57.863+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:31:57.862+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:31:57.874+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.400 seconds
+[2025-04-25T23:32:28.172+0000] {processor.py:161} INFO - Started process (PID=764) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:28.175+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:32:28.178+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:28.177+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:28.507+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:28.834+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:28.834+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:32:28.854+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:28.854+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:32:28.942+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.787 seconds
+[2025-04-25T23:32:59.259+0000] {processor.py:161} INFO - Started process (PID=776) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:59.262+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:32:59.263+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:59.263+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:59.374+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:32:59.407+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:59.407+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:32:59.428+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:32:59.428+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:32:59.441+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.191 seconds
+[2025-04-25T23:33:29.630+0000] {processor.py:161} INFO - Started process (PID=788) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:33:29.634+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:33:29.635+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:33:29.635+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:33:29.734+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:33:29.768+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:33:29.767+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:33:29.790+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:33:29.790+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:33:29.984+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.368 seconds
+[2025-04-25T23:34:01.030+0000] {processor.py:161} INFO - Started process (PID=800) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:01.032+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:34:01.033+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:01.032+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:01.164+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:01.203+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:01.202+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:34:01.448+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:01.448+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:34:01.458+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.437 seconds
+[2025-04-25T23:34:31.709+0000] {processor.py:161} INFO - Started process (PID=812) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:31.711+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:34:31.712+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:31.712+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:31.828+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:34:31.855+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:31.855+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:34:32.146+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:34:32.146+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:30:00+00:00, run_after=2025-04-25 23:35:00+00:00
+[2025-04-25T23:34:32.156+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.455 seconds
+[2025-04-25T23:35:02.354+0000] {processor.py:161} INFO - Started process (PID=830) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:02.357+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:35:02.360+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:02.359+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:02.545+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:02.990+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:02.990+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:35:03.020+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:03.020+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:35:03.041+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.705 seconds
+[2025-04-25T23:35:33.766+0000] {processor.py:161} INFO - Started process (PID=843) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:33.768+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:35:33.769+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:33.769+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:34.141+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:35:34.550+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:34.549+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:35:34.588+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:35:34.588+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:35:34.600+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.838 seconds
+[2025-04-25T23:36:04.983+0000] {processor.py:161} INFO - Started process (PID=859) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:04.988+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:36:04.989+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:04.989+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:05.133+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:05.163+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:05.163+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:36:05.192+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:05.192+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:36:05.205+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.231 seconds
+[2025-04-25T23:36:35.611+0000] {processor.py:161} INFO - Started process (PID=871) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:35.612+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:36:35.614+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:35.613+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:35.797+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:36:35.836+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:35.836+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:36:36.084+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:36:36.084+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:36:36.096+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.490 seconds
+[2025-04-25T23:37:06.295+0000] {processor.py:161} INFO - Started process (PID=883) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:06.297+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:37:06.299+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:06.298+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:06.535+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:06.584+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:06.584+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:37:07.429+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:07.429+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:37:07.445+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 1.163 seconds
+[2025-04-25T23:37:37.980+0000] {processor.py:161} INFO - Started process (PID=892) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:37.982+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:37:37.985+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:37.984+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:38.370+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:37:38.985+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:38.980+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:37:40.152+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:37:40.151+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:37:40.223+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 2.251 seconds
+[2025-04-25T23:38:10.872+0000] {processor.py:161} INFO - Started process (PID=900) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:10.874+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:38:10.878+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:10.877+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:11.209+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:12.242+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:12.241+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:38:12.311+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:12.310+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:38:12.358+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 1.493 seconds
+[2025-04-25T23:38:42.489+0000] {processor.py:161} INFO - Started process (PID=912) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:42.492+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:38:42.493+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:42.493+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:42.847+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:38:42.879+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:42.879+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:38:42.900+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:38:42.900+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:38:42.913+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.443 seconds
+[2025-04-25T23:39:13.230+0000] {processor.py:161} INFO - Started process (PID=924) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:13.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:39:13.233+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:13.233+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:13.357+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:13.395+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:13.395+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:39:13.420+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:13.420+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:39:13.658+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.436 seconds
+[2025-04-25T23:39:44.020+0000] {processor.py:161} INFO - Started process (PID=936) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:44.021+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:39:44.022+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:44.022+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:44.147+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:39:44.183+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:44.183+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:39:44.590+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:39:44.589+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:35:00+00:00, run_after=2025-04-25 23:40:00+00:00
+[2025-04-25T23:39:44.646+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.634 seconds
+[2025-04-25T23:40:15.359+0000] {processor.py:161} INFO - Started process (PID=980) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:15.362+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:40:15.363+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:15.363+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:15.487+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:15.522+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:15.522+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:40:15.841+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:15.841+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:40:00+00:00, run_after=2025-04-25 23:45:00+00:00
+[2025-04-25T23:40:15.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.520 seconds
+[2025-04-25T23:40:45.967+0000] {processor.py:161} INFO - Started process (PID=992) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:45.968+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:40:45.969+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:45.969+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:46.121+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:40:46.427+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:46.427+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:40:46.455+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:40:46.455+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:40:00+00:00, run_after=2025-04-25 23:45:00+00:00
+[2025-04-25T23:40:46.469+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.511 seconds
+[2025-04-25T23:41:17.302+0000] {processor.py:161} INFO - Started process (PID=1060) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:4[2025-04-25T23:47:01.578+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:01.582+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:47:01.583+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:01.582+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:01.703+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:01.743+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:01.742+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:47:01.891+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:01.891+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:45:00+00:00, run_after=2025-04-25 23:50:00+00:00
+[2025-04-25T23:47:02.003+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.433 seconds
+[2025-04-25T23:47:32.347+0000] {processor.py:161} INFO - Started process (PID=212) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:32.356+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:47:32.358+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:32.357+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:32.579+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:47:33.778+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:33.778+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:47:33.831+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:47:33.830+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:45:00+00:00, run_after=2025-04-25 23:50:00+00:00
+[2025-04-25T23:47:33.858+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 1.519 seconds
+[2025-04-25T23:48:04.244+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:04.246+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:48:04.246+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:04.246+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:04.349+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:04.389+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:04.389+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:48:04.413+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:04.413+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:45:00+00:00, run_after=2025-04-25 23:50:00+00:00
+[2025-04-25T23:48:04.432+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.194 seconds
+[2025-04-25T23:48:34.738+0000] {processor.py:161} INFO - Started process (PID=236) to work on /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:34.743+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/mbta_producer_dag.py for tasks to queue
+[2025-04-25T23:48:34.745+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:34.744+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:34.994+0000] {processor.py:840} INFO - DAG(s) 'mbta_producer_dag' retrieved from /opt/airflow/dags/mbta_producer_dag.py
+[2025-04-25T23:48:35.045+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:35.045+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2025-04-25T23:48:35.074+0000] {logging_mixin.py:188} INFO - [2025-04-25T23:48:35.074+0000] {dag.py:3823} INFO - Setting next_dagrun for mbta_producer_dag to 2025-04-25 23:45:00+00:00, run_after=2025-04-25 23:50:00+00:00
+[2025-04-25T23:48:35.087+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/mbta_producer_dag.py took 0.367 seconds

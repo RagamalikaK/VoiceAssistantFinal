@@ -55,17 +55,16 @@ services:
       - kafka
     networks:
       - mbta_pipeline_network    
-    entrypoint: ["/bin/bash", "-c"]
-    command: >
+    entrypoint: >
       bash -c "
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_alerts &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_routes &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_stops &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_vehicles &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_predictions &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_schedules &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_lines &&
-      kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_facilities
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_alerts &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_routes &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_stops &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_vehicles &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_predictions &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_schedules &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_lines &&
+        kafka-topics --bootstrap-server kafka:9092 --create --if-not-exists --replication-factor 1 --partitions 1 --topic mbta_facilities
       "
 
 
@@ -129,7 +128,8 @@ services:
       - .env
     working_dir: /app
     command: >
-      bash -c "sleep 40 && python mbta_data_pipeline.py"
+      bash -c "sleep 40 && python airflow/dags/mbta_data_pipeline.py"
+
 
   kafka_consumer:
     build:
@@ -148,8 +148,7 @@ services:
       - .env
     working_dir: /app
     command: >
-      bash -c "sleep 45 && python ./airflow/dags/mbta_kafka_consumer.py"
-
+      bash -c "sleep 45 && python airflow/dags/mbta_kafka_consumer.py"
 networks:
   mbta_pipeline_network:
     driver: bridge
